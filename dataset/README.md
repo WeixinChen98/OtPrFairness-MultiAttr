@@ -1,0 +1,2 @@
+- Run `./act_level_generator` to generate the behavioral feature activity level (already).
+- Run `statistics.py` to print the statistics of the datasets.
