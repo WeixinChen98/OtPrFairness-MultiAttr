@@ -5,7 +5,7 @@
 This repository includes the implementation for paper *Investigating User-Side Fairness in Outcome and Process for Multi-Type Sensitive Attributes in Recommendations*.
 
 ## Datasets
-The preprocessed Insurance and MovieLens-1M datasets are already provided in the `./dataset` folder. 
+The preprocessed Insurance and MovieLens-1M datasets are already provided in the [`./dataset`](./dataset/) folder, and the Taobao dataset set with psychological attributes can be downloaded [here](https://github.com/greenblue96/Taobao-Serendipity-Dataset).
 
 ## Environments
 
@@ -40,4 +40,4 @@ All running commands can be found in the `./cmd` folder. For example, to train t
 
 
 ## Acknowledgement
-The code of this repository is implemented based on the source code framework at https://github.com/yunqi-li/Personalized-Counterfactual-Fairness-in-Recommendation.
+The code of this repository is implemented based on the source code framework at [PCFR](https://github.com/yunqi-li/Personalized-Counterfactual-Fairness-in-Recommendation).
