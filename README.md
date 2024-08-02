@@ -31,7 +31,7 @@ Install the above packages:
 ```
 
 ## Usage
-All running commands can be found in the `./cmd` folder. For example, to train the  PCFR fairness method with PMF as recommendation benchmark for gender as sensitive attribute on the Insurance dataset:
+All running commands can be found in the [`./cmd`](./cmd/) folder. For example, to train the  PCFR fairness method with PMF as recommendation benchmark for gender as sensitive attribute on the Insurance dataset:
 ```
 > cd ./src/
 > python ./main.py --model_name PMF --fairness_framework PCFR --optimizer Adam --dataset insurance --feature_columns u_gender --data_processor RecDataset --metric ndcg@3,f1@3 --l2 1e-4 --lr 1e-3 --batch_size 1024 --model_path "../model/PMF_PCFR_insurance_u_gender_neg_sample=10/PMF_PCFR_insurance_u_gender_l2=1e-4_dim=64_neg_sample=10.pt" --runner RecRunner --vt_num_neg 10 --vt_batch_size 1024 --num_worker 0 --epoch 1000 --eval_disc 
