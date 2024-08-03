@@ -5,7 +5,7 @@
 This repository includes the implementation for paper *Investigating User-Side Fairness in Outcome and Process for Multi-Type Sensitive Attributes in Recommendations*.
 
 ## Datasets
-The preprocessed Insurance and MovieLens-1M datasets are already provided in the [`./dataset`](./dataset/) folder, and the Taobao dataset set with psychological attributes can be downloaded [here](https://github.com/greenblue96/Taobao-Serendipity-Dataset).
+The preprocessed Insurance and MovieLens-1M datasets are already provided in the [`./dataset`](./dataset/) folder, and the Taobao dataset with psychological attributes can be downloaded [here](https://github.com/greenblue96/Taobao-Serendipity-Dataset).
 
 ## Environments
 
