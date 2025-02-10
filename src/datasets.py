@@ -80,40 +80,67 @@ class RecDataset:
             logging.info('Prepare test data...')
         else:
             raise ValueError('Wrong stage in dataset.')
+
         df[SAMPLE_ID] = df.index
         columns_order = [USER, ITEM, SAMPLE_ID, LABEL] + [f_col for f_col in self.data_reader.feature_columns]
         data = df[columns_order]
-        
+
         user_list = data[USER].unique()
-        for uid in tqdm(user_list, leave=False, ncols=100, mininterval=1, desc='Prepare %d negative samples for each user' % self.num_neg):
-            neg_candidates = self.data_reader.item_ids_set - self.data_reader.all_user2items_dict[uid]
-            assert self.num_neg <= len(neg_candidates)
-            neg_candidates = random.sample(neg_candidates, k = self.num_neg) 
-            user_info_rows = data[data[USER] == uid]
+        all_items = set(self.data_reader.item_ids_set)  # All items in the dataset
 
-            neg_candidates_uid = [uid] * self.num_neg
-            neg_candidates_iid = neg_candidates
-            neg_candidates_sampleid = [0] * self.num_neg
-            neg_candidates_labels = [0] * self.num_neg
-            neg_candidates_input_dict = {USER: neg_candidates_uid, ITEM: neg_candidates_iid, SAMPLE_ID: neg_candidates_sampleid, LABEL: neg_candidates_labels}
+        full_data = []
+
+        for uid in tqdm(user_list, leave=False, ncols=100, mininterval=1, desc=f'Prepare negative samples (num_neg={self.num_neg})'):
+            interacted_items = self.data_reader.all_user2items_dict[uid]  # Items user has interacted with
+            negative_candidates = list(all_items - interacted_items)  # All non-interacted items
+
+            # Creating positive samples (actual interactions)
+            user_data = data[data[USER] == uid]
+            full_data.append(user_data)
+
+            if self.num_neg > 0:
+                # **Sampling-based negative candidates (original behavior)**
+                assert self.num_neg <= len(negative_candidates), f"User {uid} has fewer than {self.num_neg} negative candidates!"
+                neg_candidates = random.sample(negative_candidates, k=self.num_neg)
+            else:
+                # **Non-sampling approach: Use ALL negative candidates**
+                neg_candidates = negative_candidates
+
+            # Creating negative samples
+            neg_samples_dict = {
+                USER: [uid] * len(neg_candidates),
+                ITEM: neg_candidates,
+                SAMPLE_ID: [0] * len(neg_candidates),
+                LABEL: [0] * len(neg_candidates)
+            }
+
+            # Copy feature columns (assuming user-based features remain the same)
             for f_col in self.data_reader.feature_columns:
-                neg_candidates_input_dict[f_col] = [user_info_rows[f_col].values[0]] * self.num_neg
-            neg_candidates_df = pd.DataFrame(data = neg_candidates_input_dict)
-            data = pd.concat([data, neg_candidates_df], ignore_index=True)
+                neg_samples_dict[f_col] = [user_data[f_col].values[0]] * len(neg_candidates)
 
+            neg_samples_df = pd.DataFrame(neg_samples_dict)
+            full_data.append(neg_samples_df)
 
-        vt_batch_size = self.batch_size * (1 + self.num_neg)
-        len_data = len(data)
-        total_batches = int((len_data + vt_batch_size - 1) / vt_batch_size)
-        data = data.to_numpy()
+        # Combine all users' data
+        full_data_df = pd.concat(full_data, ignore_index=True)
+
+        # Convert to numpy for batch processing
+        full_data_np = full_data_df.to_numpy()
+
+        # Adjust batch size dynamically for large datasets
+        if self.num_neg > 0:
+            vt_batch_size = self.batch_size * (1 + self.num_neg)  # Sampling mode
+        else:
+            vt_batch_size = min(8192, len(full_data_np))  # Adaptive batch size for large test/validation sets
+
+        len_data = len(full_data_np)
+        total_batches = (len_data + vt_batch_size - 1) // vt_batch_size
         batches = []
+
         for n_batch in tqdm(range(total_batches), leave=False, ncols=100, mininterval=1, desc='Prepare Batches'):
             batch_start = n_batch * vt_batch_size
             batch_end = min(len_data, batch_start + vt_batch_size)
-
-            real_batch_size = batch_end - batch_start
-
-            batch = data[batch_start:batch_start + real_batch_size, :]
+            batch = full_data_np[batch_start:batch_end, :]
 
             inputs = torch.from_numpy(np.asarray(batch)[:, 0:3])
             labels = torch.from_numpy(np.asarray(batch)[:, 3])
@@ -121,6 +148,7 @@ class RecDataset:
 
             feed_dict = {'X': inputs, LABEL: labels, 'features': features}
             batches.append(feed_dict)
+
         return batches
 
     def collate_fn(self, batch):
