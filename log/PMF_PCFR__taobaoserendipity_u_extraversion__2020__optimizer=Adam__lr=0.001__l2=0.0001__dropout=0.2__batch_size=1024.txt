@@ -1,0 +1,960 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'PMF', 'fairness_framework': 'PCFR', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '0', 'verbose': 20, 'log_file': '../log/PMF_PCFR__taobaoserendipity_u_extraversion__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'taobaoserendipity', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_extraversion'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: PMF
+INFO:root:Fairness framework: PCFR
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 9132376
+INFO:root:load validation csv...
+INFO:root:size of validation: 1141547
+INFO:root:load test csv...
+INFO:root:size of test: 1141548
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 54139008
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 509.6876, l2 = 28.8417
+INFO:root:u_extraversion disc test= 0.5855,0.6067,0.5638,0.6067auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [799.5 s]
+ validation= 0.6368,0.1478 [196.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 296.1353, l2 = 50.4727
+INFO:root:u_extraversion disc test= 0.7189,0.7292,0.7195,0.7292auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [593.0 s]
+ validation= 0.6667,0.1599 [172.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 207.9585, l2 = 62.0445
+INFO:root:u_extraversion disc test= 0.7936,0.8006,0.7959,0.8006auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [726.7 s]
+ validation= 0.6827,0.1667 [200.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 162.3086, l2 = 66.4525
+INFO:root:u_extraversion disc test= 0.8324,0.8376,0.8347,0.8376auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [606.6 s]
+ validation= 0.6924,0.1710 [190.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 137.9874, l2 = 67.2780
+INFO:root:u_extraversion disc test= 0.8534,0.8579,0.8557,0.8579auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [713.3 s]
+ validation= 0.7006,0.1742 [160.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 123.5853, l2 = 66.6520
+INFO:root:u_extraversion disc test= 0.8670,0.8712,0.8693,0.8712auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [678.8 s]
+ validation= 0.7028,0.1756 [179.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 114.3286, l2 = 65.5778
+INFO:root:u_extraversion disc test= 0.8765,0.8805,0.8788,0.8805auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [649.3 s]
+ validation= 0.7087,0.1792 [172.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 108.3125, l2 = 64.6012
+INFO:root:u_extraversion disc test= 0.8847,0.8881,0.8866,0.8881auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [704.7 s]
+ validation= 0.7102,0.1800 [199.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 103.7169, l2 = 63.7753
+INFO:root:u_extraversion disc test= 0.8870,0.8906,0.8891,0.8906auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [608.5 s]
+ validation= 0.7128,0.1815 [187.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 100.0555, l2 = 63.1017
+INFO:root:u_extraversion disc test= 0.8897,0.8934,0.8919,0.8934auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [679.4 s]
+ validation= 0.7178,0.1831 [191.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 97.0275, l2 = 62.5078
+INFO:root:u_extraversion disc test= 0.8929,0.8966,0.8951,0.8966auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [597.8 s]
+ validation= 0.7211,0.1847 [193.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 95.0319, l2 = 62.0741
+INFO:root:u_extraversion disc test= 0.8955,0.8992,0.8978,0.8992auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [741.7 s]
+ validation= 0.7227,0.1854 [169.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 93.2980, l2 = 61.8896
+INFO:root:u_extraversion disc test= 0.8966,0.9002,0.8988,0.9002auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [732.0 s]
+ validation= 0.7244,0.1861 [188.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 91.5484, l2 = 61.6172
+INFO:root:u_extraversion disc test= 0.8998,0.9033,0.9020,0.9033auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [581.4 s]
+ validation= 0.7256,0.1875 [180.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 90.2613, l2 = 61.4695
+INFO:root:u_extraversion disc test= 0.8996,0.9028,0.9016,0.9028auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [785.8 s]
+ validation= 0.7298,0.1890 [168.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 89.1873, l2 = 61.3836
+INFO:root:u_extraversion disc test= 0.9018,0.9049,0.9037,0.9049auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [599.0 s]
+ validation= 0.7326,0.1900 [206.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 88.1723, l2 = 61.3283
+INFO:root:u_extraversion disc test= 0.9018,0.9049,0.9037,0.9049auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [602.8 s]
+ validation= 0.7346,0.1913 [159.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 87.6208, l2 = 61.3728
+INFO:root:u_extraversion disc test= 0.9043,0.9073,0.9062,0.9073auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [616.2 s]
+ validation= 0.7360,0.1920 [179.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 86.3274, l2 = 61.3117
+INFO:root:u_extraversion disc test= 0.9063,0.9091,0.9080,0.9091auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [382.9 s]
+ validation= 0.7369,0.1918 [165.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 85.8921, l2 = 61.3617
+INFO:root:u_extraversion disc test= 0.9059,0.9087,0.9076,0.9087auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [556.5 s]
+ validation= 0.7410,0.1933 [156.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 85.4328, l2 = 61.4241
+INFO:root:u_extraversion disc test= 0.9064,0.9091,0.9081,0.9091auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [607.3 s]
+ validation= 0.7427,0.1946 [175.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.8992, l2 = 61.4988
+INFO:root:u_extraversion disc test= 0.9075,0.9102,0.9092,0.9102auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    22 [460.1 s]
+ validation= 0.7442,0.1952 [170.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.1002, l2 = 61.4575
+INFO:root:u_extraversion disc test= 0.9074,0.9102,0.9092,0.9102auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    23 [579.3 s]
+ validation= 0.7449,0.1958 [158.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 83.6131, l2 = 61.4672
+INFO:root:u_extraversion disc test= 0.9064,0.9092,0.9081,0.9092auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    24 [580.8 s]
+ validation= 0.7453,0.1955 [172.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 83.0493, l2 = 61.5044
+INFO:root:u_extraversion disc test= 0.9062,0.9090,0.9079,0.9090auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    25 [458.9 s]
+ validation= 0.7482,0.1966 [179.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 82.8403, l2 = 61.5496
+INFO:root:u_extraversion disc test= 0.9079,0.9106,0.9096,0.9106auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    26 [568.0 s]
+ validation= 0.7481,0.1968 [175.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 82.4098, l2 = 61.5394
+INFO:root:u_extraversion disc test= 0.9102,0.9128,0.9118,0.9128auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    27 [492.6 s]
+ validation= 0.7488,0.1971 [175.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 81.9387, l2 = 61.5683
+INFO:root:u_extraversion disc test= 0.9105,0.9130,0.9121,0.9130auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    28 [545.5 s]
+ validation= 0.7505,0.1980 [169.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 81.7034, l2 = 61.6077
+INFO:root:u_extraversion disc test= 0.9099,0.9130,0.9119,0.9130auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    29 [578.5 s]
+ validation= 0.7526,0.1989 [176.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 81.3855, l2 = 61.6037
+INFO:root:u_extraversion disc test= 0.9096,0.9127,0.9116,0.9127auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    30 [484.7 s]
+ validation= 0.7534,0.1988 [176.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.9187, l2 = 61.6147
+INFO:root:u_extraversion disc test= 0.9080,0.9112,0.9101,0.9112auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    31 [443.0 s]
+ validation= 0.7540,0.1994 [173.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.7437, l2 = 61.6393
+INFO:root:u_extraversion disc test= 0.9077,0.9107,0.9096,0.9107auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    32 [577.8 s]
+ validation= 0.7542,0.1994 [187.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.8928, l2 = 61.7187
+INFO:root:u_extraversion disc test= 0.9098,0.9128,0.9117,0.9128auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    33 [470.5 s]
+ validation= 0.7565,0.2007 [173.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.0254, l2 = 61.6490
+INFO:root:u_extraversion disc test= 0.9109,0.9141,0.9130,0.9141auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    34 [419.4 s]
+ validation= 0.7556,0.2004 [173.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.0201, l2 = 61.6503
+INFO:root:u_extraversion disc test= 0.9106,0.9142,0.9130,0.9142auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    35 [566.8 s]
+ validation= 0.7576,0.2010 [183.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.8623, l2 = 61.6745
+INFO:root:u_extraversion disc test= 0.9107,0.9142,0.9130,0.9142auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    36 [367.4 s]
+ validation= 0.7587,0.2015 [167.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.5102, l2 = 61.6679
+INFO:root:u_extraversion disc test= 0.9113,0.9147,0.9135,0.9147auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    37 [600.7 s]
+ validation= 0.7610,0.2021 [168.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.3362, l2 = 61.6780
+INFO:root:u_extraversion disc test= 0.9113,0.9147,0.9136,0.9147auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    38 [492.6 s]
+ validation= 0.7618,0.2022 [178.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.1200, l2 = 61.6810
+INFO:root:u_extraversion disc test= 0.9103,0.9137,0.9125,0.9137auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    39 [530.3 s]
+ validation= 0.7615,0.2023 [158.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.1677, l2 = 61.7062
+INFO:root:u_extraversion disc test= 0.9098,0.9133,0.9121,0.9133auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    40 [586.9 s]
+ validation= 0.7620,0.2026 [178.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 78.6977, l2 = 61.6835
+INFO:root:u_extraversion disc test= 0.9108,0.9142,0.9131,0.9142auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    41 [497.1 s]
+ validation= 0.7629,0.2035 [189.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 78.6633, l2 = 61.6605
+INFO:root:u_extraversion disc test= 0.9124,0.9158,0.9147,0.9158auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    42 [592.6 s]
+ validation= 0.7610,0.2025 [178.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 78.5755, l2 = 61.6200
+INFO:root:u_extraversion disc test= 0.9122,0.9158,0.9146,0.9158auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    43 [551.5 s]
+ validation= 0.7625,0.2029 [175.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 78.2007, l2 = 61.6458
+INFO:root:u_extraversion disc test= 0.9128,0.9162,0.9151,0.9162auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    44 [463.6 s]
+ validation= 0.7641,0.2032 [163.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 78.1583, l2 = 61.5821
+INFO:root:u_extraversion disc test= 0.9121,0.9156,0.9145,0.9156auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    45 [603.5 s]
+ validation= 0.7661,0.2044 [180.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 78.0271, l2 = 61.5900
+INFO:root:u_extraversion disc test= 0.9125,0.9158,0.9147,0.9158auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    46 [364.7 s]
+ validation= 0.7669,0.2046 [171.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 78.0285, l2 = 61.6194
+INFO:root:u_extraversion disc test= 0.9119,0.9153,0.9142,0.9153auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    47 [598.9 s]
+ validation= 0.7665,0.2048 [154.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 77.9643, l2 = 61.6080
+INFO:root:u_extraversion disc test= 0.9125,0.9158,0.9147,0.9158auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    48 [561.7 s]
+ validation= 0.7668,0.2052 [170.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 77.5082, l2 = 61.5609
+INFO:root:u_extraversion disc test= 0.9127,0.9161,0.9150,0.9161auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    49 [456.0 s]
+ validation= 0.7682,0.2053 [176.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 77.3268, l2 = 61.5117
+INFO:root:u_extraversion disc test= 0.9127,0.9161,0.9149,0.9161auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    50 [519.5 s]
+ validation= 0.7667,0.2049 [183.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 77.4590, l2 = 61.5051
+INFO:root:u_extraversion disc test= 0.9122,0.9156,0.9145,0.9156auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    51 [465.8 s]
+ validation= 0.7674,0.2051 [195.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 77.2678, l2 = 61.5042
+INFO:root:u_extraversion disc test= 0.9112,0.9151,0.9138,0.9151auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    52 [513.6 s]
+ validation= 0.7671,0.2056 [197.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 77.2968, l2 = 61.5092
+INFO:root:u_extraversion disc test= 0.9104,0.9145,0.9132,0.9145auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    53 [542.6 s]
+ validation= 0.7682,0.2063 [187.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 77.1234, l2 = 61.5083
+INFO:root:u_extraversion disc test= 0.9123,0.9160,0.9148,0.9160auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    54 [432.7 s]
+ validation= 0.7677,0.2058 [195.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.8211, l2 = 61.4432
+INFO:root:u_extraversion disc test= 0.9139,0.9173,0.9162,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    55 [485.1 s]
+ validation= 0.7693,0.2060 [147.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 76.9007, l2 = 61.4308
+INFO:root:u_extraversion disc test= 0.9141,0.9176,0.9164,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    56 [483.1 s]
+ validation= 0.7711,0.2064 [167.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 76.3607, l2 = 61.3623
+INFO:root:u_extraversion disc test= 0.9132,0.9167,0.9155,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    57 [409.7 s]
+ validation= 0.7706,0.2063 [168.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.7552, l2 = 61.3652
+INFO:root:u_extraversion disc test= 0.9132,0.9167,0.9155,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    58 [429.2 s]
+ validation= 0.7708,0.2067 [154.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.8037, l2 = 61.3651
+INFO:root:u_extraversion disc test= 0.9128,0.9163,0.9152,0.9163auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    59 [357.0 s]
+ validation= 0.7709,0.2065 [159.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.4144, l2 = 61.3371
+INFO:root:u_extraversion disc test= 0.9123,0.9158,0.9147,0.9158auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    60 [418.6 s]
+ validation= 0.7715,0.2071 [162.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 76.5238, l2 = 61.3425
+INFO:root:u_extraversion disc test= 0.9112,0.9149,0.9137,0.9149auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    61 [392.0 s]
+ validation= 0.7726,0.2076 [154.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 76.0977, l2 = 61.2934
+INFO:root:u_extraversion disc test= 0.9096,0.9134,0.9121,0.9134auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    62 [381.1 s]
+ validation= 0.7729,0.2076 [157.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 76.3400, l2 = 61.2598
+INFO:root:u_extraversion disc test= 0.9089,0.9129,0.9116,0.9129auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    63 [402.1 s]
+ validation= 0.7730,0.2077 [158.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 76.2632, l2 = 61.2743
+INFO:root:u_extraversion disc test= 0.9104,0.9144,0.9131,0.9144auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    64 [389.3 s]
+ validation= 0.7745,0.2084 [158.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.9743, l2 = 61.2085
+INFO:root:u_extraversion disc test= 0.9123,0.9161,0.9149,0.9161auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    65 [373.3 s]
+ validation= 0.7737,0.2083 [155.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.9985, l2 = 61.1861
+INFO:root:u_extraversion disc test= 0.9121,0.9157,0.9145,0.9157auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    66 [365.4 s]
+ validation= 0.7739,0.2083 [144.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.1094, l2 = 61.2030
+INFO:root:u_extraversion disc test= 0.9126,0.9162,0.9150,0.9162auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    67 [399.5 s]
+ validation= 0.7743,0.2076 [155.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.9332, l2 = 61.1962
+INFO:root:u_extraversion disc test= 0.9123,0.9157,0.9146,0.9157auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    68 [360.2 s]
+ validation= 0.7751,0.2084 [155.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.7129, l2 = 61.1257
+INFO:root:u_extraversion disc test= 0.9116,0.9151,0.9139,0.9151auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    69 [369.4 s]
+ validation= 0.7742,0.2077 [154.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.9312, l2 = 61.1323
+INFO:root:u_extraversion disc test= 0.9139,0.9174,0.9163,0.9174auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    70 [354.4 s]
+ validation= 0.7757,0.2091 [156.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.4800, l2 = 61.0916
+INFO:root:u_extraversion disc test= 0.9142,0.9178,0.9166,0.9178auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    71 [370.8 s]
+ validation= 0.7767,0.2086 [157.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.8146, l2 = 61.0799
+INFO:root:u_extraversion disc test= 0.9131,0.9167,0.9156,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    72 [427.4 s]
+ validation= 0.7761,0.2087 [160.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.5103, l2 = 61.0667
+INFO:root:u_extraversion disc test= 0.9126,0.9162,0.9150,0.9162auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    73 [318.1 s]
+ validation= 0.7764,0.2087 [157.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.4823, l2 = 61.0441
+INFO:root:u_extraversion disc test= 0.9130,0.9166,0.9154,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    74 [395.6 s]
+ validation= 0.7767,0.2091 [154.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.4757, l2 = 61.0367
+INFO:root:u_extraversion disc test= 0.9145,0.9179,0.9168,0.9179auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    75 [425.3 s]
+ validation= 0.7758,0.2085 [164.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.2960, l2 = 60.9884
+INFO:root:u_extraversion disc test= 0.9142,0.9176,0.9165,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    76 [372.1 s]
+ validation= 0.7769,0.2091 [154.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.2763, l2 = 60.9729
+INFO:root:u_extraversion disc test= 0.9140,0.9174,0.9163,0.9174auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    77 [390.9 s]
+ validation= 0.7759,0.2087 [158.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.1820, l2 = 60.9232
+INFO:root:u_extraversion disc test= 0.9149,0.9183,0.9172,0.9183auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    78 [369.8 s]
+ validation= 0.7769,0.2092 [153.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.1632, l2 = 60.9116
+INFO:root:u_extraversion disc test= 0.9145,0.9177,0.9166,0.9177auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    79 [420.2 s]
+ validation= 0.7764,0.2088 [160.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.1477, l2 = 60.8811
+INFO:root:u_extraversion disc test= 0.9144,0.9176,0.9165,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    80 [408.4 s]
+ validation= 0.7775,0.2093 [162.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.1444, l2 = 60.8921
+INFO:root:u_extraversion disc test= 0.9132,0.9163,0.9153,0.9163auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    81 [403.5 s]
+ validation= 0.7786,0.2098 [156.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.8728, l2 = 60.8393
+INFO:root:u_extraversion disc test= 0.9148,0.9177,0.9167,0.9177auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    82 [338.2 s]
+ validation= 0.7779,0.2095 [157.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.9818, l2 = 60.8199
+INFO:root:u_extraversion disc test= 0.9145,0.9176,0.9165,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    83 [380.0 s]
+ validation= 0.7789,0.2095 [154.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.8736, l2 = 60.7997
+INFO:root:u_extraversion disc test= 0.9130,0.9162,0.9151,0.9162auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    84 [389.6 s]
+ validation= 0.7772,0.2089 [153.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.8857, l2 = 60.7731
+INFO:root:u_extraversion disc test= 0.9122,0.9154,0.9143,0.9154auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    85 [373.1 s]
+ validation= 0.7779,0.2093 [155.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.8802, l2 = 60.7553
+INFO:root:u_extraversion disc test= 0.9132,0.9163,0.9153,0.9163auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    86 [324.6 s]
+ validation= 0.7778,0.2092 [153.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.0650, l2 = 60.7748
+INFO:root:u_extraversion disc test= 0.9151,0.9182,0.9172,0.9182auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    87 [362.6 s]
+ validation= 0.7785,0.2092 [149.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.6102, l2 = 60.7159
+INFO:root:u_extraversion disc test= 0.9134,0.9165,0.9155,0.9165auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    88 [420.4 s]
+ validation= 0.7791,0.2098 [156.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.5300, l2 = 60.6306
+INFO:root:u_extraversion disc test= 0.9125,0.9159,0.9147,0.9159auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    89 [381.6 s]
+ validation= 0.7788,0.2094 [147.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.6339, l2 = 60.6208
+INFO:root:u_extraversion disc test= 0.9121,0.9155,0.9143,0.9155auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    90 [381.1 s]
+ validation= 0.7795,0.2101 [158.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.7635, l2 = 60.6364
+INFO:root:u_extraversion disc test= 0.9109,0.9145,0.9133,0.9145auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    91 [411.5 s]
+ validation= 0.7785,0.2096 [159.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.3594, l2 = 60.5991
+INFO:root:u_extraversion disc test= 0.9104,0.9140,0.9128,0.9140auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    92 [527.8 s]
+ validation= 0.7791,0.2100 [196.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.5561, l2 = 60.5856
+INFO:root:u_extraversion disc test= 0.9115,0.9152,0.9140,0.9152auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    93 [502.7 s]
+ validation= 0.7797,0.2103 [202.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.6058, l2 = 60.6039
+INFO:root:u_extraversion disc test= 0.9130,0.9167,0.9155,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    94 [400.0 s]
+ validation= 0.7807,0.2106 [175.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.2363, l2 = 60.5776
+INFO:root:u_extraversion disc test= 0.9137,0.9173,0.9162,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    95 [439.6 s]
+ validation= 0.7800,0.2106 [164.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.3254, l2 = 60.5289
+INFO:root:u_extraversion disc test= 0.9134,0.9172,0.9160,0.9172auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    96 [383.2 s]
+ validation= 0.7808,0.2107 [154.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.3075, l2 = 60.5016
+INFO:root:u_extraversion disc test= 0.9131,0.9167,0.9155,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    97 [390.5 s]
+ validation= 0.7802,0.2107 [150.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.4668, l2 = 60.5094
+INFO:root:u_extraversion disc test= 0.9126,0.9160,0.9149,0.9160auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    98 [382.8 s]
+ validation= 0.7799,0.2102 [156.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.2967, l2 = 60.5052
+INFO:root:u_extraversion disc test= 0.9109,0.9145,0.9133,0.9145auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    99 [433.7 s]
+ validation= 0.7807,0.2104 [155.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.1560, l2 = 60.4589
+INFO:root:u_extraversion disc test= 0.9126,0.9161,0.9150,0.9161auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   100 [353.7 s]
+ validation= 0.7804,0.2108 [161.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.9775, l2 = 60.4183
+INFO:root:u_extraversion disc test= 0.9131,0.9166,0.9154,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   101 [356.8 s]
+ validation= 0.7793,0.2101 [155.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.2505, l2 = 60.3859
+INFO:root:u_extraversion disc test= 0.9124,0.9157,0.9146,0.9157auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   102 [394.3 s]
+ validation= 0.7799,0.2104 [160.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.2270, l2 = 60.4218
+INFO:root:u_extraversion disc test= 0.9135,0.9169,0.9158,0.9169auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   103 [373.5 s]
+ validation= 0.7787,0.2096 [155.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.9274, l2 = 60.3933
+INFO:root:u_extraversion disc test= 0.9143,0.9176,0.9165,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   104 [324.2 s]
+ validation= 0.7821,0.2107 [157.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.2609, l2 = 60.3802
+INFO:root:u_extraversion disc test= 0.9133,0.9166,0.9155,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   105 [359.3 s]
+ validation= 0.7809,0.2110 [157.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.0960, l2 = 60.3962
+INFO:root:u_extraversion disc test= 0.9140,0.9173,0.9162,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   106 [364.6 s]
+ validation= 0.7808,0.2108 [153.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.1526, l2 = 60.3881
+INFO:root:u_extraversion disc test= 0.9140,0.9170,0.9160,0.9170auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   107 [388.3 s]
+ validation= 0.7828,0.2118 [147.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.7083, l2 = 60.3278
+INFO:root:u_extraversion disc test= 0.9159,0.9188,0.9178,0.9188auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   108 [353.0 s]
+ validation= 0.7832,0.2115 [157.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.8855, l2 = 60.2630
+INFO:root:u_extraversion disc test= 0.9151,0.9184,0.9173,0.9184auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   109 [496.9 s]
+ validation= 0.7836,0.2120 [148.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.8004, l2 = 60.2566
+INFO:root:u_extraversion disc test= 0.9155,0.9188,0.9177,0.9188auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   110 [384.6 s]
+ validation= 0.7831,0.2117 [157.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.9360, l2 = 60.2991
+INFO:root:u_extraversion disc test= 0.9151,0.9184,0.9173,0.9184auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   111 [362.8 s]
+ validation= 0.7832,0.2119 [148.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.7669, l2 = 60.2320
+INFO:root:u_extraversion disc test= 0.9155,0.9185,0.9175,0.9185auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   112 [357.9 s]
+ validation= 0.7831,0.2116 [157.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.9257, l2 = 60.2547
+INFO:root:u_extraversion disc test= 0.9151,0.9184,0.9173,0.9184auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   113 [468.4 s]
+ validation= 0.7835,0.2115 [169.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.7981, l2 = 60.2579
+INFO:root:u_extraversion disc test= 0.9150,0.9183,0.9172,0.9183auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   114 [447.6 s]
+ validation= 0.7834,0.2116 [166.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.6264, l2 = 60.2279
+INFO:root:u_extraversion disc test= 0.9152,0.9183,0.9173,0.9183auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   115 [453.4 s]
+ validation= 0.7836,0.2120 [154.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.6162, l2 = 60.1592
+INFO:root:u_extraversion disc test= 0.9134,0.9168,0.9157,0.9168auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   116 [499.3 s]
+ validation= 0.7824,0.2111 [166.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.1004, l2 = 60.1966
+INFO:root:u_extraversion disc test= 0.9125,0.9161,0.9149,0.9161auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   117 [361.0 s]
+ validation= 0.7837,0.2120 [158.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.3117, l2 = 60.1635
+INFO:root:u_extraversion disc test= 0.9127,0.9164,0.9152,0.9164auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   118 [395.4 s]
+ validation= 0.7813,0.2115 [157.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.5906, l2 = 60.1286
+INFO:root:u_extraversion disc test= 0.9132,0.9170,0.9158,0.9170auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   119 [321.8 s]
+ validation= 0.7833,0.2116 [152.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.7029, l2 = 60.1357
+INFO:root:u_extraversion disc test= 0.9135,0.9173,0.9161,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   120 [381.2 s]
+ validation= 0.7830,0.2119 [155.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.6719, l2 = 60.1407
+INFO:root:u_extraversion disc test= 0.9146,0.9183,0.9171,0.9183auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   121 [342.3 s]
+ validation= 0.7823,0.2117 [150.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.4218, l2 = 60.1354
+INFO:root:u_extraversion disc test= 0.9132,0.9169,0.9157,0.9169auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   122 [373.3 s]
+ validation= 0.7829,0.2119 [160.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.3361, l2 = 60.0794
+INFO:root:u_extraversion disc test= 0.9105,0.9144,0.9131,0.9144auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   123 [259.5 s]
+ validation= 0.7824,0.2113 [151.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.7626, l2 = 60.0781
+INFO:root:u_extraversion disc test= 0.9117,0.9155,0.9143,0.9155auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   124 [370.7 s]
+ validation= 0.7832,0.2118 [148.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.4459, l2 = 60.0362
+INFO:root:u_extraversion disc test= 0.9140,0.9176,0.9165,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   125 [248.7 s]
+ validation= 0.7837,0.2119 [159.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.5960, l2 = 60.0644
+INFO:root:u_extraversion disc test= 0.9141,0.9178,0.9166,0.9178auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   126 [376.1 s]
+ validation= 0.7834,0.2124 [158.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.3906, l2 = 60.0370
+INFO:root:u_extraversion disc test= 0.9130,0.9167,0.9155,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   127 [333.1 s]
+ validation= 0.7827,0.2114 [167.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.3767, l2 = 60.0249
+INFO:root:u_extraversion disc test= 0.9135,0.9171,0.9160,0.9171auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   128 [474.9 s]
+ validation= 0.7842,0.2125 [155.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.2722, l2 = 59.9967
+INFO:root:u_extraversion disc test= 0.9128,0.9165,0.9153,0.9165auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   129 [321.3 s]
+ validation= 0.7838,0.2118 [156.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.5039, l2 = 60.0118
+INFO:root:u_extraversion disc test= 0.9136,0.9173,0.9161,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   130 [394.4 s]
+ validation= 0.7843,0.2120 [159.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.3138, l2 = 59.9903
+INFO:root:u_extraversion disc test= 0.9128,0.9166,0.9154,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   131 [363.6 s]
+ validation= 0.7836,0.2115 [164.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.3104, l2 = 59.9752
+INFO:root:u_extraversion disc test= 0.9137,0.9174,0.9162,0.9174auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   132 [373.2 s]
+ validation= 0.7840,0.2119 [154.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.9619, l2 = 59.9160
+INFO:root:u_extraversion disc test= 0.9146,0.9181,0.9170,0.9181auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   133 [422.3 s]
+ validation= 0.7857,0.2130 [156.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.2430, l2 = 59.9085
+INFO:root:u_extraversion disc test= 0.9147,0.9181,0.9170,0.9181auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   134 [404.7 s]
+ validation= 0.7854,0.2129 [138.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.0994, l2 = 59.8565
+INFO:root:u_extraversion disc test= 0.9138,0.9173,0.9162,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   135 [354.1 s]
+ validation= 0.7856,0.2125 [157.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.3893, l2 = 59.9053
+INFO:root:u_extraversion disc test= 0.9135,0.9172,0.9160,0.9172auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   136 [370.4 s]
+ validation= 0.7855,0.2123 [158.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.1023, l2 = 59.8663
+INFO:root:u_extraversion disc test= 0.9137,0.9173,0.9162,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   137 [234.4 s]
+ validation= 0.7853,0.2125 [162.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.0895, l2 = 59.8352
+INFO:root:u_extraversion disc test= 0.9136,0.9174,0.9161,0.9174auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   138 [388.6 s]
+ validation= 0.7852,0.2122 [153.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.0178, l2 = 59.8136
+INFO:root:u_extraversion disc test= 0.9137,0.9175,0.9163,0.9175auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   139 [370.0 s]
+ validation= 0.7837,0.2118 [158.2 s] ndcg@10,f1@10
+INFO:root:Early stop at 139 based on validation result.
+INFO:root:Best Iter (validation) =   133	 valid= 0.7857,0.2130 [86497.4 s] ndcg@10,f1@10 u_extraversion=0.9146auc
+INFO:root:Load model from ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load u_extraversion discriminator model from ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/u_extraversion_disc.pt
+INFO:root:Load model from ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/PMF_PCFR_taobaoserendipity_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_extraversion loss = 0.7038
+INFO:root:Epoch     1 [1.9 s]
+INFO:root:u_extraversion disc test = 0.5023,0.4591,0.3543,0.4591 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_extraversion loss = 0.6957
+INFO:root:
+
+INFO:root:u_extraversion loss = 0.6201
+INFO:root:Epoch   126 [1.9 s]
+INFO:root:u_extraversion disc test = 0.5081,0.4517,0.3633,0.4517 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_extraversion loss = 0.5783
+INFO:root:Epoch   251 [1.5 s]
+INFO:root:u_extraversion disc test = 0.5015,0.4605,0.3691,0.4605 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_extraversion loss = 0.5516
+INFO:root:Epoch   376 [1.4 s]
+INFO:root:u_extraversion disc test = 0.5029,0.4530,0.3402,0.4530 auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion best auc: 0.5104
+INFO:root:And the corresponding u_extraversion best disc test= 0.5104,0.4482,0.3517,0.4482 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_extraversion discriminator model from ../model/PMF_PCFR_taobaoserendipity_u_extraversion_neg_sample=1000/u_extraversion_eval_disc.pt
+INFO:root:Test After Training = 0.7857,0.2115 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.001872195211054417

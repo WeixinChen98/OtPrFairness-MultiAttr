@@ -1,0 +1,306 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'DMF', 'fairness_framework': 'None', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '3', 'verbose': 20, 'log_file': '../log/DMF_None__douban_u_openness__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'douban', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_openness'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'num_layers': 3, 'model_path': '../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: DMF
+INFO:root:Fairness framework: None
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 19451
+INFO:root:load validation csv...
+INFO:root:size of validation: 2431
+INFO:root:load test csv...
+INFO:root:size of test: 2432
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 287488
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 554.8635, l2 = 0.0410
+INFO:root:Epoch     1 [3.1 s]
+ validation= 0.1638,0.0802 [35.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 321.8370, l2 = 0.0414
+INFO:root:Epoch     2 [2.7 s]
+ validation= 0.1599,0.0824 [39.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 298.9593, l2 = 0.0415
+INFO:root:Epoch     3 [1.6 s]
+ validation= 0.1756,0.0868 [42.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 287.3093, l2 = 0.0416
+INFO:root:Epoch     4 [0.9 s]
+ validation= 0.1964,0.0947 [58.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 279.0332, l2 = 0.0417
+INFO:root:Epoch     5 [2.2 s]
+ validation= 0.2021,0.0993 [49.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 277.5194, l2 = 0.0418
+INFO:root:Epoch     6 [0.6 s]
+ validation= 0.2114,0.1022 [49.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 271.0775, l2 = 0.0419
+INFO:root:Epoch     7 [1.7 s]
+ validation= 0.2143,0.1022 [58.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 275.4509, l2 = 0.0421
+INFO:root:Epoch     8 [1.2 s]
+ validation= 0.2168,0.1075 [48.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 264.1422, l2 = 0.0421
+INFO:root:Epoch     9 [1.0 s]
+ validation= 0.2215,0.1058 [48.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 259.5701, l2 = 0.0423
+INFO:root:Epoch    10 [0.6 s]
+ validation= 0.2155,0.1050 [44.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 258.9333, l2 = 0.0424
+INFO:root:Epoch    11 [0.7 s]
+ validation= 0.2327,0.1078 [50.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 258.2162, l2 = 0.0425
+INFO:root:Epoch    12 [0.7 s]
+ validation= 0.2170,0.1050 [51.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 255.2237, l2 = 0.0427
+INFO:root:Epoch    13 [1.3 s]
+ validation= 0.2336,0.1126 [55.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 254.6776, l2 = 0.0429
+INFO:root:Epoch    14 [1.2 s]
+ validation= 0.2287,0.1116 [55.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 258.0583, l2 = 0.0430
+INFO:root:Epoch    15 [1.2 s]
+ validation= 0.2405,0.1116 [38.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 253.6649, l2 = 0.0432
+INFO:root:Epoch    16 [0.6 s]
+ validation= 0.2354,0.1124 [46.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 253.5739, l2 = 0.0434
+INFO:root:Epoch    17 [1.1 s]
+ validation= 0.2358,0.1133 [51.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 245.4414, l2 = 0.0436
+INFO:root:Epoch    18 [1.7 s]
+ validation= 0.2320,0.1098 [64.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 245.8426, l2 = 0.0437
+INFO:root:Epoch    19 [1.7 s]
+ validation= 0.2366,0.1143 [50.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 249.0018, l2 = 0.0439
+INFO:root:Epoch    20 [0.9 s]
+ validation= 0.2352,0.1126 [44.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 241.3675, l2 = 0.0441
+INFO:root:Epoch    21 [1.1 s]
+ validation= 0.2356,0.1157 [44.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 248.8411, l2 = 0.0443
+INFO:root:Epoch    22 [0.8 s]
+ validation= 0.2443,0.1180 [49.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 242.2384, l2 = 0.0445
+INFO:root:Epoch    23 [1.6 s]
+ validation= 0.2410,0.1170 [42.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 239.9783, l2 = 0.0446
+INFO:root:Epoch    24 [1.3 s]
+ validation= 0.2344,0.1135 [50.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 243.0974, l2 = 0.0448
+INFO:root:Epoch    25 [1.0 s]
+ validation= 0.2302,0.1136 [50.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 243.1429, l2 = 0.0450
+INFO:root:Epoch    26 [0.8 s]
+ validation= 0.2344,0.1175 [58.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 235.3842, l2 = 0.0452
+INFO:root:Epoch    27 [1.4 s]
+ validation= 0.2461,0.1135 [43.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 238.9742, l2 = 0.0454
+INFO:root:Epoch    28 [0.5 s]
+ validation= 0.2493,0.1153 [42.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 234.6391, l2 = 0.0456
+INFO:root:Epoch    29 [0.6 s]
+ validation= 0.2408,0.1146 [45.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 236.7439, l2 = 0.0459
+INFO:root:Epoch    30 [1.1 s]
+ validation= 0.2452,0.1166 [39.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 230.4391, l2 = 0.0461
+INFO:root:Epoch    31 [1.6 s]
+ validation= 0.2379,0.1169 [55.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 227.7448, l2 = 0.0464
+INFO:root:Epoch    32 [1.2 s]
+ validation= 0.2230,0.1108 [37.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 233.5578, l2 = 0.0466
+INFO:root:Epoch    33 [1.0 s]
+ validation= 0.2379,0.1144 [47.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 228.3432, l2 = 0.0468
+INFO:root:Epoch    34 [1.1 s]
+ validation= 0.2269,0.1125 [42.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 225.5140, l2 = 0.0471
+INFO:root:Epoch    35 [0.6 s]
+ validation= 0.2333,0.1151 [40.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 226.7825, l2 = 0.0473
+INFO:root:Epoch    36 [0.9 s]
+ validation= 0.2354,0.1165 [45.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 223.7814, l2 = 0.0475
+INFO:root:Epoch    37 [0.9 s]
+ validation= 0.2302,0.1132 [36.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 225.2455, l2 = 0.0478
+INFO:root:Epoch    38 [0.5 s]
+ validation= 0.2358,0.1188 [46.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 214.7678, l2 = 0.0480
+INFO:root:Epoch    39 [0.7 s]
+ validation= 0.2181,0.1132 [39.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 223.3083, l2 = 0.0484
+INFO:root:Epoch    40 [1.0 s]
+ validation= 0.2325,0.1131 [48.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 217.6614, l2 = 0.0486
+INFO:root:Epoch    41 [0.7 s]
+ validation= 0.2156,0.1105 [42.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 218.5653, l2 = 0.0489
+INFO:root:Epoch    42 [0.8 s]
+ validation= 0.2194,0.1139 [37.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.5820, l2 = 0.0492
+INFO:root:Epoch    43 [0.7 s]
+ validation= 0.2221,0.1138 [36.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.9850, l2 = 0.0494
+INFO:root:Epoch    44 [0.5 s]
+ validation= 0.2208,0.1123 [35.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 205.8195, l2 = 0.0497
+INFO:root:Epoch    45 [0.6 s]
+ validation= 0.2195,0.1087 [36.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 214.0584, l2 = 0.0500
+INFO:root:Epoch    46 [0.9 s]
+ validation= 0.2237,0.1147 [40.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.2180, l2 = 0.0502
+INFO:root:Epoch    47 [1.0 s]
+ validation= 0.2286,0.1129 [40.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 204.5437, l2 = 0.0505
+INFO:root:Epoch    48 [0.8 s]
+ validation= 0.2256,0.1141 [32.6 s] ndcg@10,f1@10
+INFO:root:Early stop at 48 based on validation result.
+INFO:root:Best Iter (validation) =    28	 valid= 0.2493,0.1153 [2249.3 s] ndcg@10,f1@10
+INFO:root:Load model from ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load model from ../model/DMF_None_douban_u_openness_neg_sample=1000/DMF_None_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_openness loss = 0.6966
+INFO:root:Epoch     1 [0.5 s]
+INFO:root:u_openness disc test = 0.5000,0.5015,0.3340,0.5015 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_openness loss = 0.6957
+INFO:root:
+
+INFO:root:u_openness loss = 0.6798
+INFO:root:Epoch   126 [0.3 s]
+INFO:root:u_openness disc test = 0.5196,0.5191,0.4997,0.5191 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_openness loss = 0.6655
+INFO:root:Epoch   251 [0.3 s]
+INFO:root:u_openness disc test = 0.5193,0.5191,0.5160,0.5191 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_openness loss = 0.6423
+INFO:root:Epoch   376 [0.2 s]
+INFO:root:u_openness disc test = 0.5281,0.5279,0.5259,0.5279 auc, acc, f1_macro, f1_micro
+INFO:root:u_openness best auc: 0.5493
+INFO:root:And the corresponding u_openness best disc test= 0.5493,0.5484,0.5011,0.5484 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_openness discriminator model from ../model/DMF_None_douban_u_openness_neg_sample=1000/u_openness_eval_disc.pt
+INFO:root:Test After Training = 0.2407,0.1198 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.011355343183365618

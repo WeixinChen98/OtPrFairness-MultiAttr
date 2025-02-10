@@ -1,0 +1,981 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'MLP', 'fairness_framework': 'FairRec', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '0', 'verbose': 20, 'log_file': '../log/MLP_FairRec__taobaoserendipity_u_conscientiousness__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'taobaoserendipity', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_conscientiousness'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'num_layers': 3, 'model_path': '../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.05, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: MLP
+INFO:root:Fairness framework: FairRec
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 9132376
+INFO:root:load validation csv...
+INFO:root:size of validation: 1141547
+INFO:root:load test csv...
+INFO:root:size of test: 1141548
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 54166593
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 595.8044, l2 = 21.7798
+INFO:root:u_conscientiousness disc test= 0.6002,0.6359,0.5847,0.6359auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.6088,0.6423,0.5970,0.6423auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [2291.4 s]
+ validation= 0.5070,0.1060 [238.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 493.0068, l2 = 44.3080
+INFO:root:u_conscientiousness disc test= 0.6402,0.6581,0.6406,0.6581auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.6484,0.6667,0.6489,0.6667auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [2315.5 s]
+ validation= 0.5431,0.1167 [209.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 426.3781, l2 = 57.6802
+INFO:root:u_conscientiousness disc test= 0.6623,0.6738,0.6636,0.6738auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.6654,0.6784,0.6669,0.6784auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [2419.6 s]
+ validation= 0.5499,0.1181 [211.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 383.2552, l2 = 66.9745
+INFO:root:u_conscientiousness disc test= 0.6700,0.6815,0.6713,0.6815auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.6752,0.6874,0.6768,0.6874auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [2500.6 s]
+ validation= 0.5609,0.1212 [233.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 349.1281, l2 = 73.2419
+INFO:root:u_conscientiousness disc test= 0.6788,0.6912,0.6804,0.6912auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.6877,0.6989,0.6893,0.6989auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [2471.9 s]
+ validation= 0.5694,0.1244 [216.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 325.0456, l2 = 77.0875
+INFO:root:u_conscientiousness disc test= 0.6941,0.7065,0.6960,0.7065auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7024,0.7140,0.7043,0.7140auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [2524.0 s]
+ validation= 0.5821,0.1282 [211.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 307.8445, l2 = 79.1259
+INFO:root:u_conscientiousness disc test= 0.7091,0.7216,0.7114,0.7216auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7230,0.7343,0.7253,0.7343auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [2472.4 s]
+ validation= 0.5851,0.1297 [214.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 295.7035, l2 = 80.0691
+INFO:root:u_conscientiousness disc test= 0.7196,0.7323,0.7221,0.7323auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7343,0.7450,0.7366,0.7450auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [2399.3 s]
+ validation= 0.5964,0.1337 [214.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 287.0005, l2 = 80.5166
+INFO:root:u_conscientiousness disc test= 0.7294,0.7419,0.7321,0.7419auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7421,0.7520,0.7443,0.7520auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [2349.2 s]
+ validation= 0.6035,0.1360 [231.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 280.0830, l2 = 80.6642
+INFO:root:u_conscientiousness disc test= 0.7371,0.7490,0.7399,0.7490auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7544,0.7637,0.7567,0.7637auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [2355.6 s]
+ validation= 0.6145,0.1411 [213.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 274.6729, l2 = 80.7224
+INFO:root:u_conscientiousness disc test= 0.7400,0.7521,0.7429,0.7521auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7585,0.7679,0.7609,0.7679auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [2276.4 s]
+ validation= 0.6165,0.1421 [228.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 270.3139, l2 = 80.7110
+INFO:root:u_conscientiousness disc test= 0.7479,0.7596,0.7509,0.7596auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7651,0.7737,0.7673,0.7737auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [2436.9 s]
+ validation= 0.6143,0.1411 [223.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 266.1548, l2 = 80.6303
+INFO:root:u_conscientiousness disc test= 0.7529,0.7643,0.7559,0.7643auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7695,0.7773,0.7714,0.7773auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [2597.8 s]
+ validation= 0.6213,0.1436 [202.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 262.8525, l2 = 80.5337
+INFO:root:u_conscientiousness disc test= 0.7558,0.7668,0.7587,0.7668auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7744,0.7820,0.7763,0.7820auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [2757.4 s]
+ validation= 0.6251,0.1450 [223.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 259.5568, l2 = 80.4928
+INFO:root:u_conscientiousness disc test= 0.7581,0.7689,0.7610,0.7689auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7775,0.7848,0.7793,0.7848auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [2730.1 s]
+ validation= 0.6273,0.1463 [243.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 257.0469, l2 = 80.4727
+INFO:root:u_conscientiousness disc test= 0.7635,0.7738,0.7664,0.7738auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7826,0.7896,0.7843,0.7896auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [2645.1 s]
+ validation= 0.6258,0.1463 [239.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 254.2635, l2 = 80.4385
+INFO:root:u_conscientiousness disc test= 0.7673,0.7777,0.7702,0.7777auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7863,0.7928,0.7878,0.7928auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [2512.4 s]
+ validation= 0.6294,0.1473 [220.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 252.1246, l2 = 80.3959
+INFO:root:u_conscientiousness disc test= 0.7708,0.7813,0.7739,0.7813auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7911,0.7975,0.7927,0.7975auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [2496.4 s]
+ validation= 0.6287,0.1472 [228.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 249.8449, l2 = 80.3506
+INFO:root:u_conscientiousness disc test= 0.7737,0.7840,0.7768,0.7840auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7920,0.7989,0.7938,0.7989auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [2504.8 s]
+ validation= 0.6297,0.1477 [214.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 247.8332, l2 = 80.3287
+INFO:root:u_conscientiousness disc test= 0.7754,0.7855,0.7784,0.7855auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.7984,0.8048,0.8001,0.8048auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [2496.1 s]
+ validation= 0.6334,0.1486 [209.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 245.7964, l2 = 80.2836
+INFO:root:u_conscientiousness disc test= 0.7780,0.7876,0.7809,0.7876auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8003,0.8067,0.8020,0.8067auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [2941.9 s]
+ validation= 0.6302,0.1476 [224.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 244.1767, l2 = 80.2483
+INFO:root:u_conscientiousness disc test= 0.7777,0.7872,0.7806,0.7872auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8018,0.8080,0.8034,0.8080auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    22 [2826.9 s]
+ validation= 0.6306,0.1485 [267.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 242.6323, l2 = 80.1562
+INFO:root:u_conscientiousness disc test= 0.7846,0.7936,0.7873,0.7936auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8077,0.8131,0.8090,0.8131auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    23 [2893.3 s]
+ validation= 0.6320,0.1484 [239.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 241.3911, l2 = 80.0796
+INFO:root:u_conscientiousness disc test= 0.7902,0.7991,0.7930,0.7991auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8084,0.8134,0.8094,0.8134auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    24 [2543.4 s]
+ validation= 0.6314,0.1481 [244.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 239.8031, l2 = 79.9527
+INFO:root:u_conscientiousness disc test= 0.7901,0.7992,0.7930,0.7992auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8094,0.8145,0.8105,0.8145auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    25 [2623.0 s]
+ validation= 0.6328,0.1484 [218.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 238.8310, l2 = 79.8059
+INFO:root:u_conscientiousness disc test= 0.7933,0.8020,0.7961,0.8020auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8125,0.8179,0.8139,0.8179auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    26 [2517.7 s]
+ validation= 0.6345,0.1490 [180.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 238.0008, l2 = 79.7152
+INFO:root:u_conscientiousness disc test= 0.7947,0.8029,0.7973,0.8029auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8139,0.8196,0.8155,0.8196auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    27 [2457.3 s]
+ validation= 0.6341,0.1491 [202.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 236.4767, l2 = 79.5628
+INFO:root:u_conscientiousness disc test= 0.7974,0.8056,0.8000,0.8056auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8152,0.8208,0.8167,0.8208auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    28 [2431.7 s]
+ validation= 0.6339,0.1492 [187.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 235.9006, l2 = 79.4077
+INFO:root:u_conscientiousness disc test= 0.7991,0.8072,0.8017,0.8072auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8150,0.8206,0.8165,0.8206auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    29 [2410.5 s]
+ validation= 0.6328,0.1491 [202.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 234.5684, l2 = 79.2368
+INFO:root:u_conscientiousness disc test= 0.7990,0.8073,0.8017,0.8073auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8177,0.8228,0.8189,0.8228auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    30 [2432.2 s]
+ validation= 0.6331,0.1489 [205.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 233.7083, l2 = 79.0898
+INFO:root:u_conscientiousness disc test= 0.8023,0.8105,0.8051,0.8105auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8220,0.8268,0.8231,0.8268auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    31 [2410.3 s]
+ validation= 0.6349,0.1495 [196.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 232.7559, l2 = 78.9695
+INFO:root:u_conscientiousness disc test= 0.8071,0.8154,0.8100,0.8154auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8222,0.8264,0.8229,0.8264auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    32 [2436.9 s]
+ validation= 0.6374,0.1507 [199.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 232.2350, l2 = 78.8077
+INFO:root:u_conscientiousness disc test= 0.8101,0.8179,0.8127,0.8179auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8263,0.8297,0.8266,0.8297auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    33 [2459.9 s]
+ validation= 0.6331,0.1490 [186.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 231.8517, l2 = 78.7052
+INFO:root:u_conscientiousness disc test= 0.8056,0.8142,0.8086,0.8142auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8293,0.8331,0.8299,0.8331auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    34 [2379.2 s]
+ validation= 0.6310,0.1485 [193.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 230.7111, l2 = 78.6010
+INFO:root:u_conscientiousness disc test= 0.8082,0.8166,0.8111,0.8166auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8319,0.8360,0.8327,0.8360auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    35 [2198.3 s]
+ validation= 0.6312,0.1488 [203.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 230.0510, l2 = 78.4896
+INFO:root:u_conscientiousness disc test= 0.8106,0.8189,0.8135,0.8189auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8353,0.8389,0.8358,0.8389auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    36 [2107.9 s]
+ validation= 0.6340,0.1493 [195.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 229.4568, l2 = 78.3107
+INFO:root:u_conscientiousness disc test= 0.8117,0.8199,0.8146,0.8199auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8357,0.8395,0.8364,0.8395auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    37 [1894.2 s]
+ validation= 0.6333,0.1493 [184.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 228.7594, l2 = 78.1674
+INFO:root:u_conscientiousness disc test= 0.8129,0.8214,0.8160,0.8214auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8367,0.8403,0.8373,0.8403auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    38 [1952.1 s]
+ validation= 0.6339,0.1495 [175.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 227.9405, l2 = 78.0419
+INFO:root:u_conscientiousness disc test= 0.8153,0.8239,0.8185,0.8239auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8377,0.8413,0.8382,0.8413auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    39 [1913.3 s]
+ validation= 0.6352,0.1496 [204.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 227.5076, l2 = 77.9334
+INFO:root:u_conscientiousness disc test= 0.8154,0.8244,0.8188,0.8244auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8409,0.8444,0.8414,0.8444auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    40 [1379.8 s]
+ validation= 0.6342,0.1495 [196.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 226.9590, l2 = 77.8527
+INFO:root:u_conscientiousness disc test= 0.8161,0.8253,0.8196,0.8253auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8431,0.8460,0.8432,0.8460auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    41 [1986.0 s]
+ validation= 0.6349,0.1503 [193.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 226.1544, l2 = 77.7002
+INFO:root:u_conscientiousness disc test= 0.8226,0.8310,0.8258,0.8310auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8436,0.8468,0.8440,0.8468auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    42 [1724.2 s]
+ validation= 0.6350,0.1496 [195.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 225.9630, l2 = 77.5690
+INFO:root:u_conscientiousness disc test= 0.8202,0.8287,0.8234,0.8287auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8483,0.8513,0.8486,0.8513auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    43 [1818.4 s]
+ validation= 0.6361,0.1501 [179.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 225.5255, l2 = 77.4283
+INFO:root:u_conscientiousness disc test= 0.8196,0.8282,0.8229,0.8282auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8517,0.8542,0.8517,0.8542auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    44 [1640.6 s]
+ validation= 0.6352,0.1496 [184.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 224.8808, l2 = 77.2871
+INFO:root:u_conscientiousness disc test= 0.8227,0.8307,0.8257,0.8307auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8512,0.8539,0.8513,0.8539auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    45 [1662.1 s]
+ validation= 0.6403,0.1509 [161.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 224.6732, l2 = 77.1745
+INFO:root:u_conscientiousness disc test= 0.8239,0.8320,0.8270,0.8320auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8501,0.8531,0.8504,0.8531auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    46 [2852.0 s]
+ validation= 0.6395,0.1511 [234.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 224.1764, l2 = 77.0914
+INFO:root:u_conscientiousness disc test= 0.8259,0.8337,0.8289,0.8337auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8529,0.8559,0.8533,0.8559auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    47 [3177.3 s]
+ validation= 0.6372,0.1504 [221.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 223.4979, l2 = 76.9651
+INFO:root:u_conscientiousness disc test= 0.8266,0.8345,0.8297,0.8345auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8542,0.8572,0.8545,0.8572auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    48 [2905.9 s]
+ validation= 0.6379,0.1510 [207.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 222.8821, l2 = 76.9172
+INFO:root:u_conscientiousness disc test= 0.8270,0.8346,0.8299,0.8346auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8534,0.8568,0.8540,0.8568auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    49 [2649.3 s]
+ validation= 0.6392,0.1509 [258.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 222.9222, l2 = 76.8683
+INFO:root:u_conscientiousness disc test= 0.8250,0.8327,0.8279,0.8327auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8507,0.8546,0.8516,0.8546auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    50 [2819.6 s]
+ validation= 0.6410,0.1514 [229.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 222.3270, l2 = 76.8354
+INFO:root:u_conscientiousness disc test= 0.8276,0.8352,0.8306,0.8352auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8511,0.8550,0.8520,0.8550auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    51 [2841.2 s]
+ validation= 0.6400,0.1513 [209.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 221.8580, l2 = 76.7938
+INFO:root:u_conscientiousness disc test= 0.8270,0.8348,0.8300,0.8348auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8545,0.8585,0.8555,0.8585auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    52 [1324.4 s]
+ validation= 0.6407,0.1512 [170.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 221.5847, l2 = 76.7150
+INFO:root:u_conscientiousness disc test= 0.8284,0.8364,0.8315,0.8364auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8533,0.8571,0.8542,0.8571auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    53 [1154.9 s]
+ validation= 0.6407,0.1515 [169.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 221.3849, l2 = 76.7656
+INFO:root:u_conscientiousness disc test= 0.8264,0.8343,0.8294,0.8343auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8547,0.8581,0.8554,0.8581auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    54 [2696.7 s]
+ validation= 0.6402,0.1508 [205.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 220.8414, l2 = 76.7452
+INFO:root:u_conscientiousness disc test= 0.8249,0.8328,0.8279,0.8328auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8544,0.8577,0.8549,0.8577auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    55 [2639.7 s]
+ validation= 0.6391,0.1505 [213.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 220.4469, l2 = 76.6976
+INFO:root:u_conscientiousness disc test= 0.8252,0.8327,0.8280,0.8327auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8559,0.8593,0.8565,0.8593auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    56 [2185.8 s]
+ validation= 0.6428,0.1519 [205.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 220.0659, l2 = 76.6625
+INFO:root:u_conscientiousness disc test= 0.8271,0.8347,0.8300,0.8347auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8578,0.8612,0.8585,0.8612auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    57 [2171.5 s]
+ validation= 0.6367,0.1500 [199.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 219.6660, l2 = 76.5992
+INFO:root:u_conscientiousness disc test= 0.8279,0.8358,0.8310,0.8358auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8589,0.8629,0.8600,0.8629auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    58 [2077.2 s]
+ validation= 0.6414,0.1513 [183.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 219.7896, l2 = 76.5570
+INFO:root:u_conscientiousness disc test= 0.8277,0.8357,0.8309,0.8357auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8608,0.8649,0.8621,0.8649auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    59 [2024.1 s]
+ validation= 0.6380,0.1503 [190.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 218.9856, l2 = 76.4700
+INFO:root:u_conscientiousness disc test= 0.8288,0.8366,0.8318,0.8366auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8618,0.8659,0.8630,0.8659auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    60 [1994.8 s]
+ validation= 0.6370,0.1497 [202.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 218.6862, l2 = 76.4146
+INFO:root:u_conscientiousness disc test= 0.8293,0.8372,0.8324,0.8372auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8602,0.8643,0.8614,0.8643auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    61 [1944.0 s]
+ validation= 0.6396,0.1512 [203.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 218.8939, l2 = 76.3679
+INFO:root:u_conscientiousness disc test= 0.8271,0.8354,0.8304,0.8354auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8582,0.8623,0.8594,0.8623auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    62 [2037.0 s]
+ validation= 0.6380,0.1499 [201.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 218.3739, l2 = 76.2879
+INFO:root:u_conscientiousness disc test= 0.8277,0.8359,0.8310,0.8359auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8600,0.8636,0.8608,0.8636auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    63 [2048.3 s]
+ validation= 0.6411,0.1511 [198.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 218.3359, l2 = 76.2258
+INFO:root:u_conscientiousness disc test= 0.8290,0.8377,0.8326,0.8377auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8621,0.8658,0.8631,0.8658auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    64 [2025.8 s]
+ validation= 0.6374,0.1491 [183.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 217.9029, l2 = 76.1889
+INFO:root:u_conscientiousness disc test= 0.8301,0.8387,0.8336,0.8387auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8646,0.8683,0.8656,0.8683auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    65 [1780.1 s]
+ validation= 0.6362,0.1493 [187.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 217.4008, l2 = 76.1084
+INFO:root:u_conscientiousness disc test= 0.8293,0.8381,0.8329,0.8381auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8649,0.8684,0.8657,0.8684auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    66 [1709.7 s]
+ validation= 0.6382,0.1505 [190.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 217.5464, l2 = 76.1065
+INFO:root:u_conscientiousness disc test= 0.8319,0.8406,0.8356,0.8406auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8660,0.8696,0.8669,0.8696auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    67 [1748.0 s]
+ validation= 0.6385,0.1499 [175.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 217.1218, l2 = 76.0429
+INFO:root:u_conscientiousness disc test= 0.8334,0.8422,0.8371,0.8422auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8661,0.8695,0.8669,0.8695auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    68 [1797.8 s]
+ validation= 0.6402,0.1509 [187.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 216.8698, l2 = 76.0215
+INFO:root:u_conscientiousness disc test= 0.8332,0.8420,0.8369,0.8420auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8649,0.8688,0.8661,0.8688auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    69 [1719.1 s]
+ validation= 0.6399,0.1502 [196.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 216.5920, l2 = 76.0169
+INFO:root:u_conscientiousness disc test= 0.8358,0.8447,0.8396,0.8447auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8629,0.8670,0.8642,0.8670auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    70 [1643.6 s]
+ validation= 0.6391,0.1498 [196.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 216.1803, l2 = 75.9431
+INFO:root:u_conscientiousness disc test= 0.8350,0.8438,0.8388,0.8438auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8633,0.8678,0.8649,0.8678auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    71 [1607.0 s]
+ validation= 0.6414,0.1507 [207.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 215.9261, l2 = 75.8885
+INFO:root:u_conscientiousness disc test= 0.8334,0.8425,0.8373,0.8425auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8650,0.8695,0.8666,0.8695auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    72 [1628.2 s]
+ validation= 0.6396,0.1497 [198.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 215.8781, l2 = 75.9020
+INFO:root:u_conscientiousness disc test= 0.8330,0.8420,0.8369,0.8420auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8626,0.8668,0.8640,0.8668auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    73 [1728.1 s]
+ validation= 0.6398,0.1499 [187.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 215.4751, l2 = 75.8363
+INFO:root:u_conscientiousness disc test= 0.8352,0.8437,0.8388,0.8437auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8651,0.8690,0.8663,0.8690auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    74 [793.7 s]
+ validation= 0.6413,0.1505 [154.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 215.5072, l2 = 75.8025
+INFO:root:u_conscientiousness disc test= 0.8345,0.8432,0.8382,0.8432auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8653,0.8694,0.8666,0.8694auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    75 [632.6 s]
+ validation= 0.6404,0.1502 [152.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 215.0011, l2 = 75.7464
+INFO:root:u_conscientiousness disc test= 0.8362,0.8448,0.8399,0.8448auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8647,0.8689,0.8661,0.8689auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    76 [618.7 s]
+ validation= 0.6428,0.1512 [155.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 214.8863, l2 = 75.6993
+INFO:root:u_conscientiousness disc test= 0.8374,0.8460,0.8411,0.8460auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8647,0.8691,0.8662,0.8691auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    77 [1072.5 s]
+ validation= 0.6411,0.1505 [167.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 214.9738, l2 = 75.6583
+INFO:root:u_conscientiousness disc test= 0.8386,0.8471,0.8423,0.8471auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8643,0.8689,0.8659,0.8689auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    78 [1715.3 s]
+ validation= 0.6436,0.1516 [191.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 214.7089, l2 = 75.6812
+INFO:root:u_conscientiousness disc test= 0.8388,0.8471,0.8424,0.8471auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8659,0.8706,0.8677,0.8706auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    79 [1752.5 s]
+ validation= 0.6415,0.1509 [182.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 214.6213, l2 = 75.6123
+INFO:root:u_conscientiousness disc test= 0.8385,0.8467,0.8420,0.8467auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8679,0.8722,0.8694,0.8722auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    80 [1702.2 s]
+ validation= 0.6411,0.1509 [175.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 214.3084, l2 = 75.5680
+INFO:root:u_conscientiousness disc test= 0.8384,0.8467,0.8420,0.8467auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8687,0.8728,0.8701,0.8728auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    81 [1690.6 s]
+ validation= 0.6427,0.1512 [164.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 214.4301, l2 = 75.5685
+INFO:root:u_conscientiousness disc test= 0.8391,0.8478,0.8429,0.8478auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8665,0.8708,0.8680,0.8708auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    82 [1688.2 s]
+ validation= 0.6426,0.1513 [190.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.7973, l2 = 75.5010
+INFO:root:u_conscientiousness disc test= 0.8397,0.8481,0.8433,0.8481auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8682,0.8721,0.8694,0.8721auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    83 [1452.7 s]
+ validation= 0.6432,0.1514 [171.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.9459, l2 = 75.4735
+INFO:root:u_conscientiousness disc test= 0.8401,0.8483,0.8436,0.8483auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8682,0.8725,0.8697,0.8725auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    84 [1667.2 s]
+ validation= 0.6380,0.1497 [202.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.7248, l2 = 75.5122
+INFO:root:u_conscientiousness disc test= 0.8401,0.8482,0.8436,0.8482auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8696,0.8733,0.8707,0.8733auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    85 [2184.1 s]
+ validation= 0.6404,0.1505 [206.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.4171, l2 = 75.5054
+INFO:root:u_conscientiousness disc test= 0.8401,0.8483,0.8437,0.8483auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8697,0.8730,0.8705,0.8730auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    86 [2220.9 s]
+ validation= 0.6391,0.1494 [214.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.0126, l2 = 75.4467
+INFO:root:u_conscientiousness disc test= 0.8422,0.8500,0.8455,0.8500auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8674,0.8711,0.8685,0.8711auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    87 [2243.0 s]
+ validation= 0.6417,0.1508 [223.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.3649, l2 = 75.5049
+INFO:root:u_conscientiousness disc test= 0.8436,0.8511,0.8468,0.8511auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8668,0.8708,0.8681,0.8708auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    88 [2244.9 s]
+ validation= 0.6387,0.1499 [203.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.0764, l2 = 75.5180
+INFO:root:u_conscientiousness disc test= 0.8407,0.8488,0.8442,0.8488auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8686,0.8725,0.8699,0.8725auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    89 [2250.1 s]
+ validation= 0.6417,0.1508 [225.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.9470, l2 = 75.5513
+INFO:root:u_conscientiousness disc test= 0.8421,0.8501,0.8455,0.8501auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8688,0.8728,0.8701,0.8728auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    90 [2049.5 s]
+ validation= 0.6439,0.1510 [208.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 212.7721, l2 = 75.5584
+INFO:root:u_conscientiousness disc test= 0.8441,0.8523,0.8477,0.8523auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8687,0.8727,0.8700,0.8727auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    91 [1671.7 s]
+ validation= 0.6415,0.1504 [191.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.7499, l2 = 75.6011
+INFO:root:u_conscientiousness disc test= 0.8425,0.8509,0.8462,0.8509auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8702,0.8742,0.8715,0.8742auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    92 [1724.0 s]
+ validation= 0.6425,0.1512 [209.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.3680, l2 = 75.5405
+INFO:root:u_conscientiousness disc test= 0.8411,0.8495,0.8448,0.8495auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8683,0.8727,0.8699,0.8727auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    93 [1793.0 s]
+ validation= 0.6432,0.1515 [199.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.2368, l2 = 75.4937
+INFO:root:u_conscientiousness disc test= 0.8410,0.8492,0.8446,0.8492auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8708,0.8747,0.8721,0.8747auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    94 [1705.3 s]
+ validation= 0.6432,0.1510 [191.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.1728, l2 = 75.4330
+INFO:root:u_conscientiousness disc test= 0.8437,0.8515,0.8471,0.8515auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8701,0.8739,0.8713,0.8739auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    95 [1850.8 s]
+ validation= 0.6428,0.1510 [186.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.3251, l2 = 75.4714
+INFO:root:u_conscientiousness disc test= 0.8448,0.8527,0.8483,0.8527auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8728,0.8767,0.8740,0.8767auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    96 [1797.8 s]
+ validation= 0.6431,0.1506 [192.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.1796, l2 = 75.4506
+INFO:root:u_conscientiousness disc test= 0.8437,0.8520,0.8474,0.8520auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8734,0.8773,0.8747,0.8773auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    97 [1841.2 s]
+ validation= 0.6388,0.1495 [193.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 211.8751, l2 = 75.3898
+INFO:root:u_conscientiousness disc test= 0.8433,0.8512,0.8467,0.8512auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8718,0.8760,0.8733,0.8760auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    98 [1747.1 s]
+ validation= 0.6427,0.1504 [187.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 211.5438, l2 = 75.3289
+INFO:root:u_conscientiousness disc test= 0.8446,0.8527,0.8482,0.8527auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8714,0.8757,0.8729,0.8757auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    99 [1779.8 s]
+ validation= 0.6395,0.1493 [197.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 211.4564, l2 = 75.2642
+INFO:root:u_conscientiousness disc test= 0.8456,0.8534,0.8490,0.8534auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8725,0.8766,0.8739,0.8766auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   100 [1587.4 s]
+ validation= 0.6422,0.1505 [182.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 211.3064, l2 = 75.1527
+INFO:root:u_conscientiousness disc test= 0.8480,0.8557,0.8514,0.8557auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8734,0.8775,0.8748,0.8775auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   101 [1735.7 s]
+ validation= 0.6411,0.1501 [187.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 211.2740, l2 = 75.0503
+INFO:root:u_conscientiousness disc test= 0.8501,0.8578,0.8536,0.8578auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8740,0.8781,0.8755,0.8781auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   102 [1878.0 s]
+ validation= 0.6426,0.1508 [180.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 211.3838, l2 = 75.0232
+INFO:root:u_conscientiousness disc test= 0.8465,0.8540,0.8497,0.8540auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8739,0.8778,0.8752,0.8778auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   103 [1853.4 s]
+ validation= 0.6404,0.1498 [168.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 210.9834, l2 = 74.9402
+INFO:root:u_conscientiousness disc test= 0.8464,0.8540,0.8497,0.8540auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8734,0.8772,0.8746,0.8772auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   104 [1856.4 s]
+ validation= 0.6435,0.1513 [168.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 210.9560, l2 = 74.9119
+INFO:root:u_conscientiousness disc test= 0.8446,0.8519,0.8477,0.8519auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8734,0.8772,0.8746,0.8772auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   105 [1731.0 s]
+ validation= 0.6433,0.1510 [158.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 210.9635, l2 = 74.9011
+INFO:root:u_conscientiousness disc test= 0.8442,0.8517,0.8474,0.8517auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8733,0.8770,0.8744,0.8770auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   106 [1460.2 s]
+ validation= 0.6398,0.1495 [182.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 210.5841, l2 = 74.8099
+INFO:root:u_conscientiousness disc test= 0.8462,0.8538,0.8495,0.8538auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8715,0.8755,0.8729,0.8755auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   107 [1288.0 s]
+ validation= 0.6445,0.1509 [148.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 210.8916, l2 = 74.7631
+INFO:root:u_conscientiousness disc test= 0.8467,0.8538,0.8497,0.8538auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8742,0.8782,0.8756,0.8782auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   108 [1266.5 s]
+ validation= 0.6455,0.1514 [176.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 210.3367, l2 = 74.7478
+INFO:root:u_conscientiousness disc test= 0.8472,0.8545,0.8503,0.8545auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8743,0.8781,0.8755,0.8781auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   109 [749.6 s]
+ validation= 0.6421,0.1503 [169.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 210.1065, l2 = 74.7052
+INFO:root:u_conscientiousness disc test= 0.8453,0.8530,0.8486,0.8530auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8707,0.8749,0.8722,0.8749auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   110 [814.9 s]
+ validation= 0.6424,0.1502 [164.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 210.3655, l2 = 74.6942
+INFO:root:u_conscientiousness disc test= 0.8449,0.8524,0.8481,0.8524auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8704,0.8746,0.8718,0.8746auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   111 [644.3 s]
+ validation= 0.6431,0.1507 [165.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.9769, l2 = 74.6518
+INFO:root:u_conscientiousness disc test= 0.8437,0.8513,0.8470,0.8513auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8726,0.8766,0.8739,0.8766auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   112 [914.2 s]
+ validation= 0.6435,0.1506 [163.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 210.0857, l2 = 74.6022
+INFO:root:u_conscientiousness disc test= 0.8440,0.8518,0.8474,0.8518auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8698,0.8738,0.8711,0.8738auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   113 [938.9 s]
+ validation= 0.6434,0.1511 [139.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.7477, l2 = 74.5724
+INFO:root:u_conscientiousness disc test= 0.8462,0.8532,0.8491,0.8532auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8710,0.8750,0.8723,0.8750auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   114 [496.7 s]
+ validation= 0.6431,0.1511 [142.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.6985, l2 = 74.5392
+INFO:root:u_conscientiousness disc test= 0.8444,0.8519,0.8476,0.8519auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8716,0.8756,0.8729,0.8756auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   115 [421.5 s]
+ validation= 0.6414,0.1502 [144.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.4174, l2 = 74.4529
+INFO:root:u_conscientiousness disc test= 0.8461,0.8533,0.8492,0.8533auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8726,0.8763,0.8738,0.8763auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   116 [374.4 s]
+ validation= 0.6437,0.1515 [146.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.1428, l2 = 74.3854
+INFO:root:u_conscientiousness disc test= 0.8467,0.8541,0.8499,0.8541auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8716,0.8757,0.8730,0.8757auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   117 [365.9 s]
+ validation= 0.6433,0.1509 [148.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.5322, l2 = 74.3515
+INFO:root:u_conscientiousness disc test= 0.8491,0.8561,0.8521,0.8561auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8710,0.8754,0.8726,0.8754auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   118 [368.9 s]
+ validation= 0.6403,0.1499 [155.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.2624, l2 = 74.3053
+INFO:root:u_conscientiousness disc test= 0.8496,0.8563,0.8524,0.8563auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8702,0.8745,0.8718,0.8745auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   119 [1114.4 s]
+ validation= 0.6426,0.1510 [162.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.6376, l2 = 74.3016
+INFO:root:u_conscientiousness disc test= 0.8502,0.8568,0.8529,0.8568auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8698,0.8739,0.8712,0.8739auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   120 [1864.6 s]
+ validation= 0.6430,0.1509 [194.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.0462, l2 = 74.2388
+INFO:root:u_conscientiousness disc test= 0.8498,0.8566,0.8526,0.8566auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8701,0.8745,0.8717,0.8745auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   121 [2333.1 s]
+ validation= 0.6430,0.1506 [219.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 208.8383, l2 = 74.1261
+INFO:root:u_conscientiousness disc test= 0.8509,0.8579,0.8539,0.8579auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8719,0.8759,0.8733,0.8759auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   122 [1248.8 s]
+ validation= 0.6394,0.1496 [167.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.1235, l2 = 74.0749
+INFO:root:u_conscientiousness disc test= 0.8529,0.8599,0.8560,0.8599auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8743,0.8784,0.8757,0.8784auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   123 [2183.8 s]
+ validation= 0.6436,0.1509 [205.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 208.5115, l2 = 73.9966
+INFO:root:u_conscientiousness disc test= 0.8477,0.8545,0.8505,0.8545auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8725,0.8763,0.8737,0.8763auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   124 [2178.3 s]
+ validation= 0.6430,0.1511 [231.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 208.7750, l2 = 73.9905
+INFO:root:u_conscientiousness disc test= 0.8490,0.8561,0.8520,0.8561auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8723,0.8763,0.8736,0.8763auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   125 [2657.3 s]
+ validation= 0.6380,0.1489 [219.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 208.4812, l2 = 73.9305
+INFO:root:u_conscientiousness disc test= 0.8514,0.8586,0.8546,0.8586auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8731,0.8770,0.8744,0.8770auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   126 [2600.1 s]
+ validation= 0.6369,0.1490 [215.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 208.6133, l2 = 73.9294
+INFO:root:u_conscientiousness disc test= 0.8509,0.8582,0.8541,0.8582auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8745,0.8782,0.8757,0.8782auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   127 [2433.8 s]
+ validation= 0.6436,0.1509 [210.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 208.3235, l2 = 73.9091
+INFO:root:u_conscientiousness disc test= 0.8505,0.8576,0.8536,0.8576auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness pred test= 0.8743,0.8785,0.8758,0.8785auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   128 [2195.1 s]
+ validation= 0.6432,0.1508 [189.1 s] ndcg@10,f1@10
+INFO:root:Early stop at 128 based on validation result.
+INFO:root:Best Iter (validation) =   108	 valid= 0.6455,0.1514 [275120.6 s] ndcg@10,f1@10
+INFO:root:disc test: u_conscientiousness=0.8467auc, pred test: u_conscientiousness=0.8742auc
+INFO:root:Load model from ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load u_conscientiousness discriminator model from ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/u_conscientiousness_disc.pt
+INFO:root:Load u_conscientiousness discriminator model from ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/u_conscientiousness_disc.pt
+INFO:root:Load model from ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_conscientiousness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_conscientiousness loss = 0.6991
+INFO:root:Epoch     1 [2.0 s]
+INFO:root:u_conscientiousness disc test = 0.5000,0.4490,0.3099,0.4490 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_conscientiousness loss = 0.6916
+INFO:root:
+
+INFO:root:u_conscientiousness loss = 0.6367
+INFO:root:Epoch   126 [1.6 s]
+INFO:root:u_conscientiousness disc test = 0.5110,0.4956,0.4889,0.4956 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_conscientiousness loss = 0.6189
+INFO:root:Epoch   251 [2.6 s]
+INFO:root:u_conscientiousness disc test = 0.5134,0.5040,0.4787,0.5040 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_conscientiousness loss = 0.6174
+INFO:root:Epoch   376 [2.5 s]
+INFO:root:u_conscientiousness disc test = 0.5069,0.5180,0.4721,0.5180 auc, acc, f1_macro, f1_micro
+INFO:root:u_conscientiousness best auc: 0.5462
+INFO:root:And the corresponding u_conscientiousness best disc test= 0.5462,0.4512,0.4510,0.4512 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_conscientiousness discriminator model from ../model/MLP_FairRec_taobaoserendipity_u_conscientiousness_neg_sample=1000/u_conscientiousness_eval_disc.pt
+INFO:root:Test After Training = 0.6447,0.1516 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.029519740022599605

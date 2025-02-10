@@ -1,0 +1,1692 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'BiasedMF', 'fairness_framework': 'PCFR', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '2', 'verbose': 20, 'log_file': '../log/BiasedMF_PCFR__taobaoserendipity_u_curiosity__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'taobaoserendipity', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_curiosity'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=10000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=10000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 10000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: BiasedMF
+INFO:root:Fairness framework: PCFR
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 9132376
+INFO:root:load validation csv...
+INFO:root:size of validation: 1141547
+INFO:root:load test csv...
+INFO:root:size of test: 1141548
+INFO:root:Prepare validation data...
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'BiasedMF', 'fairness_framework': 'PCFR', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '2', 'verbose': 20, 'log_file': '../log/BiasedMF_PCFR__taobaoserendipity_u_curiosity__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'taobaoserendipity', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_curiosity'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: BiasedMF
+INFO:root:Fairness framework: PCFR
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 9132376
+INFO:root:load validation csv...
+INFO:root:size of validation: 1141547
+INFO:root:load test csv...
+INFO:root:size of test: 1141548
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 54984670
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 512.0143, l2 = 28.9360
+INFO:root:u_curiosity disc test= 0.5921,0.6126,0.5706,0.6126auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [3830.0 s]
+ validation= 0.6360,0.1478 [516.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 296.4716, l2 = 50.0990
+INFO:root:u_curiosity disc test= 0.7324,0.7394,0.7336,0.7394auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [5109.4 s]
+ validation= 0.6693,0.1609 [1397.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 207.8035, l2 = 61.5380
+INFO:root:u_curiosity disc test= 0.8008,0.8043,0.8020,0.8043auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [4969.3 s]
+ validation= 0.6822,0.1661 [2337.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 163.1611, l2 = 66.1082
+INFO:root:u_curiosity disc test= 0.8387,0.8402,0.8391,0.8402auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [4754.2 s]
+ validation= 0.6901,0.1700 [697.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 138.6942, l2 = 67.0557
+INFO:root:u_curiosity disc test= 0.8607,0.8615,0.8607,0.8615auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [4730.2 s]
+ validation= 0.6937,0.1722 [537.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 124.6236, l2 = 66.4834
+INFO:root:u_curiosity disc test= 0.8719,0.8725,0.8718,0.8725auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [4980.2 s]
+ validation= 0.7012,0.1752 [607.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 115.3744, l2 = 65.5037
+INFO:root:u_curiosity disc test= 0.8810,0.8814,0.8808,0.8814auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [4788.7 s]
+ validation= 0.7073,0.1783 [459.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 108.9151, l2 = 64.5233
+INFO:root:u_curiosity disc test= 0.8879,0.8883,0.8877,0.8883auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [4983.3 s]
+ validation= 0.7086,0.1788 [626.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 104.2977, l2 = 63.6497
+INFO:root:u_curiosity disc test= 0.8921,0.8924,0.8918,0.8924auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [4905.2 s]
+ validation= 0.7136,0.1812 [611.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 100.8547, l2 = 62.9645
+INFO:root:u_curiosity disc test= 0.8957,0.8959,0.8954,0.8959auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [4973.2 s]
+ validation= 0.7175,0.1829 [681.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 97.6752, l2 = 62.4223
+INFO:root:u_curiosity disc test= 0.8971,0.8974,0.8969,0.8974auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [4932.9 s]
+ validation= 0.7187,0.1838 [671.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 95.4959, l2 = 62.0008
+INFO:root:u_curiosity disc test= 0.8992,0.8996,0.8991,0.8996auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [4973.3 s]
+ validation= 0.7218,0.1851 [610.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 93.7669, l2 = 61.6793
+INFO:root:u_curiosity disc test= 0.9004,0.9005,0.9000,0.9005auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [4914.3 s]
+ validation= 0.7227,0.1857 [509.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 92.3156, l2 = 61.4803
+INFO:root:u_curiosity disc test= 0.9013,0.9014,0.9009,0.9014auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [4933.7 s]
+ validation= 0.7278,0.1882 [499.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 90.9747, l2 = 61.3322
+INFO:root:u_curiosity disc test= 0.9047,0.9048,0.9043,0.9048auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [4837.8 s]
+ validation= 0.7296,0.1892 [559.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 89.7467, l2 = 61.1802
+INFO:root:u_curiosity disc test= 0.9063,0.9063,0.9058,0.9063auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [4895.9 s]
+ validation= 0.7330,0.1901 [616.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 89.0029, l2 = 61.1766
+INFO:root:u_curiosity disc test= 0.9068,0.9063,0.9059,0.9063auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [4894.5 s]
+ validation= 0.7338,0.1905 [856.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 88.4598, l2 = 61.1687
+INFO:root:u_curiosity disc test= 0.9066,0.9061,0.9057,0.9061auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [4928.6 s]
+ validation= 0.7364,0.1922 [593.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 87.3297, l2 = 61.2122
+INFO:root:u_curiosity disc test= 0.9071,0.9066,0.9062,0.9066auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [4810.8 s]
+ validation= 0.7388,0.1928 [557.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 86.4671, l2 = 61.1686
+INFO:root:u_curiosity disc test= 0.9086,0.9083,0.9079,0.9083auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [4940.9 s]
+ validation= 0.7411,0.1937 [462.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 85.8227, l2 = 61.1461
+INFO:root:u_curiosity disc test= 0.9100,0.9095,0.9091,0.9095auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [5113.7 s]
+ validation= 0.7410,0.1947 [1222.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 85.5481, l2 = 61.2337
+INFO:root:u_curiosity disc test= 0.9101,0.9094,0.9090,0.9094auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    22 [5662.2 s]
+ validation= 0.7433,0.1951 [2468.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.9415, l2 = 61.3348
+INFO:root:u_curiosity disc test= 0.9094,0.9089,0.9086,0.9089auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    23 [5286.8 s]
+ validation= 0.7441,0.1954 [1082.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.3088, l2 = 61.3530
+INFO:root:u_curiosity disc test= 0.9111,0.9105,0.9101,0.9105auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    24 [5299.1 s]
+ validation= 0.7458,0.1961 [853.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.0284, l2 = 61.4729
+INFO:root:u_curiosity disc test= 0.9117,0.9111,0.9107,0.9111auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    25 [5314.4 s]
+ validation= 0.7472,0.1971 [860.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 83.2764, l2 = 61.5224
+INFO:root:u_curiosity disc test= 0.9128,0.9122,0.9118,0.9122auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    26 [5306.1 s]
+ validation= 0.7498,0.1976 [856.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 83.0886, l2 = 61.5656
+INFO:root:u_curiosity disc test= 0.9134,0.9132,0.9128,0.9132auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    27 [5382.6 s]
+ validation= 0.7507,0.1979 [957.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 82.6102, l2 = 61.6686
+INFO:root:u_curiosity disc test= 0.9148,0.9146,0.9142,0.9146auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    28 [5390.1 s]
+ validation= 0.7531,0.1990 [590.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 82.2031, l2 = 61.7035
+INFO:root:u_curiosity disc test= 0.9149,0.9146,0.9142,0.9146auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    29 [5188.9 s]
+ validation= 0.7524,0.1987 [604.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.7966, l2 = 61.7194
+INFO:root:u_curiosity disc test= 0.9146,0.9144,0.9140,0.9144auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    30 [5105.7 s]
+ validation= 0.7533,0.1999 [540.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 81.2776, l2 = 61.6987
+INFO:root:u_curiosity disc test= 0.9152,0.9150,0.9146,0.9150auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    31 [4884.3 s]
+ validation= 0.7551,0.2000 [568.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 81.1886, l2 = 61.7144
+INFO:root:u_curiosity disc test= 0.9167,0.9166,0.9162,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    32 [4877.0 s]
+ validation= 0.7564,0.2006 [554.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.9847, l2 = 61.7361
+INFO:root:u_curiosity disc test= 0.9159,0.9158,0.9154,0.9158auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    33 [4799.1 s]
+ validation= 0.7577,0.2016 [471.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.7065, l2 = 61.7556
+INFO:root:u_curiosity disc test= 0.9157,0.9155,0.9151,0.9155auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    34 [4849.6 s]
+ validation= 0.7579,0.2010 [541.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.2742, l2 = 61.7658
+INFO:root:u_curiosity disc test= 0.9155,0.9152,0.9149,0.9152auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    35 [4636.3 s]
+ validation= 0.7577,0.2011 [579.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.7805, l2 = 61.7343
+INFO:root:u_curiosity disc test= 0.9153,0.9150,0.9146,0.9150auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    36 [4555.3 s]
+ validation= 0.7598,0.2019 [549.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.0509, l2 = 61.7728
+INFO:root:u_curiosity disc test= 0.9177,0.9173,0.9170,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    37 [4392.8 s]
+ validation= 0.7594,0.2013 [553.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.5506, l2 = 61.8096
+INFO:root:u_curiosity disc test= 0.9173,0.9167,0.9164,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    38 [4288.4 s]
+ validation= 0.7613,0.2024 [410.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.5134, l2 = 61.7987
+INFO:root:u_curiosity disc test= 0.9174,0.9168,0.9165,0.9168auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    39 [4105.9 s]
+ validation= 0.7616,0.2023 [481.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.1390, l2 = 61.8070
+INFO:root:u_curiosity disc test= 0.9172,0.9166,0.9163,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    40 [4032.5 s]
+ validation= 0.7626,0.2033 [461.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.0173, l2 = 61.7998
+INFO:root:u_curiosity disc test= 0.9177,0.9172,0.9169,0.9172auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    41 [4016.9 s]
+ validation= 0.7624,0.2034 [424.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 78.7880, l2 = 61.7833
+INFO:root:u_curiosity disc test= 0.9170,0.9166,0.9162,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    42 [3745.9 s]
+ validation= 0.7633,0.2036 [414.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 78.6699, l2 = 61.7941
+INFO:root:u_curiosity disc test= 0.9178,0.9174,0.9170,0.9174auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    43 [3599.5 s]
+ validation= 0.7643,0.2042 [360.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 78.3218, l2 = 61.7444
+INFO:root:u_curiosity disc test= 0.9181,0.9176,0.9173,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    44 [3469.3 s]
+ validation= 0.7651,0.2042 [354.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 78.3399, l2 = 61.7377
+INFO:root:u_curiosity disc test= 0.9178,0.9171,0.9168,0.9171auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    45 [3546.3 s]
+ validation= 0.7654,0.2042 [417.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 78.4136, l2 = 61.7447
+INFO:root:u_curiosity disc test= 0.9171,0.9166,0.9163,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    46 [3410.3 s]
+ validation= 0.7653,0.2044 [447.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 77.9701, l2 = 61.6969
+INFO:root:u_curiosity disc test= 0.9167,0.9162,0.9159,0.9162auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    47 [3340.1 s]
+ validation= 0.7663,0.2044 [364.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 77.9616, l2 = 61.6730
+INFO:root:u_curiosity disc test= 0.9180,0.9175,0.9172,0.9175auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    48 [3195.8 s]
+ validation= 0.7658,0.2046 [390.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 77.8989, l2 = 61.7123
+INFO:root:u_curiosity disc test= 0.9181,0.9177,0.9173,0.9177auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    49 [3255.0 s]
+ validation= 0.7659,0.2046 [403.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 77.6618, l2 = 61.6809
+INFO:root:u_curiosity disc test= 0.9181,0.9176,0.9173,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    50 [3268.1 s]
+ validation= 0.7663,0.2048 [381.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 77.5265, l2 = 61.6434
+INFO:root:u_curiosity disc test= 0.9173,0.9167,0.9164,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    51 [3129.4 s]
+ validation= 0.7673,0.2048 [406.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 77.2966, l2 = 61.5702
+INFO:root:u_curiosity disc test= 0.9163,0.9155,0.9152,0.9155auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    52 [3054.2 s]
+ validation= 0.7677,0.2053 [398.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 77.2772, l2 = 61.5768
+INFO:root:u_curiosity disc test= 0.9172,0.9166,0.9162,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    53 [2989.6 s]
+ validation= 0.7689,0.2056 [326.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 76.9593, l2 = 61.5145
+INFO:root:u_curiosity disc test= 0.9169,0.9164,0.9161,0.9164auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    54 [2855.6 s]
+ validation= 0.7709,0.2062 [388.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 77.1828, l2 = 61.5372
+INFO:root:u_curiosity disc test= 0.9173,0.9168,0.9165,0.9168auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    55 [2860.3 s]
+ validation= 0.7714,0.2070 [405.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 76.8724, l2 = 61.5085
+INFO:root:u_curiosity disc test= 0.9173,0.9168,0.9165,0.9168auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    56 [2803.4 s]
+ validation= 0.7708,0.2064 [363.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.6787, l2 = 61.4483
+INFO:root:u_curiosity disc test= 0.9178,0.9174,0.9171,0.9174auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    57 [2693.4 s]
+ validation= 0.7716,0.2072 [301.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 76.8312, l2 = 61.4457
+INFO:root:u_curiosity disc test= 0.9181,0.9178,0.9174,0.9178auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    58 [2783.8 s]
+ validation= 0.7737,0.2082 [333.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 76.8974, l2 = 61.4531
+INFO:root:u_curiosity disc test= 0.9189,0.9184,0.9181,0.9184auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    59 [2625.8 s]
+ validation= 0.7724,0.2070 [354.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.6424, l2 = 61.4498
+INFO:root:u_curiosity disc test= 0.9185,0.9178,0.9175,0.9178auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    60 [2736.0 s]
+ validation= 0.7725,0.2071 [330.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.5711, l2 = 61.4036
+INFO:root:u_curiosity disc test= 0.9167,0.9162,0.9158,0.9162auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    61 [1919.8 s]
+ validation= 0.7732,0.2078 [224.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.4963, l2 = 61.4076
+INFO:root:u_curiosity disc test= 0.9172,0.9167,0.9164,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    62 [1863.4 s]
+ validation= 0.7734,0.2074 [214.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.3054, l2 = 61.3880
+INFO:root:u_curiosity disc test= 0.9165,0.9162,0.9158,0.9162auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    63 [1846.8 s]
+ validation= 0.7745,0.2076 [207.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 76.3060, l2 = 61.3333
+INFO:root:u_curiosity disc test= 0.9162,0.9159,0.9155,0.9159auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    64 [1884.6 s]
+ validation= 0.7739,0.2076 [221.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.2251, l2 = 61.3327
+INFO:root:u_curiosity disc test= 0.9164,0.9160,0.9156,0.9160auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    65 [1806.7 s]
+ validation= 0.7745,0.2078 [205.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 76.1905, l2 = 61.3077
+INFO:root:u_curiosity disc test= 0.9170,0.9166,0.9163,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    66 [1886.1 s]
+ validation= 0.7743,0.2078 [207.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.0698, l2 = 61.2988
+INFO:root:u_curiosity disc test= 0.9183,0.9179,0.9176,0.9179auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    67 [1802.2 s]
+ validation= 0.7734,0.2077 [218.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 76.2355, l2 = 61.2763
+INFO:root:u_curiosity disc test= 0.9172,0.9167,0.9163,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    68 [1896.4 s]
+ validation= 0.7755,0.2084 [218.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.8359, l2 = 61.2549
+INFO:root:u_curiosity disc test= 0.9180,0.9174,0.9171,0.9174auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    69 [1725.2 s]
+ validation= 0.7745,0.2079 [219.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.9034, l2 = 61.2540
+INFO:root:u_curiosity disc test= 0.9203,0.9196,0.9193,0.9196auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    70 [1782.8 s]
+ validation= 0.7750,0.2076 [214.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.7810, l2 = 61.2153
+INFO:root:u_curiosity disc test= 0.9208,0.9200,0.9197,0.9200auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    71 [1647.6 s]
+ validation= 0.7754,0.2083 [216.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.4955, l2 = 61.1528
+INFO:root:u_curiosity disc test= 0.9205,0.9196,0.9193,0.9196auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    72 [1730.1 s]
+ validation= 0.7761,0.2087 [219.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.7760, l2 = 61.1438
+INFO:root:u_curiosity disc test= 0.9196,0.9187,0.9184,0.9187auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    73 [1716.4 s]
+ validation= 0.7758,0.2087 [215.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.5379, l2 = 61.1345
+INFO:root:u_curiosity disc test= 0.9203,0.9198,0.9194,0.9198auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    74 [1725.9 s]
+ validation= 0.7774,0.2092 [215.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.7396, l2 = 61.1373
+INFO:root:u_curiosity disc test= 0.9198,0.9192,0.9189,0.9192auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    75 [1675.9 s]
+ validation= 0.7777,0.2094 [209.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.3314, l2 = 61.1132
+INFO:root:u_curiosity disc test= 0.9178,0.9172,0.9169,0.9172auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    76 [1708.2 s]
+ validation= 0.7774,0.2094 [214.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.2926, l2 = 61.0535
+INFO:root:u_curiosity disc test= 0.9170,0.9165,0.9162,0.9165auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    77 [1691.4 s]
+ validation= 0.7778,0.2094 [211.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.2914, l2 = 61.0650
+INFO:root:u_curiosity disc test= 0.9176,0.9170,0.9167,0.9170auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    78 [1673.6 s]
+ validation= 0.7787,0.2095 [208.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 75.2052, l2 = 61.0101
+INFO:root:u_curiosity disc test= 0.9185,0.9179,0.9176,0.9179auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    79 [1679.7 s]
+ validation= 0.7781,0.2090 [211.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.4607, l2 = 61.0130
+INFO:root:u_curiosity disc test= 0.9176,0.9169,0.9166,0.9169auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    80 [1629.0 s]
+ validation= 0.7769,0.2086 [207.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.0993, l2 = 60.9944
+INFO:root:u_curiosity disc test= 0.9170,0.9162,0.9159,0.9162auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    81 [1601.4 s]
+ validation= 0.7776,0.2093 [203.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.9881, l2 = 60.9570
+INFO:root:u_curiosity disc test= 0.9164,0.9157,0.9154,0.9157auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    82 [1600.8 s]
+ validation= 0.7767,0.2093 [216.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.1184, l2 = 60.9492
+INFO:root:u_curiosity disc test= 0.9162,0.9158,0.9155,0.9158auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    83 [1608.4 s]
+ validation= 0.7777,0.2097 [203.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.1302, l2 = 60.9697
+INFO:root:u_curiosity disc test= 0.9149,0.9148,0.9144,0.9148auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    84 [1586.3 s]
+ validation= 0.7790,0.2103 [203.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.8647, l2 = 60.9264
+INFO:root:u_curiosity disc test= 0.9162,0.9161,0.9157,0.9161auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    85 [1703.2 s]
+ validation= 0.7769,0.2090 [213.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.9265, l2 = 60.8888
+INFO:root:u_curiosity disc test= 0.9165,0.9166,0.9161,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    86 [1559.4 s]
+ validation= 0.7785,0.2093 [212.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.8408, l2 = 60.8657
+INFO:root:u_curiosity disc test= 0.9159,0.9159,0.9155,0.9159auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    87 [1629.8 s]
+ validation= 0.7786,0.2098 [208.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.8722, l2 = 60.8721
+INFO:root:u_curiosity disc test= 0.9169,0.9169,0.9165,0.9169auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    88 [1576.6 s]
+ validation= 0.7793,0.2102 [197.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.7579, l2 = 60.8610
+INFO:root:u_curiosity disc test= 0.9176,0.9175,0.9171,0.9175auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    89 [1592.0 s]
+ validation= 0.7799,0.2107 [218.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.6638, l2 = 60.8113
+INFO:root:u_curiosity disc test= 0.9172,0.9171,0.9167,0.9171auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    90 [1675.6 s]
+ validation= 0.7805,0.2098 [202.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.8775, l2 = 60.8144
+INFO:root:u_curiosity disc test= 0.9170,0.9167,0.9163,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    91 [1547.2 s]
+ validation= 0.7798,0.2094 [218.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.5730, l2 = 60.8035
+INFO:root:u_curiosity disc test= 0.9179,0.9177,0.9173,0.9177auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    92 [1618.1 s]
+ validation= 0.7798,0.2102 [206.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.8533, l2 = 60.7954
+INFO:root:u_curiosity disc test= 0.9180,0.9178,0.9174,0.9178auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    93 [1560.6 s]
+ validation= 0.7810,0.2108 [209.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.5415, l2 = 60.7787
+INFO:root:u_curiosity disc test= 0.9170,0.9168,0.9164,0.9168auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    94 [1508.1 s]
+ validation= 0.7801,0.2105 [216.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.3392, l2 = 60.7372
+INFO:root:u_curiosity disc test= 0.9155,0.9155,0.9151,0.9155auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    95 [1560.7 s]
+ validation= 0.7808,0.2109 [199.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.4428, l2 = 60.6983
+INFO:root:u_curiosity disc test= 0.9152,0.9153,0.9149,0.9153auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    96 [1554.8 s]
+ validation= 0.7799,0.2106 [203.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.2787, l2 = 60.6466
+INFO:root:u_curiosity disc test= 0.9164,0.9165,0.9161,0.9165auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    97 [1566.6 s]
+ validation= 0.7811,0.2110 [205.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.5924, l2 = 60.6636
+INFO:root:u_curiosity disc test= 0.9170,0.9170,0.9166,0.9170auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    98 [1493.2 s]
+ validation= 0.7827,0.2114 [191.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.1819, l2 = 60.6760
+INFO:root:u_curiosity disc test= 0.9163,0.9164,0.9159,0.9164auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    99 [1460.6 s]
+ validation= 0.7822,0.2111 [198.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.1515, l2 = 60.6113
+INFO:root:u_curiosity disc test= 0.9174,0.9172,0.9169,0.9172auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   100 [1465.3 s]
+ validation= 0.7826,0.2113 [204.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.1802, l2 = 60.6007
+INFO:root:u_curiosity disc test= 0.9166,0.9165,0.9161,0.9165auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   101 [1464.5 s]
+ validation= 0.7821,0.2112 [189.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.4035, l2 = 60.6014
+INFO:root:u_curiosity disc test= 0.9168,0.9170,0.9165,0.9170auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   102 [1451.4 s]
+ validation= 0.7828,0.2120 [183.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.0622, l2 = 60.5792
+INFO:root:u_curiosity disc test= 0.9175,0.9175,0.9171,0.9175auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   103 [1354.2 s]
+ validation= 0.7820,0.2112 [175.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.0217, l2 = 60.5533
+INFO:root:u_curiosity disc test= 0.9180,0.9179,0.9175,0.9179auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   104 [1150.1 s]
+ validation= 0.7811,0.2108 [179.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.1936, l2 = 60.5547
+INFO:root:u_curiosity disc test= 0.9186,0.9185,0.9181,0.9185auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   105 [1136.8 s]
+ validation= 0.7823,0.2114 [177.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.1082, l2 = 60.5413
+INFO:root:u_curiosity disc test= 0.9184,0.9182,0.9178,0.9182auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   106 [1106.1 s]
+ validation= 0.7820,0.2112 [166.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.9275, l2 = 60.5150
+INFO:root:u_curiosity disc test= 0.9169,0.9166,0.9163,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   107 [1098.7 s]
+ validation= 0.7815,0.2107 [168.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.8532, l2 = 60.4537
+INFO:root:u_curiosity disc test= 0.9162,0.9162,0.9158,0.9162auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   108 [1036.6 s]
+ validation= 0.7831,0.2113 [170.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.9257, l2 = 60.4525
+INFO:root:u_curiosity disc test= 0.9166,0.9167,0.9162,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   109 [1095.0 s]
+ validation= 0.7841,0.2117 [173.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.9896, l2 = 60.4555
+INFO:root:u_curiosity disc test= 0.9173,0.9172,0.9168,0.9172auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   110 [1099.6 s]
+ validation= 0.7844,0.2122 [166.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.6998, l2 = 60.4285
+INFO:root:u_curiosity disc test= 0.9179,0.9176,0.9172,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   111 [998.2 s]
+ validation= 0.7845,0.2125 [169.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 74.1130, l2 = 60.4229
+INFO:root:u_curiosity disc test= 0.9191,0.9190,0.9186,0.9190auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   112 [959.9 s]
+ validation= 0.7824,0.2117 [175.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.7180, l2 = 60.4350
+INFO:root:u_curiosity disc test= 0.9173,0.9171,0.9167,0.9171auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   113 [1082.2 s]
+ validation= 0.7840,0.2123 [165.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.7117, l2 = 60.4156
+INFO:root:u_curiosity disc test= 0.9165,0.9165,0.9161,0.9165auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   114 [1022.8 s]
+ validation= 0.7830,0.2116 [171.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.5379, l2 = 60.3564
+INFO:root:u_curiosity disc test= 0.9165,0.9167,0.9162,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   115 [958.0 s]
+ validation= 0.7833,0.2118 [165.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.7966, l2 = 60.3497
+INFO:root:u_curiosity disc test= 0.9172,0.9175,0.9170,0.9175auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   116 [1007.3 s]
+ validation= 0.7835,0.2118 [175.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.7986, l2 = 60.3952
+INFO:root:u_curiosity disc test= 0.9175,0.9176,0.9172,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   117 [1115.5 s]
+ validation= 0.7845,0.2121 [172.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.6473, l2 = 60.3683
+INFO:root:u_curiosity disc test= 0.9190,0.9188,0.9185,0.9188auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   118 [1037.5 s]
+ validation= 0.7842,0.2119 [168.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.6147, l2 = 60.3533
+INFO:root:u_curiosity disc test= 0.9186,0.9184,0.9180,0.9184auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   119 [1005.0 s]
+ validation= 0.7835,0.2118 [171.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.6644, l2 = 60.3643
+INFO:root:u_curiosity disc test= 0.9189,0.9189,0.9185,0.9189auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   120 [976.2 s]
+ validation= 0.7854,0.2123 [170.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.6660, l2 = 60.3319
+INFO:root:u_curiosity disc test= 0.9197,0.9197,0.9193,0.9197auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   121 [1003.9 s]
+ validation= 0.7852,0.2124 [167.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.2861, l2 = 60.2991
+INFO:root:u_curiosity disc test= 0.9186,0.9186,0.9182,0.9186auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   122 [960.6 s]
+ validation= 0.7848,0.2123 [162.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.4490, l2 = 60.2529
+INFO:root:u_curiosity disc test= 0.9178,0.9178,0.9174,0.9178auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   123 [1001.9 s]
+ validation= 0.7846,0.2127 [168.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.4889, l2 = 60.2605
+INFO:root:u_curiosity disc test= 0.9183,0.9181,0.9177,0.9181auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   124 [961.3 s]
+ validation= 0.7861,0.2131 [167.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.5415, l2 = 60.2437
+INFO:root:u_curiosity disc test= 0.9183,0.9179,0.9175,0.9179auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   125 [1041.5 s]
+ validation= 0.7854,0.2130 [169.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.3181, l2 = 60.2436
+INFO:root:u_curiosity disc test= 0.9181,0.9178,0.9174,0.9178auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   126 [1033.3 s]
+ validation= 0.7844,0.2125 [167.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.6121, l2 = 60.2778
+INFO:root:u_curiosity disc test= 0.9181,0.9178,0.9175,0.9178auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   127 [993.7 s]
+ validation= 0.7858,0.2128 [165.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.5302, l2 = 60.2515
+INFO:root:u_curiosity disc test= 0.9179,0.9177,0.9173,0.9177auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   128 [961.8 s]
+ validation= 0.7845,0.2125 [170.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.3329, l2 = 60.2574
+INFO:root:u_curiosity disc test= 0.9182,0.9181,0.9177,0.9181auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   129 [982.1 s]
+ validation= 0.7845,0.2121 [168.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.1549, l2 = 60.1970
+INFO:root:u_curiosity disc test= 0.9198,0.9196,0.9193,0.9196auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   130 [972.7 s]
+ validation= 0.7846,0.2118 [169.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.2657, l2 = 60.1839
+INFO:root:u_curiosity disc test= 0.9183,0.9181,0.9178,0.9181auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   131 [959.3 s]
+ validation= 0.7858,0.2128 [164.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.3951, l2 = 60.1865
+INFO:root:u_curiosity disc test= 0.9178,0.9178,0.9174,0.9178auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   132 [1008.6 s]
+ validation= 0.7849,0.2128 [169.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.4273, l2 = 60.2335
+INFO:root:u_curiosity disc test= 0.9191,0.9188,0.9184,0.9188auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   133 [960.1 s]
+ validation= 0.7865,0.2137 [169.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 72.9760, l2 = 60.1618
+INFO:root:u_curiosity disc test= 0.9200,0.9195,0.9192,0.9195auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   134 [1003.8 s]
+ validation= 0.7874,0.2136 [170.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 73.0539, l2 = 60.1437
+INFO:root:u_curiosity disc test= 0.9191,0.9187,0.9184,0.9187auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   135 [951.9 s]
+ validation= 0.7855,0.2131 [167.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.1227, l2 = 60.1082
+INFO:root:u_curiosity disc test= 0.9171,0.9167,0.9164,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   136 [1011.2 s]
+ validation= 0.7851,0.2121 [172.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.1744, l2 = 60.1417
+INFO:root:u_curiosity disc test= 0.9166,0.9161,0.9158,0.9161auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   137 [1012.3 s]
+ validation= 0.7855,0.2126 [169.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.1051, l2 = 60.1575
+INFO:root:u_curiosity disc test= 0.9162,0.9157,0.9153,0.9157auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   138 [999.8 s]
+ validation= 0.7851,0.2126 [168.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.3307, l2 = 60.1384
+INFO:root:u_curiosity disc test= 0.9155,0.9152,0.9148,0.9152auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   139 [1079.6 s]
+ validation= 0.7872,0.2133 [171.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.7711, l2 = 60.1148
+INFO:root:u_curiosity disc test= 0.9158,0.9155,0.9151,0.9155auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   140 [1053.5 s]
+ validation= 0.7850,0.2122 [226.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.9615, l2 = 60.0790
+INFO:root:u_curiosity disc test= 0.9179,0.9177,0.9173,0.9177auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   141 [1047.2 s]
+ validation= 0.7857,0.2127 [177.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.0575, l2 = 60.1065
+INFO:root:u_curiosity disc test= 0.9195,0.9193,0.9189,0.9193auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   142 [1010.8 s]
+ validation= 0.7872,0.2128 [167.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.8536, l2 = 60.0746
+INFO:root:u_curiosity disc test= 0.9196,0.9194,0.9190,0.9194auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   143 [1027.3 s]
+ validation= 0.7872,0.2132 [168.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.9116, l2 = 60.0556
+INFO:root:u_curiosity disc test= 0.9195,0.9194,0.9190,0.9194auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   144 [995.4 s]
+ validation= 0.7870,0.2132 [169.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 73.2542, l2 = 60.1028
+INFO:root:u_curiosity disc test= 0.9199,0.9200,0.9196,0.9200auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   145 [1011.9 s]
+ validation= 0.7861,0.2126 [172.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.9690, l2 = 60.1123
+INFO:root:u_curiosity disc test= 0.9189,0.9190,0.9186,0.9190auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   146 [1050.6 s]
+ validation= 0.7867,0.2128 [252.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.7949, l2 = 60.0587
+INFO:root:u_curiosity disc test= 0.9199,0.9198,0.9194,0.9198auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   147 [1045.9 s]
+ validation= 0.7868,0.2125 [209.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.8811, l2 = 60.0604
+INFO:root:u_curiosity disc test= 0.9208,0.9206,0.9202,0.9206auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   148 [1024.4 s]
+ validation= 0.7858,0.2127 [180.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.9395, l2 = 60.0640
+INFO:root:u_curiosity disc test= 0.9214,0.9212,0.9209,0.9212auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   149 [880.3 s]
+ validation= 0.7878,0.2129 [164.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 72.6039, l2 = 60.0533
+INFO:root:u_curiosity disc test= 0.9194,0.9193,0.9189,0.9193auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   150 [1007.0 s]
+ validation= 0.7886,0.2138 [166.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 72.8655, l2 = 59.9912
+INFO:root:u_curiosity disc test= 0.9199,0.9195,0.9191,0.9195auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   151 [885.6 s]
+ validation= 0.7892,0.2143 [167.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 72.5173, l2 = 59.9743
+INFO:root:u_curiosity disc test= 0.9196,0.9192,0.9189,0.9192auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   152 [937.6 s]
+ validation= 0.7881,0.2137 [165.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.7298, l2 = 59.9486
+INFO:root:u_curiosity disc test= 0.9201,0.9197,0.9194,0.9197auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   153 [881.1 s]
+ validation= 0.7893,0.2141 [168.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 72.6553, l2 = 59.9407
+INFO:root:u_curiosity disc test= 0.9190,0.9186,0.9183,0.9186auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   154 [861.2 s]
+ validation= 0.7876,0.2137 [170.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.5961, l2 = 59.9247
+INFO:root:u_curiosity disc test= 0.9194,0.9190,0.9187,0.9190auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   155 [770.9 s]
+ validation= 0.7881,0.2136 [167.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.8450, l2 = 59.9363
+INFO:root:u_curiosity disc test= 0.9199,0.9197,0.9193,0.9197auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   156 [783.6 s]
+ validation= 0.7889,0.2137 [167.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.4954, l2 = 59.9183
+INFO:root:u_curiosity disc test= 0.9186,0.9185,0.9181,0.9185auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   157 [868.5 s]
+ validation= 0.7880,0.2136 [162.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.7765, l2 = 59.9522
+INFO:root:u_curiosity disc test= 0.9190,0.9189,0.9185,0.9189auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   158 [826.5 s]
+ validation= 0.7877,0.2136 [168.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.4749, l2 = 59.9126
+INFO:root:u_curiosity disc test= 0.9173,0.9173,0.9169,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   159 [795.6 s]
+ validation= 0.7884,0.2133 [165.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.6837, l2 = 59.9142
+INFO:root:u_curiosity disc test= 0.9185,0.9186,0.9182,0.9186auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   160 [814.5 s]
+ validation= 0.7879,0.2141 [169.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.3923, l2 = 59.8664
+INFO:root:u_curiosity disc test= 0.9202,0.9203,0.9199,0.9203auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   161 [888.8 s]
+ validation= 0.7878,0.2131 [163.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.5883, l2 = 59.8695
+INFO:root:u_curiosity disc test= 0.9192,0.9192,0.9188,0.9192auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   162 [846.3 s]
+ validation= 0.7877,0.2138 [189.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.4976, l2 = 59.8584
+INFO:root:u_curiosity disc test= 0.9194,0.9193,0.9189,0.9193auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   163 [845.2 s]
+ validation= 0.7889,0.2141 [176.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.5644, l2 = 59.8550
+INFO:root:u_curiosity disc test= 0.9174,0.9173,0.9169,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   164 [819.4 s]
+ validation= 0.7887,0.2141 [165.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.4894, l2 = 59.8545
+INFO:root:u_curiosity disc test= 0.9166,0.9163,0.9159,0.9163auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   165 [718.0 s]
+ validation= 0.7889,0.2146 [165.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.6321, l2 = 59.9092
+INFO:root:u_curiosity disc test= 0.9177,0.9174,0.9171,0.9174auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   166 [816.4 s]
+ validation= 0.7894,0.2146 [196.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 72.5031, l2 = 59.8832
+INFO:root:u_curiosity disc test= 0.9175,0.9172,0.9169,0.9172auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   167 [770.6 s]
+ validation= 0.7896,0.2144 [158.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 72.2881, l2 = 59.8609
+INFO:root:u_curiosity disc test= 0.9185,0.9181,0.9178,0.9181auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   168 [740.0 s]
+ validation= 0.7882,0.2142 [154.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.2176, l2 = 59.8145
+INFO:root:u_curiosity disc test= 0.9189,0.9187,0.9183,0.9187auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   169 [739.5 s]
+ validation= 0.7897,0.2147 [159.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 72.2895, l2 = 59.7911
+INFO:root:u_curiosity disc test= 0.9185,0.9182,0.9178,0.9182auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   170 [759.3 s]
+ validation= 0.7883,0.2137 [159.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.3709, l2 = 59.8144
+INFO:root:u_curiosity disc test= 0.9196,0.9194,0.9191,0.9194auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   171 [810.6 s]
+ validation= 0.7887,0.2143 [161.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.4123, l2 = 59.8415
+INFO:root:u_curiosity disc test= 0.9184,0.9182,0.9178,0.9182auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   172 [751.5 s]
+ validation= 0.7895,0.2145 [170.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.4336, l2 = 59.8681
+INFO:root:u_curiosity disc test= 0.9184,0.9180,0.9177,0.9180auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   173 [757.9 s]
+ validation= 0.7896,0.2146 [161.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.1819, l2 = 59.8134
+INFO:root:u_curiosity disc test= 0.9193,0.9190,0.9186,0.9190auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   174 [754.6 s]
+ validation= 0.7885,0.2141 [153.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.3166, l2 = 59.8100
+INFO:root:u_curiosity disc test= 0.9195,0.9192,0.9188,0.9192auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   175 [705.6 s]
+ validation= 0.7881,0.2139 [160.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.1636, l2 = 59.8314
+INFO:root:u_curiosity disc test= 0.9201,0.9196,0.9193,0.9196auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   176 [686.0 s]
+ validation= 0.7887,0.2143 [158.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.2833, l2 = 59.7754
+INFO:root:u_curiosity disc test= 0.9213,0.9209,0.9205,0.9209auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   177 [691.7 s]
+ validation= 0.7883,0.2141 [148.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.4240, l2 = 59.7999
+INFO:root:u_curiosity disc test= 0.9221,0.9219,0.9215,0.9219auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   178 [703.9 s]
+ validation= 0.7902,0.2149 [158.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 72.2175, l2 = 59.7972
+INFO:root:u_curiosity disc test= 0.9202,0.9200,0.9197,0.9200auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   179 [642.6 s]
+ validation= 0.7903,0.2148 [172.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 72.2029, l2 = 59.8044
+INFO:root:u_curiosity disc test= 0.9211,0.9209,0.9206,0.9209auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   180 [673.5 s]
+ validation= 0.7895,0.2146 [164.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.1413, l2 = 59.7542
+INFO:root:u_curiosity disc test= 0.9205,0.9203,0.9199,0.9203auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   181 [673.2 s]
+ validation= 0.7901,0.2145 [159.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.2482, l2 = 59.7769
+INFO:root:u_curiosity disc test= 0.9197,0.9195,0.9192,0.9195auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   182 [593.5 s]
+ validation= 0.7903,0.2146 [157.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.2887, l2 = 59.8252
+INFO:root:u_curiosity disc test= 0.9191,0.9188,0.9185,0.9188auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   183 [720.8 s]
+ validation= 0.7900,0.2145 [161.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.9321, l2 = 59.7469
+INFO:root:u_curiosity disc test= 0.9179,0.9176,0.9172,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   184 [655.3 s]
+ validation= 0.7909,0.2153 [154.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 72.2453, l2 = 59.7635
+INFO:root:u_curiosity disc test= 0.9170,0.9166,0.9162,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   185 [695.1 s]
+ validation= 0.7900,0.2144 [141.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.1074, l2 = 59.7469
+INFO:root:u_curiosity disc test= 0.9183,0.9179,0.9176,0.9179auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   186 [731.9 s]
+ validation= 0.7906,0.2149 [154.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.9327, l2 = 59.7313
+INFO:root:u_curiosity disc test= 0.9187,0.9185,0.9182,0.9185auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   187 [634.1 s]
+ validation= 0.7906,0.2151 [158.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.1009, l2 = 59.7321
+INFO:root:u_curiosity disc test= 0.9182,0.9182,0.9178,0.9182auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   188 [680.9 s]
+ validation= 0.7911,0.2151 [153.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 71.8652, l2 = 59.7015
+INFO:root:u_curiosity disc test= 0.9187,0.9186,0.9182,0.9186auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   189 [716.6 s]
+ validation= 0.7902,0.2148 [157.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.0111, l2 = 59.6745
+INFO:root:u_curiosity disc test= 0.9178,0.9177,0.9173,0.9177auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   190 [615.4 s]
+ validation= 0.7909,0.2159 [155.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.9929, l2 = 59.6680
+INFO:root:u_curiosity disc test= 0.9177,0.9174,0.9171,0.9174auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   191 [690.6 s]
+ validation= 0.7907,0.2153 [163.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.9926, l2 = 59.6945
+INFO:root:u_curiosity disc test= 0.9173,0.9171,0.9167,0.9171auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   192 [681.2 s]
+ validation= 0.7905,0.2151 [161.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.9196, l2 = 59.6879
+INFO:root:u_curiosity disc test= 0.9176,0.9174,0.9170,0.9174auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   193 [649.7 s]
+ validation= 0.7905,0.2153 [155.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.9578, l2 = 59.6636
+INFO:root:u_curiosity disc test= 0.9180,0.9180,0.9176,0.9180auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   194 [724.2 s]
+ validation= 0.7912,0.2147 [153.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 72.0070, l2 = 59.6759
+INFO:root:u_curiosity disc test= 0.9178,0.9176,0.9172,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   195 [691.9 s]
+ validation= 0.7912,0.2154 [150.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.9728, l2 = 59.6870
+INFO:root:u_curiosity disc test= 0.9187,0.9186,0.9182,0.9186auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   196 [667.1 s]
+ validation= 0.7916,0.2150 [157.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 71.8179, l2 = 59.6500
+INFO:root:u_curiosity disc test= 0.9187,0.9186,0.9182,0.9186auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   197 [690.1 s]
+ validation= 0.7911,0.2150 [160.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.9454, l2 = 59.6308
+INFO:root:u_curiosity disc test= 0.9174,0.9173,0.9169,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   198 [634.8 s]
+ validation= 0.7918,0.2158 [164.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 71.9772, l2 = 59.6550
+INFO:root:u_curiosity disc test= 0.9178,0.9178,0.9174,0.9178auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   199 [698.9 s]
+ validation= 0.7919,0.2154 [161.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 71.8546, l2 = 59.6660
+INFO:root:u_curiosity disc test= 0.9190,0.9190,0.9186,0.9190auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   200 [606.9 s]
+ validation= 0.7905,0.2148 [158.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.6010, l2 = 59.6148
+INFO:root:u_curiosity disc test= 0.9188,0.9186,0.9182,0.9186auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   201 [600.6 s]
+ validation= 0.7913,0.2155 [143.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 72.2225, l2 = 59.6469
+INFO:root:u_curiosity disc test= 0.9183,0.9181,0.9177,0.9181auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   202 [628.8 s]
+ validation= 0.7913,0.2156 [156.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.7352, l2 = 59.6401
+INFO:root:u_curiosity disc test= 0.9188,0.9184,0.9181,0.9184auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   203 [513.9 s]
+ validation= 0.7913,0.2153 [142.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.6725, l2 = 59.5716
+INFO:root:u_curiosity disc test= 0.9186,0.9181,0.9177,0.9181auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   204 [539.9 s]
+ validation= 0.7908,0.2153 [145.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.9120, l2 = 59.6150
+INFO:root:u_curiosity disc test= 0.9180,0.9178,0.9174,0.9178auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   205 [552.8 s]
+ validation= 0.7905,0.2155 [142.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.8505, l2 = 59.6467
+INFO:root:u_curiosity disc test= 0.9189,0.9191,0.9187,0.9191auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   206 [497.3 s]
+ validation= 0.7903,0.2147 [153.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.7559, l2 = 59.5968
+INFO:root:u_curiosity disc test= 0.9199,0.9201,0.9197,0.9201auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   207 [520.7 s]
+ validation= 0.7911,0.2153 [143.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.8255, l2 = 59.6227
+INFO:root:u_curiosity disc test= 0.9195,0.9198,0.9193,0.9198auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   208 [537.5 s]
+ validation= 0.7906,0.2145 [142.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.6610, l2 = 59.6302
+INFO:root:u_curiosity disc test= 0.9196,0.9196,0.9192,0.9196auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   209 [501.4 s]
+ validation= 0.7899,0.2145 [149.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.7010, l2 = 59.5813
+INFO:root:u_curiosity disc test= 0.9196,0.9194,0.9190,0.9194auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   210 [512.1 s]
+ validation= 0.7918,0.2150 [144.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.7027, l2 = 59.5639
+INFO:root:u_curiosity disc test= 0.9203,0.9199,0.9195,0.9199auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   211 [538.8 s]
+ validation= 0.7918,0.2153 [142.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.7504, l2 = 59.5770
+INFO:root:u_curiosity disc test= 0.9201,0.9197,0.9194,0.9197auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   212 [514.7 s]
+ validation= 0.7913,0.2152 [143.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.7291, l2 = 59.5735
+INFO:root:u_curiosity disc test= 0.9202,0.9199,0.9195,0.9199auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   213 [520.5 s]
+ validation= 0.7905,0.2145 [163.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.5488, l2 = 59.5242
+INFO:root:u_curiosity disc test= 0.9194,0.9191,0.9188,0.9191auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   214 [532.5 s]
+ validation= 0.7916,0.2158 [161.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.8160, l2 = 59.5269
+INFO:root:u_curiosity disc test= 0.9183,0.9182,0.9178,0.9182auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   215 [434.7 s]
+ validation= 0.7915,0.2160 [146.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.7476, l2 = 59.5401
+INFO:root:u_curiosity disc test= 0.9194,0.9192,0.9188,0.9192auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   216 [475.9 s]
+ validation= 0.7918,0.2153 [148.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.5727, l2 = 59.5247
+INFO:root:u_curiosity disc test= 0.9188,0.9187,0.9183,0.9187auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   217 [458.3 s]
+ validation= 0.7902,0.2148 [152.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.6043, l2 = 59.5118
+INFO:root:u_curiosity disc test= 0.9176,0.9175,0.9171,0.9175auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   218 [433.8 s]
+ validation= 0.7915,0.2152 [147.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.5765, l2 = 59.4816
+INFO:root:u_curiosity disc test= 0.9160,0.9160,0.9156,0.9160auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   219 [475.1 s]
+ validation= 0.7924,0.2158 [131.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 71.7047, l2 = 59.4891
+INFO:root:u_curiosity disc test= 0.9175,0.9176,0.9172,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   220 [457.9 s]
+ validation= 0.7912,0.2151 [158.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.5862, l2 = 59.4811
+INFO:root:u_curiosity disc test= 0.9179,0.9178,0.9174,0.9178auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   221 [424.2 s]
+ validation= 0.7908,0.2151 [138.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.6018, l2 = 59.4668
+INFO:root:u_curiosity disc test= 0.9166,0.9165,0.9161,0.9165auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   222 [460.2 s]
+ validation= 0.7900,0.2150 [127.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.2961, l2 = 59.4414
+INFO:root:u_curiosity disc test= 0.9169,0.9167,0.9163,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   223 [446.8 s]
+ validation= 0.7908,0.2150 [156.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.5302, l2 = 59.4548
+INFO:root:u_curiosity disc test= 0.9170,0.9168,0.9164,0.9168auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   224 [410.9 s]
+ validation= 0.7917,0.2151 [129.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.5841, l2 = 59.4370
+INFO:root:u_curiosity disc test= 0.9163,0.9162,0.9158,0.9162auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   225 [430.2 s]
+ validation= 0.7920,0.2158 [125.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.8019, l2 = 59.4883
+INFO:root:u_curiosity disc test= 0.9186,0.9186,0.9182,0.9186auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   226 [434.9 s]
+ validation= 0.7915,0.2159 [126.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.3365, l2 = 59.4625
+INFO:root:u_curiosity disc test= 0.9187,0.9184,0.9181,0.9184auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   227 [406.7 s]
+ validation= 0.7912,0.2157 [125.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.5431, l2 = 59.4534
+INFO:root:u_curiosity disc test= 0.9187,0.9184,0.9180,0.9184auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   228 [423.9 s]
+ validation= 0.7924,0.2159 [124.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 71.5789, l2 = 59.4390
+INFO:root:u_curiosity disc test= 0.9197,0.9193,0.9190,0.9193auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   229 [433.6 s]
+ validation= 0.7913,0.2157 [127.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.4475, l2 = 59.4616
+INFO:root:u_curiosity disc test= 0.9188,0.9184,0.9180,0.9184auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   230 [403.0 s]
+ validation= 0.7902,0.2148 [126.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.6962, l2 = 59.4883
+INFO:root:u_curiosity disc test= 0.9186,0.9182,0.9178,0.9182auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   231 [416.1 s]
+ validation= 0.7926,0.2156 [124.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 71.4300, l2 = 59.4708
+INFO:root:u_curiosity disc test= 0.9173,0.9170,0.9166,0.9170auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   232 [441.7 s]
+ validation= 0.7921,0.2160 [125.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.2880, l2 = 59.4277
+INFO:root:u_curiosity disc test= 0.9183,0.9179,0.9175,0.9179auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   233 [403.1 s]
+ validation= 0.7921,0.2157 [126.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.3745, l2 = 59.4119
+INFO:root:u_curiosity disc test= 0.9172,0.9167,0.9164,0.9167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   234 [410.9 s]
+ validation= 0.7922,0.2160 [125.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.2523, l2 = 59.3792
+INFO:root:u_curiosity disc test= 0.9165,0.9161,0.9157,0.9161auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   235 [435.0 s]
+ validation= 0.7931,0.2161 [126.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 71.4747, l2 = 59.3862
+INFO:root:u_curiosity disc test= 0.9174,0.9170,0.9166,0.9170auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   236 [410.5 s]
+ validation= 0.7915,0.2154 [126.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.4971, l2 = 59.3762
+INFO:root:u_curiosity disc test= 0.9193,0.9188,0.9184,0.9188auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   237 [409.3 s]
+ validation= 0.7920,0.2156 [123.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.3094, l2 = 59.3567
+INFO:root:u_curiosity disc test= 0.9186,0.9180,0.9177,0.9180auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   238 [437.1 s]
+ validation= 0.7923,0.2158 [126.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.3108, l2 = 59.3500
+INFO:root:u_curiosity disc test= 0.9192,0.9187,0.9184,0.9187auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   239 [416.3 s]
+ validation= 0.7918,0.2154 [124.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.3895, l2 = 59.3592
+INFO:root:u_curiosity disc test= 0.9174,0.9169,0.9166,0.9169auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   240 [412.8 s]
+ validation= 0.7935,0.2165 [123.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 71.5102, l2 = 59.3512
+INFO:root:u_curiosity disc test= 0.9177,0.9173,0.9169,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   241 [437.4 s]
+ validation= 0.7921,0.2158 [124.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.3713, l2 = 59.3633
+INFO:root:u_curiosity disc test= 0.9176,0.9171,0.9168,0.9171auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   242 [427.1 s]
+ validation= 0.7920,0.2156 [126.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.2927, l2 = 59.3443
+INFO:root:u_curiosity disc test= 0.9178,0.9173,0.9170,0.9173auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   243 [409.0 s]
+ validation= 0.7913,0.2154 [125.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.1994, l2 = 59.3168
+INFO:root:u_curiosity disc test= 0.9180,0.9176,0.9172,0.9176auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   244 [442.5 s]
+ validation= 0.7918,0.2160 [122.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.5648, l2 = 59.3630
+INFO:root:u_curiosity disc test= 0.9155,0.9152,0.9149,0.9152auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   245 [429.2 s]
+ validation= 0.7907,0.2152 [125.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.3546, l2 = 59.3604
+INFO:root:u_curiosity disc test= 0.9150,0.9147,0.9143,0.9147auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   246 [403.6 s]
+ validation= 0.7909,0.2155 [126.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.3125, l2 = 59.3480
+INFO:root:u_curiosity disc test= 0.9148,0.9147,0.9142,0.9147auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   247 [427.6 s]
+ validation= 0.7911,0.2156 [123.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.2243, l2 = 59.3529
+INFO:root:u_curiosity disc test= 0.9158,0.9155,0.9151,0.9155auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   248 [433.0 s]
+ validation= 0.7912,0.2152 [128.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.1639, l2 = 59.3352
+INFO:root:u_curiosity disc test= 0.9157,0.9155,0.9151,0.9155auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   249 [403.9 s]
+ validation= 0.7927,0.2157 [126.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.1523, l2 = 59.2632
+INFO:root:u_curiosity disc test= 0.9177,0.9175,0.9172,0.9175auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   250 [428.5 s]
+ validation= 0.7921,0.2157 [125.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.4769, l2 = 59.2971
+INFO:root:u_curiosity disc test= 0.9165,0.9166,0.9161,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   251 [436.9 s]
+ validation= 0.7933,0.2163 [125.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.2485, l2 = 59.2939
+INFO:root:u_curiosity disc test= 0.9163,0.9163,0.9159,0.9163auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   252 [400.8 s]
+ validation= 0.7930,0.2161 [124.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.1423, l2 = 59.3229
+INFO:root:u_curiosity disc test= 0.9173,0.9169,0.9165,0.9169auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   253 [414.8 s]
+ validation= 0.7928,0.2162 [125.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.3747, l2 = 59.2793
+INFO:root:u_curiosity disc test= 0.9172,0.9166,0.9162,0.9166auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   254 [438.4 s]
+ validation= 0.7921,0.2152 [127.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.5079, l2 = 59.3216
+INFO:root:u_curiosity disc test= 0.9164,0.9161,0.9158,0.9161auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   255 [408.5 s]
+ validation= 0.7917,0.2152 [127.3 s] ndcg@10,f1@10
+INFO:root:Early stop at 255 based on validation result.
+INFO:root:Best Iter (validation) =   240	 valid= 0.7935,0.2165 [509898.0 s] ndcg@10,f1@10 u_curiosity=0.9174auc
+INFO:root:Load model from ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load u_curiosity discriminator model from ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/u_curiosity_disc.pt
+INFO:root:Load model from ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/BiasedMF_PCFR_taobaoserendipity_u_curiosity_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_curiosity loss = 0.7027
+INFO:root:Epoch     1 [1.4 s]
+INFO:root:u_curiosity disc test = 0.5004,0.4912,0.3510,0.4912 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_curiosity loss = 0.6941
+INFO:root:
+
+INFO:root:u_curiosity loss = 0.6197
+INFO:root:Epoch   126 [1.4 s]
+INFO:root:u_curiosity disc test = 0.5102,0.4881,0.4852,0.4881 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_curiosity loss = 0.5715
+INFO:root:Epoch   251 [1.4 s]
+INFO:root:u_curiosity disc test = 0.5040,0.5018,0.4500,0.5018 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_curiosity loss = 0.5437
+INFO:root:Epoch   376 [1.3 s]
+INFO:root:u_curiosity disc test = 0.5098,0.4974,0.4136,0.4974 auc, acc, f1_macro, f1_micro
+INFO:root:u_curiosity best auc: 0.5168
+INFO:root:And the corresponding u_curiosity best disc test= 0.5168,0.4859,0.4739,0.4859 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_curiosity discriminator model from ../model/BiasedMF_PCFR_taobaoserendipity_u_curiosity_neg_sample=1000/u_curiosity_eval_disc.pt
+INFO:root:Test After Training = 0.7927,0.2153 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.01549438542207937

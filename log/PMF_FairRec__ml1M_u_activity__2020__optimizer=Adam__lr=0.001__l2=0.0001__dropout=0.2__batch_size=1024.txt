@@ -1,0 +1,370 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'PMF', 'fairness_framework': 'FairRec', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '0', 'verbose': 20, 'log_file': '../log/PMF_FairRec__ml1M_u_activity__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'ml1M', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_activity'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.05, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: PMF
+INFO:root:Fairness framework: FairRec
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 800169
+INFO:root:load validation csv...
+INFO:root:size of validation: 100020
+INFO:root:load test csv...
+INFO:root:size of test: 100020
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 657152
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 350.1753, l2 = 0.1769
+INFO:root:u_activity disc test= 0.5005,0.8519,0.4602,0.8519auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.5003,0.8522,0.4605,0.8522auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [816.8 s]
+ validation= 0.2623,0.1468 [407.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 251.2832, l2 = 0.2458
+INFO:root:u_activity disc test= 0.5007,0.8530,0.4621,0.8530auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.5000,0.8529,0.4604,0.8529auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [771.0 s]
+ validation= 0.2878,0.1636 [462.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 230.6945, l2 = 0.3038
+INFO:root:u_activity disc test= 0.5195,0.8553,0.5015,0.8553auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.5082,0.8535,0.4787,0.8535auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [791.4 s]
+ validation= 0.2852,0.1629 [299.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 222.3182, l2 = 0.3582
+INFO:root:u_activity disc test= 0.5378,0.8587,0.5352,0.8587auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.5239,0.8557,0.5103,0.8557auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [742.4 s]
+ validation= 0.2863,0.1639 [266.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 214.3503, l2 = 0.4167
+INFO:root:u_activity disc test= 0.5512,0.8618,0.5579,0.8618auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.5414,0.8598,0.5414,0.8598auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [694.5 s]
+ validation= 0.2952,0.1708 [174.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 207.1362, l2 = 0.4742
+INFO:root:u_activity disc test= 0.5585,0.8634,0.5697,0.8634auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.5512,0.8617,0.5579,0.8617auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [687.8 s]
+ validation= 0.2983,0.1732 [191.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 202.6725, l2 = 0.5339
+INFO:root:u_activity disc test= 0.5624,0.8642,0.5759,0.8642auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.5499,0.8618,0.5557,0.8618auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [734.9 s]
+ validation= 0.3006,0.1745 [253.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 197.7333, l2 = 0.5955
+INFO:root:u_activity disc test= 0.5686,0.8653,0.5853,0.8653auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.5555,0.8627,0.5649,0.8627auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [742.7 s]
+ validation= 0.2953,0.1720 [241.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 193.0862, l2 = 0.6566
+INFO:root:u_activity disc test= 0.5748,0.8674,0.5947,0.8674auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.5641,0.8650,0.5785,0.8650auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [744.7 s]
+ validation= 0.3058,0.1788 [336.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 188.2018, l2 = 0.7189
+INFO:root:u_activity disc test= 0.5875,0.8704,0.6131,0.8704auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.5780,0.8688,0.5995,0.8688auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [803.1 s]
+ validation= 0.3027,0.1785 [293.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 183.4137, l2 = 0.7817
+INFO:root:u_activity disc test= 0.5976,0.8726,0.6270,0.8726auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.5843,0.8699,0.6086,0.8699auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [761.1 s]
+ validation= 0.3065,0.1798 [251.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 179.9717, l2 = 0.8444
+INFO:root:u_activity disc test= 0.6085,0.8754,0.6417,0.8754auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.5963,0.8731,0.6256,0.8731auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [728.8 s]
+ validation= 0.3160,0.1856 [273.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 175.7293, l2 = 0.9055
+INFO:root:u_activity disc test= 0.6224,0.8795,0.6598,0.8795auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.6097,0.8762,0.6435,0.8762auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [741.7 s]
+ validation= 0.3169,0.1866 [413.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 172.7850, l2 = 0.9678
+INFO:root:u_activity disc test= 0.6384,0.8838,0.6796,0.8838auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.6241,0.8802,0.6622,0.8802auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [749.0 s]
+ validation= 0.3167,0.1860 [374.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 169.5370, l2 = 1.0291
+INFO:root:u_activity disc test= 0.6520,0.8880,0.6962,0.8880auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.6426,0.8856,0.6852,0.8856auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [751.6 s]
+ validation= 0.3145,0.1845 [330.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 166.9274, l2 = 1.0904
+INFO:root:u_activity disc test= 0.6621,0.8909,0.7079,0.8909auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.6561,0.8895,0.7013,0.8895auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [780.1 s]
+ validation= 0.3144,0.1844 [474.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 164.6848, l2 = 1.1527
+INFO:root:u_activity disc test= 0.6706,0.8938,0.7180,0.8938auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.6645,0.8922,0.7112,0.8922auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [749.2 s]
+ validation= 0.3216,0.1882 [305.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 161.6050, l2 = 1.2141
+INFO:root:u_activity disc test= 0.6757,0.8949,0.7233,0.8949auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.6690,0.8933,0.7162,0.8933auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [753.9 s]
+ validation= 0.3194,0.1884 [333.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 159.0086, l2 = 1.2753
+INFO:root:u_activity disc test= 0.6837,0.8984,0.7333,0.8984auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.6746,0.8955,0.7230,0.8955auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [715.1 s]
+ validation= 0.3230,0.1896 [314.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 156.7295, l2 = 1.3370
+INFO:root:u_activity disc test= 0.6900,0.9001,0.7400,0.9001auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.6831,0.8980,0.7324,0.8980auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [787.2 s]
+ validation= 0.3207,0.1879 [441.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 156.0409, l2 = 1.3983
+INFO:root:u_activity disc test= 0.7016,0.9042,0.7532,0.9042auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.6908,0.9009,0.7415,0.9009auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [744.4 s]
+ validation= 0.3211,0.1888 [327.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 152.8048, l2 = 1.4588
+INFO:root:u_activity disc test= 0.7055,0.9056,0.7575,0.9056auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.6966,0.9032,0.7484,0.9032auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    22 [767.3 s]
+ validation= 0.3182,0.1868 [355.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 151.4778, l2 = 1.5200
+INFO:root:u_activity disc test= 0.7093,0.9065,0.7613,0.9065auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7059,0.9057,0.7579,0.9057auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    23 [761.1 s]
+ validation= 0.3270,0.1913 [339.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 150.7911, l2 = 1.5817
+INFO:root:u_activity disc test= 0.7163,0.9089,0.7688,0.9089auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7075,0.9066,0.7601,0.9066auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    24 [735.7 s]
+ validation= 0.3193,0.1870 [261.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 147.5891, l2 = 1.6417
+INFO:root:u_activity disc test= 0.7256,0.9117,0.7782,0.9117auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7172,0.9101,0.7708,0.9101auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    25 [779.6 s]
+ validation= 0.3181,0.1881 [377.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 146.9664, l2 = 1.7034
+INFO:root:u_activity disc test= 0.7331,0.9143,0.7861,0.9143auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7266,0.9135,0.7811,0.9135auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    26 [772.3 s]
+ validation= 0.3243,0.1914 [455.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 145.3095, l2 = 1.7642
+INFO:root:u_activity disc test= 0.7393,0.9161,0.7921,0.9161auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7314,0.9148,0.7858,0.9148auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    27 [758.9 s]
+ validation= 0.3250,0.1907 [380.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 142.8633, l2 = 1.8253
+INFO:root:u_activity disc test= 0.7466,0.9183,0.7992,0.9183auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7351,0.9158,0.7893,0.9158auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    28 [759.6 s]
+ validation= 0.3167,0.1855 [322.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 141.2033, l2 = 1.8847
+INFO:root:u_activity disc test= 0.7522,0.9202,0.8047,0.9202auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7378,0.9159,0.7909,0.9159auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    29 [755.7 s]
+ validation= 0.3251,0.1904 [438.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 141.3141, l2 = 1.9451
+INFO:root:u_activity disc test= 0.7611,0.9237,0.8143,0.9237auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7468,0.9194,0.8008,0.9194auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    30 [759.2 s]
+ validation= 0.3201,0.1888 [333.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 139.1396, l2 = 2.0049
+INFO:root:u_activity disc test= 0.7680,0.9262,0.8212,0.9262auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7527,0.9214,0.8067,0.9214auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    31 [766.5 s]
+ validation= 0.3197,0.1880 [370.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 138.3074, l2 = 2.0644
+INFO:root:u_activity disc test= 0.7716,0.9272,0.8244,0.9272auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7576,0.9231,0.8116,0.9231auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    32 [753.5 s]
+ validation= 0.3135,0.1848 [428.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 135.7463, l2 = 2.1237
+INFO:root:u_activity disc test= 0.7792,0.9297,0.8316,0.9297auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7650,0.9256,0.8189,0.9256auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    33 [771.8 s]
+ validation= 0.3166,0.1864 [308.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 135.0268, l2 = 2.1833
+INFO:root:u_activity disc test= 0.7863,0.9318,0.8378,0.9318auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7712,0.9277,0.8249,0.9277auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    34 [742.0 s]
+ validation= 0.3216,0.1897 [380.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 134.4108, l2 = 2.2426
+INFO:root:u_activity disc test= 0.7877,0.9326,0.8396,0.9326auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7745,0.9289,0.8283,0.9289auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    35 [768.3 s]
+ validation= 0.3186,0.1870 [336.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 132.5131, l2 = 2.3013
+INFO:root:u_activity disc test= 0.7919,0.9339,0.8433,0.9339auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7812,0.9310,0.8345,0.9310auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    36 [738.4 s]
+ validation= 0.3230,0.1900 [427.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 131.5069, l2 = 2.3606
+INFO:root:u_activity disc test= 0.7971,0.9356,0.8482,0.9356auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7878,0.9334,0.8410,0.9334auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    37 [752.2 s]
+ validation= 0.3152,0.1849 [388.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 130.2912, l2 = 2.4203
+INFO:root:u_activity disc test= 0.8003,0.9368,0.8512,0.9368auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7923,0.9355,0.8461,0.9355auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    38 [766.1 s]
+ validation= 0.3204,0.1876 [348.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 128.8932, l2 = 2.4785
+INFO:root:u_activity disc test= 0.8049,0.9383,0.8555,0.9383auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7916,0.9351,0.8453,0.9351auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    39 [741.1 s]
+ validation= 0.3212,0.1877 [348.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 128.1509, l2 = 2.5366
+INFO:root:u_activity disc test= 0.8115,0.9407,0.8617,0.9407auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.7980,0.9372,0.8510,0.9372auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    40 [780.6 s]
+ validation= 0.3118,0.1826 [353.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 127.0622, l2 = 2.5944
+INFO:root:u_activity disc test= 0.8147,0.9414,0.8639,0.9414auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.8034,0.9387,0.8556,0.9387auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    41 [753.8 s]
+ validation= 0.3127,0.1829 [386.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 126.1692, l2 = 2.6521
+INFO:root:u_activity disc test= 0.8202,0.9437,0.8696,0.9437auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.8091,0.9407,0.8608,0.9407auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    42 [745.8 s]
+ validation= 0.3228,0.1892 [327.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 124.6390, l2 = 2.7089
+INFO:root:u_activity disc test= 0.8252,0.9452,0.8736,0.9452auc, acc, f1_macro, f1_micro
+INFO:root:u_activity pred test= 0.8141,0.9424,0.8654,0.9424auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    43 [762.9 s]
+ validation= 0.3160,0.1854 [228.8 s] ndcg@10,f1@10
+INFO:root:Early stop at 43 based on validation result.
+INFO:root:Best Iter (validation) =    23	 valid= 0.3270,0.1913 [47154.3 s] ndcg@10,f1@10
+INFO:root:disc test: u_activity=0.7093auc, pred test: u_activity=0.7059auc
+INFO:root:Load model from ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:Load u_activity discriminator model from ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/u_activity_disc.pt
+INFO:root:Load u_activity discriminator model from ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/u_activity_disc.pt
+INFO:root:Load model from ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/PMF_FairRec_ml1M_u_activity_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_activity loss = 0.6981
+INFO:root:Epoch     1 [0.8 s]
+INFO:root:u_activity disc test = 0.5000,0.4876,0.3278,0.4876 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_activity loss = 0.6897
+INFO:root:
+
+INFO:root:u_activity loss = 0.5464
+INFO:root:Epoch   126 [2.2 s]
+INFO:root:u_activity disc test = 0.5015,0.4868,0.3488,0.4868 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_activity loss = 0.5076
+INFO:root:Epoch   251 [1.6 s]
+INFO:root:u_activity disc test = 0.5141,0.5025,0.3718,0.5025 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_activity loss = 0.4858
+INFO:root:Epoch   376 [0.6 s]
+INFO:root:u_activity disc test = 0.5096,0.4975,0.3516,0.4975 auc, acc, f1_macro, f1_micro
+INFO:root:u_activity best auc: 0.5158
+INFO:root:And the corresponding u_activity best disc test= 0.5158,0.5041,0.3727,0.5041 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_activity discriminator model from ../model/PMF_FairRec_ml1M_u_activity_neg_samplev=1000/u_activity_eval_disc.pt
+INFO:root:Test After Training = 0.3276,0.1930 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.21257792791712948

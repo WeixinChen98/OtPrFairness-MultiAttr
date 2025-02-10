@@ -1,0 +1,238 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'MLP', 'fairness_framework': 'FOCF_AbsUnf', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '3', 'verbose': 20, 'log_file': '../log/MLP_FOCF_AbsUnf__douban_u_openness__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'douban', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_openness'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'num_layers': 3, 'model_path': '../model/MLP_FOCF_AbsUnf_douban_u_openness_neg_sample=1000/MLP_FOCF_AbsUnf_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: MLP
+INFO:root:Fairness framework: FOCF_AbsUnf
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 19451
+INFO:root:load validation csv...
+INFO:root:size of validation: 2431
+INFO:root:load test csv...
+INFO:root:size of test: 2432
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 273409
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 698.0828, l2 = 0.0143
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'MLP', 'fairness_framework': 'FOCF_AbsUnf', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '0', 'verbose': 20, 'log_file': '../log/MLP_FOCF_AbsUnf__douban_u_openness__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'douban', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_openness'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'num_layers': 3, 'model_path': '../model/MLP_FOCF_AbsUnf_douban_u_openness_neg_sample=1000/MLP_FOCF_AbsUnf_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: MLP
+INFO:root:Fairness framework: FOCF_AbsUnf
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 19451
+INFO:root:load validation csv...
+INFO:root:size of validation: 2431
+INFO:root:load test csv...
+INFO:root:size of test: 2432
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 273409
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 698.0828, l2 = 0.0143
+INFO:root:Epoch     1 [1.8 s]
+ validation= 0.3082,0.1245 [10.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FOCF_AbsUnf_douban_u_openness_neg_sample=1000/MLP_FOCF_AbsUnf_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 583.3208, l2 = 0.0174
+INFO:root:Epoch     2 [1.3 s]
+ validation= 0.3280,0.1319 [10.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FOCF_AbsUnf_douban_u_openness_neg_sample=1000/MLP_FOCF_AbsUnf_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 340.5814, l2 = 0.0237
+INFO:root:Epoch     3 [1.3 s]
+ validation= 0.3303,0.1327 [10.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FOCF_AbsUnf_douban_u_openness_neg_sample=1000/MLP_FOCF_AbsUnf_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 256.8993, l2 = 0.0270
+INFO:root:Epoch     4 [1.2 s]
+ validation= 0.3296,0.1335 [10.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 250.9655, l2 = 0.0280
+INFO:root:Epoch     5 [1.2 s]
+ validation= 0.3263,0.1313 [10.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 252.1925, l2 = 0.0292
+INFO:root:Epoch     6 [1.3 s]
+ validation= 0.3230,0.1303 [9.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 243.6330, l2 = 0.0307
+INFO:root:Epoch     7 [1.2 s]
+ validation= 0.3231,0.1315 [9.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 239.9430, l2 = 0.0321
+INFO:root:Epoch     8 [1.5 s]
+ validation= 0.3215,0.1317 [11.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 236.2126, l2 = 0.0336
+INFO:root:Epoch     9 [1.7 s]
+ validation= 0.3247,0.1328 [11.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 233.8792, l2 = 0.0349
+INFO:root:Epoch    10 [1.3 s]
+ validation= 0.3270,0.1332 [9.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 230.2578, l2 = 0.0363
+INFO:root:Epoch    11 [1.2 s]
+ validation= 0.3301,0.1340 [9.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 224.4677, l2 = 0.0376
+INFO:root:Epoch    12 [1.2 s]
+ validation= 0.3304,0.1339 [9.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FOCF_AbsUnf_douban_u_openness_neg_sample=1000/MLP_FOCF_AbsUnf_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 225.8158, l2 = 0.0387
+INFO:root:Epoch    13 [1.2 s]
+ validation= 0.3280,0.1334 [9.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 228.4762, l2 = 0.0398
+INFO:root:Epoch    14 [1.2 s]
+ validation= 0.3279,0.1338 [9.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 222.6511, l2 = 0.0409
+INFO:root:Epoch    15 [1.2 s]
+ validation= 0.3286,0.1332 [9.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 217.4245, l2 = 0.0422
+INFO:root:Epoch    16 [1.2 s]
+ validation= 0.3302,0.1333 [9.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 221.8230, l2 = 0.0432
+INFO:root:Epoch    17 [1.2 s]
+ validation= 0.3261,0.1313 [9.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.1597, l2 = 0.0445
+INFO:root:Epoch    18 [1.2 s]
+ validation= 0.3287,0.1324 [9.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.4466, l2 = 0.0454
+INFO:root:Epoch    19 [1.2 s]
+ validation= 0.3285,0.1341 [9.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 217.0409, l2 = 0.0465
+INFO:root:Epoch    20 [1.2 s]
+ validation= 0.3291,0.1335 [11.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 206.1112, l2 = 0.0476
+INFO:root:Epoch    21 [1.2 s]
+ validation= 0.3301,0.1342 [9.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 211.8116, l2 = 0.0486
+INFO:root:Epoch    22 [1.2 s]
+ validation= 0.3304,0.1349 [9.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 205.2978, l2 = 0.0499
+INFO:root:Epoch    23 [1.2 s]
+ validation= 0.3291,0.1328 [9.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 202.7486, l2 = 0.0510
+INFO:root:Epoch    24 [1.2 s]
+ validation= 0.3252,0.1323 [9.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 204.8009, l2 = 0.0522
+INFO:root:Epoch    25 [1.2 s]
+ validation= 0.3248,0.1330 [9.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 200.2794, l2 = 0.0534
+INFO:root:Epoch    26 [1.2 s]
+ validation= 0.3288,0.1344 [10.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 200.1579, l2 = 0.0545
+INFO:root:Epoch    27 [1.2 s]
+ validation= 0.3287,0.1337 [9.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 196.5010, l2 = 0.0558
+INFO:root:Epoch    28 [1.2 s]
+ validation= 0.3272,0.1332 [9.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 190.4315, l2 = 0.0570
+INFO:root:Epoch    29 [1.2 s]
+ validation= 0.3251,0.1326 [10.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 192.5791, l2 = 0.0583
+INFO:root:Epoch    30 [1.2 s]
+ validation= 0.3264,0.1322 [10.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 188.3994, l2 = 0.0597
+INFO:root:Epoch    31 [1.2 s]
+ validation= 0.3290,0.1336 [10.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 179.4085, l2 = 0.0608
+INFO:root:Epoch    32 [1.2 s]
+ validation= 0.3262,0.1331 [9.9 s] ndcg@10,f1@10
+INFO:root:Early stop at 32 based on validation result.
+INFO:root:Best Iter (validation) =    12	 valid= 0.3304,0.1339 [360.1 s] ndcg@10,f1@10
+INFO:root:Load model from ../model/MLP_FOCF_AbsUnf_douban_u_openness_neg_sample=1000/MLP_FOCF_AbsUnf_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load model from ../model/MLP_FOCF_AbsUnf_douban_u_openness_neg_sample=1000/MLP_FOCF_AbsUnf_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_openness loss = 0.6965
+INFO:root:Epoch     1 [0.1 s]
+INFO:root:u_openness disc test = 0.5000,0.5015,0.3340,0.5015 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_openness loss = 0.6957
+INFO:root:
+
+INFO:root:u_openness loss = 0.6834
+INFO:root:Epoch   126 [0.1 s]
+INFO:root:u_openness disc test = 0.5114,0.5103,0.4328,0.5103 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_openness loss = 0.6555
+INFO:root:Epoch   251 [0.1 s]
+INFO:root:u_openness disc test = 0.5161,0.4839,0.4838,0.4839 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_openness loss = 0.6272
+INFO:root:Epoch   376 [0.1 s]
+INFO:root:u_openness disc test = 0.5248,0.4751,0.4746,0.4751 auc, acc, f1_macro, f1_micro
+INFO:root:u_openness best auc: 0.5365
+INFO:root:And the corresponding u_openness best disc test= 0.5365,0.4633,0.4624,0.4633 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_openness discriminator model from ../model/MLP_FOCF_AbsUnf_douban_u_openness_neg_sample=1000/u_openness_eval_disc.pt
+INFO:root:Test After Training = 0.3305,0.1371 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.009936153260186043

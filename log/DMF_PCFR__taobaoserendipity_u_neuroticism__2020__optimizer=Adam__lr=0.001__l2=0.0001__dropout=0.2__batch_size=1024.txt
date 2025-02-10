@@ -1,0 +1,346 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'DMF', 'fairness_framework': 'PCFR', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '0', 'verbose': 20, 'log_file': '../log/DMF_PCFR__taobaoserendipity_u_neuroticism__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'taobaoserendipity', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_neuroticism'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'num_layers': 3, 'model_path': '../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: DMF
+INFO:root:Fairness framework: PCFR
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 9132376
+INFO:root:load validation csv...
+INFO:root:size of validation: 1141547
+INFO:root:load test csv...
+INFO:root:size of test: 1141548
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 54163968
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 601.8113, l2 = 12.5759
+INFO:root:u_neuroticism disc test= 0.5083,0.5463,0.4087,0.5463auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [4448.2 s]
+ validation= 0.4716,0.0987 [639.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 555.6296, l2 = 25.2530
+INFO:root:u_neuroticism disc test= 0.5242,0.5547,0.4708,0.5547auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [4544.8 s]
+ validation= 0.5002,0.1063 [606.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 499.7270, l2 = 34.9742
+INFO:root:u_neuroticism disc test= 0.5425,0.5664,0.5162,0.5664auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [4432.5 s]
+ validation= 0.5213,0.1129 [532.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 459.3707, l2 = 38.9104
+INFO:root:u_neuroticism disc test= 0.5511,0.5731,0.5304,0.5731auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [4492.9 s]
+ validation= 0.5285,0.1147 [565.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 437.2186, l2 = 39.6530
+INFO:root:u_neuroticism disc test= 0.5531,0.5747,0.5338,0.5747auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [4549.3 s]
+ validation= 0.5282,0.1158 [516.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 420.4866, l2 = 39.9154
+INFO:root:u_neuroticism disc test= 0.5532,0.5751,0.5330,0.5751auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [4539.5 s]
+ validation= 0.5381,0.1193 [537.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 405.2198, l2 = 40.0483
+INFO:root:u_neuroticism disc test= 0.5530,0.5755,0.5314,0.5755auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [4596.3 s]
+ validation= 0.5457,0.1221 [537.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 392.4474, l2 = 39.8589
+INFO:root:u_neuroticism disc test= 0.5551,0.5768,0.5355,0.5768auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [4473.7 s]
+ validation= 0.5521,0.1246 [528.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 383.5863, l2 = 39.5561
+INFO:root:u_neuroticism disc test= 0.5551,0.5769,0.5350,0.5769auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [4502.6 s]
+ validation= 0.5521,0.1248 [587.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 376.5692, l2 = 39.2089
+INFO:root:u_neuroticism disc test= 0.5550,0.5770,0.5344,0.5770auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [4464.2 s]
+ validation= 0.5521,0.1255 [610.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 370.4456, l2 = 39.0504
+INFO:root:u_neuroticism disc test= 0.5566,0.5783,0.5370,0.5783auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [4422.6 s]
+ validation= 0.5549,0.1263 [554.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 365.6942, l2 = 38.8531
+INFO:root:u_neuroticism disc test= 0.5585,0.5799,0.5398,0.5799auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [4346.0 s]
+ validation= 0.5514,0.1248 [560.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 361.7699, l2 = 38.7112
+INFO:root:u_neuroticism disc test= 0.5582,0.5795,0.5398,0.5795auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [4356.5 s]
+ validation= 0.5526,0.1253 [613.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 358.1656, l2 = 38.5307
+INFO:root:u_neuroticism disc test= 0.5590,0.5798,0.5417,0.5798auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [4318.1 s]
+ validation= 0.5559,0.1264 [564.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 353.9948, l2 = 38.4312
+INFO:root:u_neuroticism disc test= 0.5593,0.5798,0.5426,0.5798auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [4481.7 s]
+ validation= 0.5536,0.1263 [545.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 351.3912, l2 = 38.3424
+INFO:root:u_neuroticism disc test= 0.5605,0.5807,0.5446,0.5807auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [4255.3 s]
+ validation= 0.5564,0.1264 [497.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 348.4044, l2 = 38.1637
+INFO:root:u_neuroticism disc test= 0.5599,0.5802,0.5438,0.5802auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [4442.6 s]
+ validation= 0.5572,0.1267 [547.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 346.1914, l2 = 37.9528
+INFO:root:u_neuroticism disc test= 0.5605,0.5805,0.5448,0.5805auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [4223.0 s]
+ validation= 0.5556,0.1262 [443.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 344.0359, l2 = 37.9398
+INFO:root:u_neuroticism disc test= 0.5620,0.5815,0.5476,0.5815auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [4761.0 s]
+ validation= 0.5564,0.1271 [721.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 342.3914, l2 = 37.8695
+INFO:root:u_neuroticism disc test= 0.5624,0.5815,0.5490,0.5815auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [5534.1 s]
+ validation= 0.5596,0.1277 [2224.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 340.8995, l2 = 37.7596
+INFO:root:u_neuroticism disc test= 0.5628,0.5816,0.5496,0.5816auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [4746.8 s]
+ validation= 0.5596,0.1276 [890.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 339.8625, l2 = 37.7249
+INFO:root:u_neuroticism disc test= 0.5632,0.5821,0.5500,0.5821auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    22 [4771.1 s]
+ validation= 0.5566,0.1268 [1027.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 338.9938, l2 = 37.7183
+INFO:root:u_neuroticism disc test= 0.5643,0.5831,0.5513,0.5831auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    23 [4837.5 s]
+ validation= 0.5579,0.1273 [914.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 337.7566, l2 = 37.6243
+INFO:root:u_neuroticism disc test= 0.5650,0.5837,0.5523,0.5837auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    24 [4823.6 s]
+ validation= 0.5607,0.1278 [860.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 336.7789, l2 = 37.6752
+INFO:root:u_neuroticism disc test= 0.5642,0.5833,0.5509,0.5833auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    25 [4765.1 s]
+ validation= 0.5562,0.1271 [767.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 336.1749, l2 = 37.5402
+INFO:root:u_neuroticism disc test= 0.5645,0.5833,0.5516,0.5833auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    26 [4778.8 s]
+ validation= 0.5637,0.1289 [819.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 335.4499, l2 = 37.4988
+INFO:root:u_neuroticism disc test= 0.5642,0.5832,0.5509,0.5832auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    27 [4718.1 s]
+ validation= 0.5594,0.1277 [630.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 335.5445, l2 = 37.4539
+INFO:root:u_neuroticism disc test= 0.5654,0.5841,0.5527,0.5841auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    28 [4659.1 s]
+ validation= 0.5594,0.1279 [539.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 334.8056, l2 = 37.3618
+INFO:root:u_neuroticism disc test= 0.5672,0.5857,0.5550,0.5857auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    29 [4425.5 s]
+ validation= 0.5591,0.1276 [517.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 334.3052, l2 = 37.3366
+INFO:root:u_neuroticism disc test= 0.5661,0.5845,0.5540,0.5845auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    30 [4437.1 s]
+ validation= 0.5609,0.1286 [476.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 333.5392, l2 = 37.2202
+INFO:root:u_neuroticism disc test= 0.5645,0.5838,0.5508,0.5838auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    31 [4379.6 s]
+ validation= 0.5619,0.1283 [514.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 332.9979, l2 = 37.2514
+INFO:root:u_neuroticism disc test= 0.5650,0.5844,0.5510,0.5844auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    32 [4340.0 s]
+ validation= 0.5604,0.1279 [444.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 332.8665, l2 = 37.2730
+INFO:root:u_neuroticism disc test= 0.5637,0.5834,0.5490,0.5834auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    33 [4333.3 s]
+ validation= 0.5611,0.1280 [499.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 332.1212, l2 = 37.1665
+INFO:root:u_neuroticism disc test= 0.5646,0.5844,0.5499,0.5844auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    34 [4217.9 s]
+ validation= 0.5587,0.1270 [457.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 331.6528, l2 = 37.1642
+INFO:root:u_neuroticism disc test= 0.5628,0.5832,0.5467,0.5832auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    35 [4186.4 s]
+ validation= 0.5610,0.1280 [487.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 331.4279, l2 = 37.1718
+INFO:root:u_neuroticism disc test= 0.5637,0.5840,0.5479,0.5840auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    36 [3987.6 s]
+ validation= 0.5610,0.1281 [460.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 331.1050, l2 = 37.1848
+INFO:root:u_neuroticism disc test= 0.5638,0.5839,0.5482,0.5839auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    37 [3944.5 s]
+ validation= 0.5609,0.1279 [522.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 330.3325, l2 = 37.0815
+INFO:root:u_neuroticism disc test= 0.5633,0.5839,0.5469,0.5839auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    38 [3717.3 s]
+ validation= 0.5622,0.1284 [513.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 330.0852, l2 = 37.1306
+INFO:root:u_neuroticism disc test= 0.5650,0.5851,0.5494,0.5851auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    39 [3677.2 s]
+ validation= 0.5586,0.1272 [473.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 329.7812, l2 = 37.1114
+INFO:root:u_neuroticism disc test= 0.5649,0.5850,0.5495,0.5850auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    40 [3564.8 s]
+ validation= 0.5608,0.1280 [486.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 329.2915, l2 = 37.0933
+INFO:root:u_neuroticism disc test= 0.5635,0.5838,0.5476,0.5838auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    41 [3588.5 s]
+ validation= 0.5631,0.1289 [441.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 328.5166, l2 = 37.1772
+INFO:root:u_neuroticism disc test= 0.5634,0.5835,0.5478,0.5835auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    42 [3394.4 s]
+ validation= 0.5594,0.1277 [419.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 328.2701, l2 = 37.2439
+INFO:root:u_neuroticism disc test= 0.5626,0.5832,0.5462,0.5832auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    43 [3233.9 s]
+ validation= 0.5596,0.1275 [430.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 327.9799, l2 = 37.2745
+INFO:root:u_neuroticism disc test= 0.5626,0.5830,0.5464,0.5830auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    44 [3087.2 s]
+ validation= 0.5619,0.1289 [451.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 327.4850, l2 = 37.3485
+INFO:root:u_neuroticism disc test= 0.5627,0.5833,0.5461,0.5833auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    45 [3190.3 s]
+ validation= 0.5625,0.1288 [449.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 326.8182, l2 = 37.5024
+INFO:root:u_neuroticism disc test= 0.5620,0.5831,0.5443,0.5831auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    46 [3112.7 s]
+ validation= 0.5605,0.1281 [447.1 s] ndcg@10,f1@10
+INFO:root:Early stop at 46 based on validation result.
+INFO:root:Best Iter (validation) =    26	 valid= 0.5637,0.1289 [225008.9 s] ndcg@10,f1@10 u_neuroticism=0.5645auc
+INFO:root:Load model from ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load u_neuroticism discriminator model from ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/u_neuroticism_disc.pt
+INFO:root:Load model from ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/DMF_PCFR_taobaoserendipity_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_neuroticism loss = 0.6972
+INFO:root:Epoch     1 [6.4 s]
+INFO:root:u_neuroticism disc test = 0.5000,0.4793,0.3240,0.4793 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_neuroticism loss = 0.6927
+INFO:root:
+
+INFO:root:u_neuroticism loss = 0.6599
+INFO:root:Epoch   126 [4.6 s]
+INFO:root:u_neuroticism disc test = 0.5055,0.5105,0.5003,0.5105 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_neuroticism loss = 0.6382
+INFO:root:Epoch   251 [4.7 s]
+INFO:root:u_neuroticism disc test = 0.5168,0.5180,0.5167,0.5180 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_neuroticism loss = 0.6198
+INFO:root:Epoch   376 [2.3 s]
+INFO:root:u_neuroticism disc test = 0.5137,0.5123,0.5122,0.5123 auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism best auc: 0.5223
+INFO:root:And the corresponding u_neuroticism best disc test= 0.5223,0.5228,0.5223,0.5228 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_neuroticism discriminator model from ../model/DMF_PCFR_taobaoserendipity_u_neuroticism_neg_sample=1000/u_neuroticism_eval_disc.pt
+INFO:root:Test After Training = 0.5626,0.1289 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.03364087635032187

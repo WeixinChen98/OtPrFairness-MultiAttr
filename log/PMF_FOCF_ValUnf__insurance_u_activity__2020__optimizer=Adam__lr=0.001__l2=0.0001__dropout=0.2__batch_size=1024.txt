@@ -1,0 +1,164 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'PMF', 'fairness_framework': 'FOCF_ValUnf', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '4', 'verbose': 20, 'log_file': '../log/PMF_FOCF_ValUnf__insurance_u_activity__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'insurance', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_activity'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/PMF_FOCF_ValUnf_insurance_u_activity_neg_sample=10/PMF_FOCF_ValUnf_insurance_u_activity_l2=1e-4_dim=64_neg_sample=10.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@3,f1@3', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 10, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: PMF
+INFO:root:Fairness framework: FOCF_ValUnf
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 53071
+INFO:root:load validation csv...
+INFO:root:size of validation: 6634
+INFO:root:load test csv...
+INFO:root:size of test: 6634
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 1865728
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 706.6204, l2 = 0.0113
+INFO:root:Epoch     1 [21.7 s]
+ validation= 0.7827,0.4282 [14.8 s] ndcg@3,f1@3
+INFO:root:Save model to ../model/PMF_FOCF_ValUnf_insurance_u_activity_neg_sample=10/PMF_FOCF_ValUnf_insurance_u_activity_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:
+
+INFO:root:loss = 676.5511, l2 = 0.0543
+INFO:root:Epoch     2 [7.6 s]
+ validation= 0.7959,0.4344 [12.4 s] ndcg@3,f1@3
+INFO:root:Save model to ../model/PMF_FOCF_ValUnf_insurance_u_activity_neg_sample=10/PMF_FOCF_ValUnf_insurance_u_activity_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:
+
+INFO:root:loss = 559.5124, l2 = 0.1557
+INFO:root:Epoch     3 [15.1 s]
+ validation= 0.7899,0.4347 [12.4 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 403.9339, l2 = 0.2936
+INFO:root:Epoch     4 [8.5 s]
+ validation= 0.7798,0.4294 [11.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 290.3106, l2 = 0.4294
+INFO:root:Epoch     5 [20.9 s]
+ validation= 0.7856,0.4331 [13.1 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 229.2568, l2 = 0.5453
+INFO:root:Epoch     6 [11.8 s]
+ validation= 0.7654,0.4326 [7.8 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 194.1974, l2 = 0.6432
+INFO:root:Epoch     7 [7.5 s]
+ validation= 0.6731,0.4357 [10.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 169.6444, l2 = 0.7286
+INFO:root:Epoch     8 [11.3 s]
+ validation= 0.6708,0.4349 [9.7 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 152.6468, l2 = 0.8051
+INFO:root:Epoch     9 [11.0 s]
+ validation= 0.6698,0.4342 [8.9 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 137.3621, l2 = 0.8754
+INFO:root:Epoch    10 [19.0 s]
+ validation= 0.6751,0.4381 [13.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 125.8240, l2 = 0.9404
+INFO:root:Epoch    11 [17.5 s]
+ validation= 0.6753,0.4379 [6.9 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 113.3809, l2 = 1.0018
+INFO:root:Epoch    12 [9.5 s]
+ validation= 0.6762,0.4387 [11.4 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 103.6945, l2 = 1.0600
+INFO:root:Epoch    13 [19.9 s]
+ validation= 0.6791,0.4405 [12.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 96.0922, l2 = 1.1141
+INFO:root:Epoch    14 [11.1 s]
+ validation= 0.6789,0.4379 [10.1 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 88.7006, l2 = 1.1673
+INFO:root:Epoch    15 [18.2 s]
+ validation= 0.6833,0.4411 [13.8 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 80.9793, l2 = 1.2179
+INFO:root:Epoch    16 [13.7 s]
+ validation= 0.6823,0.4395 [6.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 74.3758, l2 = 1.2662
+INFO:root:Epoch    17 [11.2 s]
+ validation= 0.6831,0.4394 [8.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 68.3029, l2 = 1.3139
+INFO:root:Epoch    18 [5.9 s]
+ validation= 0.6831,0.4406 [12.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 63.4687, l2 = 1.3587
+INFO:root:Epoch    19 [7.5 s]
+ validation= 0.6827,0.4394 [12.8 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 58.6717, l2 = 1.4026
+INFO:root:Epoch    20 [20.4 s]
+ validation= 0.6855,0.4420 [6.8 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 53.6509, l2 = 1.4449
+INFO:root:Epoch    21 [6.2 s]
+ validation= 0.6872,0.4433 [9.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 50.2005, l2 = 1.4856
+INFO:root:Epoch    22 [11.9 s]
+ validation= 0.6879,0.4435 [8.9 s] ndcg@3,f1@3
+INFO:root:Early stop at 22 based on validation result.
+INFO:root:Best Iter (validation) =     2	 valid= 0.7959,0.4344 [522.1 s] ndcg@3,f1@3
+INFO:root:Load model from ../model/PMF_FOCF_ValUnf_insurance_u_activity_neg_sample=10/PMF_FOCF_ValUnf_insurance_u_activity_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:Load model from ../model/PMF_FOCF_ValUnf_insurance_u_activity_neg_sample=10/PMF_FOCF_ValUnf_insurance_u_activity_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_activity loss = 0.7148
+INFO:root:Epoch     1 [1.0 s]
+INFO:root:u_activity disc test = 0.5000,0.2271,0.1851,0.2271 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_activity loss = 0.6961
+INFO:root:
+
+INFO:root:u_activity loss = 0.3976
+INFO:root:Epoch   126 [0.7 s]
+INFO:root:u_activity disc test = 0.6830,0.8429,0.7179,0.8429 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_activity loss = 0.3868
+INFO:root:Epoch   251 [0.9 s]
+INFO:root:u_activity disc test = 0.6933,0.8481,0.7296,0.8481 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_activity loss = 0.3808
+INFO:root:Epoch   376 [1.4 s]
+INFO:root:u_activity disc test = 0.6997,0.8498,0.7358,0.8498 auc, acc, f1_macro, f1_micro
+INFO:root:u_activity best auc: 0.7024
+INFO:root:And the corresponding u_activity best disc test= 0.7024,0.8498,0.7379,0.8498 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_activity discriminator model from ../model/PMF_FOCF_ValUnf_insurance_u_activity_neg_sample=10/u_activity_eval_disc.pt
+INFO:root:Test After Training = 0.8041,0.4380 ndcg@3,f1@3
+INFO:root:User-oriented unfairness: 0.002031566043434574

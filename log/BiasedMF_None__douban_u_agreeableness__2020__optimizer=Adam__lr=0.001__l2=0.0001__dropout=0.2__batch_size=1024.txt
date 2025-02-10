@@ -1,0 +1,399 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'BiasedMF', 'fairness_framework': 'None', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '1', 'verbose': 20, 'log_file': '../log/BiasedMF_None__douban_u_agreeableness__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'douban', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_agreeableness'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: BiasedMF
+INFO:root:Fairness framework: None
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 19451
+INFO:root:load validation csv...
+INFO:root:size of validation: 2431
+INFO:root:load test csv...
+INFO:root:size of test: 2432
+INFO:root:Prepare validation data...
+INFO:root:Prepare test data...
+INFO:root:# of params: 266631
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 705.5612, l2 = 0.0028
+INFO:root:Epoch     1 [0.4 s]
+ validation= 0.0809,0.0525 [10.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 696.1948, l2 = 0.0040
+INFO:root:Epoch     2 [0.2 s]
+ validation= 0.1356,0.0830 [9.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 684.6487, l2 = 0.0069
+INFO:root:Epoch     3 [0.2 s]
+ validation= 0.2158,0.1090 [10.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 665.2386, l2 = 0.0141
+INFO:root:Epoch     4 [0.2 s]
+ validation= 0.3014,0.1301 [9.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 629.9404, l2 = 0.0288
+INFO:root:Epoch     5 [0.2 s]
+ validation= 0.3224,0.1339 [9.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 576.1942, l2 = 0.0527
+INFO:root:Epoch     6 [0.2 s]
+ validation= 0.3314,0.1352 [9.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 509.0629, l2 = 0.0857
+INFO:root:Epoch     7 [0.2 s]
+ validation= 0.3302,0.1338 [10.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 442.2732, l2 = 0.1246
+INFO:root:Epoch     8 [0.2 s]
+ validation= 0.3315,0.1341 [9.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 383.9758, l2 = 0.1659
+INFO:root:Epoch     9 [0.2 s]
+ validation= 0.3365,0.1352 [10.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 338.7484, l2 = 0.2068
+INFO:root:Epoch    10 [0.2 s]
+ validation= 0.3360,0.1352 [10.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 306.4445, l2 = 0.2450
+INFO:root:Epoch    11 [0.2 s]
+ validation= 0.3359,0.1346 [10.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 284.9555, l2 = 0.2799
+INFO:root:Epoch    12 [0.2 s]
+ validation= 0.3360,0.1348 [10.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 266.7498, l2 = 0.3119
+INFO:root:Epoch    13 [0.2 s]
+ validation= 0.3350,0.1349 [10.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 255.4030, l2 = 0.3411
+INFO:root:Epoch    14 [0.2 s]
+ validation= 0.3344,0.1348 [10.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 244.7876, l2 = 0.3678
+INFO:root:Epoch    15 [0.2 s]
+ validation= 0.3352,0.1355 [10.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 238.9287, l2 = 0.3927
+INFO:root:Epoch    16 [0.2 s]
+ validation= 0.3354,0.1351 [10.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 233.7193, l2 = 0.4156
+INFO:root:Epoch    17 [0.2 s]
+ validation= 0.3348,0.1357 [10.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 225.9013, l2 = 0.4373
+INFO:root:Epoch    18 [0.2 s]
+ validation= 0.3346,0.1354 [10.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 218.3716, l2 = 0.4581
+INFO:root:Epoch    19 [0.2 s]
+ validation= 0.3338,0.1356 [10.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 217.7518, l2 = 0.4775
+INFO:root:Epoch    20 [0.2 s]
+ validation= 0.3313,0.1346 [10.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.9306, l2 = 0.4962
+INFO:root:Epoch    21 [0.2 s]
+ validation= 0.3314,0.1347 [10.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 210.3381, l2 = 0.5144
+INFO:root:Epoch    22 [0.2 s]
+ validation= 0.3324,0.1352 [10.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 205.1522, l2 = 0.5322
+INFO:root:Epoch    23 [0.2 s]
+ validation= 0.3333,0.1355 [10.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 205.7070, l2 = 0.5493
+INFO:root:Epoch    24 [0.2 s]
+ validation= 0.3342,0.1359 [10.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 200.7497, l2 = 0.5660
+INFO:root:Epoch    25 [0.2 s]
+ validation= 0.3350,0.1361 [10.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 201.0689, l2 = 0.5819
+INFO:root:Epoch    26 [0.2 s]
+ validation= 0.3339,0.1363 [10.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 197.3085, l2 = 0.5975
+INFO:root:Epoch    27 [0.2 s]
+ validation= 0.3349,0.1363 [10.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 193.2727, l2 = 0.6128
+INFO:root:Epoch    28 [0.2 s]
+ validation= 0.3358,0.1367 [9.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 188.2552, l2 = 0.6281
+INFO:root:Epoch    29 [0.2 s]
+ validation= 0.3365,0.1380 [10.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 185.8955, l2 = 0.6440
+INFO:root:Epoch    30 [0.2 s]
+ validation= 0.3358,0.1372 [10.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 186.3817, l2 = 0.6592
+INFO:root:Epoch    31 [0.2 s]
+ validation= 0.3358,0.1374 [10.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 178.4483, l2 = 0.6746
+INFO:root:Epoch    32 [0.2 s]
+ validation= 0.3377,0.1384 [10.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 180.8624, l2 = 0.6895
+INFO:root:Epoch    33 [0.2 s]
+ validation= 0.3394,0.1385 [10.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 176.2124, l2 = 0.7047
+INFO:root:Epoch    34 [0.2 s]
+ validation= 0.3397,0.1371 [10.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 172.8521, l2 = 0.7200
+INFO:root:Epoch    35 [0.2 s]
+ validation= 0.3411,0.1382 [10.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 169.1625, l2 = 0.7355
+INFO:root:Epoch    36 [0.2 s]
+ validation= 0.3419,0.1392 [10.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 169.1956, l2 = 0.7507
+INFO:root:Epoch    37 [0.2 s]
+ validation= 0.3415,0.1388 [10.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 166.3865, l2 = 0.7656
+INFO:root:Epoch    38 [0.2 s]
+ validation= 0.3417,0.1394 [10.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 165.4436, l2 = 0.7803
+INFO:root:Epoch    39 [0.2 s]
+ validation= 0.3435,0.1401 [10.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 159.7715, l2 = 0.7955
+INFO:root:Epoch    40 [0.2 s]
+ validation= 0.3456,0.1413 [10.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 159.3048, l2 = 0.8107
+INFO:root:Epoch    41 [0.2 s]
+ validation= 0.3448,0.1407 [10.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 158.1745, l2 = 0.8260
+INFO:root:Epoch    42 [0.2 s]
+ validation= 0.3458,0.1418 [10.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 152.1916, l2 = 0.8410
+INFO:root:Epoch    43 [0.2 s]
+ validation= 0.3451,0.1416 [10.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 148.9597, l2 = 0.8564
+INFO:root:Epoch    44 [0.2 s]
+ validation= 0.3451,0.1419 [10.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 148.1177, l2 = 0.8716
+INFO:root:Epoch    45 [0.2 s]
+ validation= 0.3465,0.1412 [10.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 145.2121, l2 = 0.8870
+INFO:root:Epoch    46 [0.2 s]
+ validation= 0.3464,0.1408 [11.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 140.7338, l2 = 0.9029
+INFO:root:Epoch    47 [0.2 s]
+ validation= 0.3449,0.1403 [10.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 138.9043, l2 = 0.9186
+INFO:root:Epoch    48 [0.2 s]
+ validation= 0.3456,0.1407 [10.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 139.5759, l2 = 0.9341
+INFO:root:Epoch    49 [0.2 s]
+ validation= 0.3467,0.1407 [10.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 134.9936, l2 = 0.9497
+INFO:root:Epoch    50 [0.2 s]
+ validation= 0.3462,0.1411 [10.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 132.0705, l2 = 0.9656
+INFO:root:Epoch    51 [0.2 s]
+ validation= 0.3472,0.1412 [10.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 129.4879, l2 = 0.9815
+INFO:root:Epoch    52 [2.1 s]
+ validation= 0.3484,0.1418 [10.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 127.1134, l2 = 0.9975
+INFO:root:Epoch    53 [0.2 s]
+ validation= 0.3485,0.1425 [10.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 126.2748, l2 = 1.0131
+INFO:root:Epoch    54 [0.2 s]
+ validation= 0.3489,0.1429 [10.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 124.8894, l2 = 1.0285
+INFO:root:Epoch    55 [0.2 s]
+ validation= 0.3485,0.1425 [10.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 121.3630, l2 = 1.0443
+INFO:root:Epoch    56 [0.2 s]
+ validation= 0.3495,0.1433 [11.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 121.3016, l2 = 1.0601
+INFO:root:Epoch    57 [0.2 s]
+ validation= 0.3496,0.1431 [10.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 117.1040, l2 = 1.0761
+INFO:root:Epoch    58 [0.2 s]
+ validation= 0.3514,0.1440 [10.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 116.7461, l2 = 1.0920
+INFO:root:Epoch    59 [0.2 s]
+ validation= 0.3509,0.1434 [10.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 113.6118, l2 = 1.1080
+INFO:root:Epoch    60 [0.2 s]
+ validation= 0.3528,0.1438 [10.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 108.8516, l2 = 1.1240
+INFO:root:Epoch    61 [0.2 s]
+ validation= 0.3521,0.1433 [10.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 110.4353, l2 = 1.1400
+INFO:root:Epoch    62 [0.2 s]
+ validation= 0.3514,0.1433 [11.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 108.7621, l2 = 1.1559
+INFO:root:Epoch    63 [0.2 s]
+ validation= 0.3512,0.1437 [10.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 103.8772, l2 = 1.1719
+INFO:root:Epoch    64 [0.2 s]
+ validation= 0.3509,0.1442 [10.4 s] ndcg@10,f1@10
+INFO:root:Early stop at 64 based on validation result.
+INFO:root:Best Iter (validation) =    60	 valid= 0.3528,0.1438 [683.5 s] ndcg@10,f1@10
+INFO:root:Load model from ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load model from ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/BiasedMF_None_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.6941
+INFO:root:Epoch     1 [0.1 s]
+INFO:root:u_agreeableness disc test = 0.5000,0.5132,0.3391,0.5132 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.6935
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.5962
+INFO:root:Epoch   126 [0.1 s]
+INFO:root:u_agreeableness disc test = 0.5090,0.5073,0.5061,0.5073 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.4519
+INFO:root:Epoch   251 [0.1 s]
+INFO:root:u_agreeableness disc test = 0.5124,0.5132,0.5123,0.5132 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.4018
+INFO:root:Epoch   376 [0.1 s]
+INFO:root:u_agreeableness disc test = 0.5070,0.5073,0.5070,0.5073 auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness best auc: 0.5424
+INFO:root:And the corresponding u_agreeableness best disc test= 0.5424,0.5396,0.5355,0.5396 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_agreeableness discriminator model from ../model/BiasedMF_None_douban_u_agreeableness_neg_sample=1000/u_agreeableness_eval_disc.pt
+INFO:root:Test After Training = 0.3498,0.1441 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.0027391907279160632

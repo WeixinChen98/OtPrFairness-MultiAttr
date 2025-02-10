@@ -1,0 +1,422 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'DMF', 'fairness_framework': 'FairRec', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '3', 'verbose': 20, 'log_file': '../log/DMF_FairRec__douban_u_neuroticism__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'douban', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_neuroticism'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'num_layers': 3, 'model_path': '../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: DMF
+INFO:root:Fairness framework: FairRec
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 19451
+INFO:root:load validation csv...
+INFO:root:size of validation: 2431
+INFO:root:load test csv...
+INFO:root:size of test: 2432
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 320896
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 556.1579, l2 = 0.0924
+INFO:root:u_neuroticism disc test= 0.5034,0.5112,0.3568,0.5112auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5039,0.5021,0.4964,0.5021auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [3.9 s]
+ validation= 0.1508,0.0763 [43.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 308.7086, l2 = 0.0928
+INFO:root:u_neuroticism disc test= 0.5130,0.5190,0.4379,0.5190auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5062,0.5134,0.3846,0.5134auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [1.6 s]
+ validation= 0.1514,0.0791 [36.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 295.1595, l2 = 0.0931
+INFO:root:u_neuroticism disc test= 0.5230,0.5248,0.5176,0.5248auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5269,0.5287,0.5223,0.5287auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [3.2 s]
+ validation= 0.1599,0.0799 [37.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 282.9110, l2 = 0.0932
+INFO:root:u_neuroticism disc test= 0.5284,0.5306,0.5208,0.5306auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5330,0.5348,0.5283,0.5348auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [1.9 s]
+ validation= 0.1816,0.0883 [37.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 276.2074, l2 = 0.0933
+INFO:root:u_neuroticism disc test= 0.5289,0.5306,0.5245,0.5306auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5361,0.5371,0.5348,0.5371auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [4.0 s]
+ validation= 0.1687,0.0841 [51.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 277.6721, l2 = 0.0935
+INFO:root:u_neuroticism disc test= 0.5398,0.5421,0.5314,0.5421auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5356,0.5375,0.5301,0.5375auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [4.0 s]
+ validation= 0.1907,0.0917 [45.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 266.7779, l2 = 0.0936
+INFO:root:u_neuroticism disc test= 0.5354,0.5371,0.5306,0.5371auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5323,0.5343,0.5255,0.5343auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [5.1 s]
+ validation= 0.1856,0.0917 [48.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 270.6848, l2 = 0.0937
+INFO:root:u_neuroticism disc test= 0.5425,0.5445,0.5361,0.5445auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5307,0.5324,0.5261,0.5324auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [2.7 s]
+ validation= 0.1931,0.0947 [33.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 266.8051, l2 = 0.0938
+INFO:root:u_neuroticism disc test= 0.5366,0.5388,0.5284,0.5388auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5349,0.5372,0.5267,0.5372auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [1.7 s]
+ validation= 0.1908,0.0975 [47.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 256.7071, l2 = 0.0940
+INFO:root:u_neuroticism disc test= 0.5356,0.5375,0.5302,0.5375auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5308,0.5334,0.5197,0.5334auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [2.1 s]
+ validation= 0.2040,0.1029 [33.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 254.8853, l2 = 0.0941
+INFO:root:u_neuroticism disc test= 0.5332,0.5347,0.5299,0.5347auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5334,0.5356,0.5257,0.5356auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [3.4 s]
+ validation= 0.1972,0.1006 [48.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 259.1549, l2 = 0.0942
+INFO:root:u_neuroticism disc test= 0.5294,0.5312,0.5245,0.5312auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5314,0.5339,0.5211,0.5339auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [3.5 s]
+ validation= 0.2073,0.1029 [55.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 254.1634, l2 = 0.0943
+INFO:root:u_neuroticism disc test= 0.5272,0.5283,0.5254,0.5283auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5328,0.5350,0.5244,0.5350auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [2.1 s]
+ validation= 0.1956,0.1010 [55.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 255.7018, l2 = 0.0945
+INFO:root:u_neuroticism disc test= 0.5218,0.5241,0.5134,0.5241auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5323,0.5346,0.5236,0.5346auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [1.8 s]
+ validation= 0.2139,0.1095 [57.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 250.2966, l2 = 0.0946
+INFO:root:u_neuroticism disc test= 0.5235,0.5259,0.5136,0.5259auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5275,0.5303,0.5140,0.5303auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [1.5 s]
+ validation= 0.2161,0.1071 [47.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 254.2212, l2 = 0.0947
+INFO:root:u_neuroticism disc test= 0.5197,0.5234,0.4949,0.5234auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5222,0.5241,0.5160,0.5241auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [2.6 s]
+ validation= 0.2202,0.1086 [47.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 252.8265, l2 = 0.0949
+INFO:root:u_neuroticism disc test= 0.5234,0.5262,0.5095,0.5262auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5299,0.5317,0.5251,0.5317auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [1.9 s]
+ validation= 0.2280,0.1115 [41.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 249.1079, l2 = 0.0950
+INFO:root:u_neuroticism disc test= 0.5278,0.5308,0.5124,0.5308auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5247,0.5273,0.5134,0.5273auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [1.9 s]
+ validation= 0.2227,0.1097 [52.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 247.4160, l2 = 0.0952
+INFO:root:u_neuroticism disc test= 0.5252,0.5284,0.5071,0.5284auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5325,0.5340,0.5291,0.5340auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [3.0 s]
+ validation= 0.2329,0.1125 [41.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 246.6061, l2 = 0.0953
+INFO:root:u_neuroticism disc test= 0.5242,0.5279,0.4997,0.5279auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5332,0.5336,0.5331,0.5336auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [1.9 s]
+ validation= 0.2326,0.1137 [41.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 249.3467, l2 = 0.0954
+INFO:root:u_neuroticism disc test= 0.5224,0.5269,0.4837,0.5269auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5381,0.5392,0.5363,0.5392auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [1.8 s]
+ validation= 0.2329,0.1154 [55.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 247.2447, l2 = 0.0956
+INFO:root:u_neuroticism disc test= 0.5207,0.5241,0.5003,0.5241auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5368,0.5379,0.5352,0.5379auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    22 [2.4 s]
+ validation= 0.2179,0.1081 [42.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 245.6042, l2 = 0.0958
+INFO:root:u_neuroticism disc test= 0.5346,0.5373,0.5230,0.5373auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5305,0.5313,0.5299,0.5313auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    23 [3.5 s]
+ validation= 0.2382,0.1166 [42.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 247.8983, l2 = 0.0960
+INFO:root:u_neuroticism disc test= 0.5269,0.5288,0.5212,0.5288auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5265,0.5261,0.5260,0.5261auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    24 [3.0 s]
+ validation= 0.2281,0.1120 [44.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 241.6344, l2 = 0.0961
+INFO:root:u_neuroticism disc test= 0.5271,0.5298,0.5155,0.5298auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5243,0.5260,0.5199,0.5260auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    25 [1.2 s]
+ validation= 0.2331,0.1133 [52.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 241.3886, l2 = 0.0963
+INFO:root:u_neuroticism disc test= 0.5294,0.5316,0.5209,0.5316auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5311,0.5307,0.5306,0.5307auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    26 [2.6 s]
+ validation= 0.2272,0.1110 [57.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 238.9619, l2 = 0.0964
+INFO:root:u_neuroticism disc test= 0.5268,0.5305,0.5025,0.5305auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5183,0.5193,0.5170,0.5193auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    27 [2.0 s]
+ validation= 0.2172,0.1083 [51.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 235.0933, l2 = 0.0966
+INFO:root:u_neuroticism disc test= 0.5300,0.5328,0.5173,0.5328auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5214,0.5232,0.5168,0.5232auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    28 [1.1 s]
+ validation= 0.2315,0.1136 [42.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 238.7400, l2 = 0.0968
+INFO:root:u_neuroticism disc test= 0.5273,0.5308,0.5058,0.5308auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5193,0.5198,0.5190,0.5198auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    29 [3.1 s]
+ validation= 0.2268,0.1122 [44.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 235.8065, l2 = 0.0969
+INFO:root:u_neuroticism disc test= 0.5336,0.5372,0.5119,0.5372auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5214,0.5225,0.5196,0.5225auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    30 [2.1 s]
+ validation= 0.2423,0.1135 [53.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 238.6136, l2 = 0.0971
+INFO:root:u_neuroticism disc test= 0.5235,0.5276,0.4916,0.5276auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5152,0.5174,0.5075,0.5174auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    31 [2.1 s]
+ validation= 0.2300,0.1122 [42.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 230.1964, l2 = 0.0973
+INFO:root:u_neuroticism disc test= 0.5215,0.5255,0.4929,0.5255auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5161,0.5177,0.5119,0.5177auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    32 [1.8 s]
+ validation= 0.2184,0.1098 [47.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 238.8983, l2 = 0.0975
+INFO:root:u_neuroticism disc test= 0.5224,0.5266,0.4903,0.5266auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5174,0.5200,0.5060,0.5200auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    33 [2.4 s]
+ validation= 0.2371,0.1155 [45.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 237.5485, l2 = 0.0977
+INFO:root:u_neuroticism disc test= 0.5191,0.5234,0.4835,0.5234auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5229,0.5249,0.5164,0.5249auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    34 [2.2 s]
+ validation= 0.2244,0.1069 [49.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 229.7387, l2 = 0.0980
+INFO:root:u_neuroticism disc test= 0.5175,0.5230,0.4594,0.5230auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5314,0.5334,0.5250,0.5334auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    35 [2.5 s]
+ validation= 0.2305,0.1120 [40.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 231.6050, l2 = 0.0982
+INFO:root:u_neuroticism disc test= 0.5229,0.5278,0.4765,0.5278auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5175,0.5188,0.5147,0.5188auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    36 [1.6 s]
+ validation= 0.2228,0.1104 [50.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 226.5630, l2 = 0.0984
+INFO:root:u_neuroticism disc test= 0.5165,0.5220,0.4576,0.5220auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5237,0.5269,0.5069,0.5269auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    37 [2.8 s]
+ validation= 0.2296,0.1086 [44.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 226.0464, l2 = 0.0987
+INFO:root:u_neuroticism disc test= 0.5149,0.5203,0.4572,0.5203auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5269,0.5279,0.5257,0.5279auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    38 [2.3 s]
+ validation= 0.2155,0.1081 [36.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 219.4370, l2 = 0.0989
+INFO:root:u_neuroticism disc test= 0.5117,0.5179,0.4314,0.5179auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5248,0.5269,0.5179,0.5269auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    39 [1.3 s]
+ validation= 0.2258,0.1126 [44.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 226.1694, l2 = 0.0992
+INFO:root:u_neuroticism disc test= 0.5095,0.5155,0.4355,0.5155auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5312,0.5320,0.5303,0.5320auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    40 [1.7 s]
+ validation= 0.2213,0.1075 [30.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 221.8788, l2 = 0.0995
+INFO:root:u_neuroticism disc test= 0.5117,0.5171,0.4532,0.5171auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5287,0.5309,0.5214,0.5309auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    41 [1.9 s]
+ validation= 0.2257,0.1092 [44.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 223.2594, l2 = 0.0997
+INFO:root:u_neuroticism disc test= 0.5189,0.5232,0.4857,0.5232auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5257,0.5284,0.5129,0.5284auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    42 [1.7 s]
+ validation= 0.2141,0.1096 [36.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 214.6979, l2 = 0.1001
+INFO:root:u_neuroticism disc test= 0.5145,0.5181,0.4919,0.5181auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5174,0.5200,0.5062,0.5200auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    43 [0.8 s]
+ validation= 0.2165,0.1058 [38.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 215.1441, l2 = 0.1003
+INFO:root:u_neuroticism disc test= 0.5139,0.5189,0.4661,0.5189auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5302,0.5326,0.5208,0.5326auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    44 [1.8 s]
+ validation= 0.2164,0.1075 [39.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.9323, l2 = 0.1007
+INFO:root:u_neuroticism disc test= 0.5154,0.5199,0.4780,0.5199auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5365,0.5388,0.5279,0.5388auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    45 [1.3 s]
+ validation= 0.1990,0.1020 [38.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.4647, l2 = 0.1010
+INFO:root:u_neuroticism disc test= 0.5141,0.5185,0.4777,0.5185auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5340,0.5376,0.5114,0.5376auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    46 [2.3 s]
+ validation= 0.2097,0.1033 [38.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.7542, l2 = 0.1013
+INFO:root:u_neuroticism disc test= 0.5225,0.5265,0.4932,0.5265auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5402,0.5424,0.5326,0.5424auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    47 [1.5 s]
+ validation= 0.2127,0.1072 [40.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 202.7983, l2 = 0.1016
+INFO:root:u_neuroticism disc test= 0.5222,0.5255,0.5035,0.5255auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5342,0.5362,0.5275,0.5362auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    48 [1.9 s]
+ validation= 0.2104,0.1037 [30.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 202.2013, l2 = 0.1019
+INFO:root:u_neuroticism disc test= 0.5268,0.5296,0.5142,0.5296auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5345,0.5366,0.5276,0.5366auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    49 [1.1 s]
+ validation= 0.2034,0.1050 [35.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 201.2774, l2 = 0.1022
+INFO:root:u_neuroticism disc test= 0.5238,0.5267,0.5100,0.5267auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism pred test= 0.5349,0.5376,0.5228,0.5376auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    50 [1.6 s]
+ validation= 0.2156,0.1032 [31.2 s] ndcg@10,f1@10
+INFO:root:Early stop at 50 based on validation result.
+INFO:root:Best Iter (validation) =    30	 valid= 0.2423,0.1135 [2313.2 s] ndcg@10,f1@10
+INFO:root:disc test: u_neuroticism=0.5336auc, pred test: u_neuroticism=0.5214auc
+INFO:root:Load model from ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load u_neuroticism discriminator model from ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/u_neuroticism_disc.pt
+INFO:root:Load u_neuroticism discriminator model from ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/u_neuroticism_disc.pt
+INFO:root:Load model from ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/DMF_FairRec_douban_u_neuroticism_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_neuroticism loss = 0.6937
+INFO:root:Epoch     1 [0.2 s]
+INFO:root:u_neuroticism disc test = 0.5000,0.5601,0.3590,0.5601 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_neuroticism loss = 0.6932
+INFO:root:
+
+INFO:root:u_neuroticism loss = 0.4418
+INFO:root:Epoch   126 [0.3 s]
+INFO:root:u_neuroticism disc test = 0.5000,0.5601,0.3590,0.5601 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_neuroticism loss = 0.3079
+INFO:root:Epoch   251 [0.2 s]
+INFO:root:u_neuroticism disc test = 0.5000,0.5601,0.3590,0.5601 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_neuroticism loss = 0.2459
+INFO:root:Epoch   376 [0.7 s]
+INFO:root:u_neuroticism disc test = 0.5000,0.5601,0.3590,0.5601 auc, acc, f1_macro, f1_micro
+INFO:root:u_neuroticism best auc: 0.5000
+INFO:root:And the corresponding u_neuroticism best disc test= 0.5000,0.5601,0.3590,0.5601 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_neuroticism discriminator model from ../model/DMF_FairRec_douban_u_neuroticism_neg_sample=1000/u_neuroticism_eval_disc.pt
+INFO:root:Test After Training = 0.2339,0.1163 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.005198742009068474

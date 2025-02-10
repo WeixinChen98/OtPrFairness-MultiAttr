@@ -1,0 +1,411 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'BiasedMF', 'fairness_framework': 'FOCF_ValUnf', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '5', 'verbose': 20, 'log_file': '../log/BiasedMF_FOCF_ValUnf__ml1M_u_occupation__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'ml1M', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_occupation'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: BiasedMF
+INFO:root:Fairness framework: FOCF_ValUnf
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 800169
+INFO:root:load validation csv...
+INFO:root:size of validation: 100020
+INFO:root:load test csv...
+INFO:root:size of test: 100020
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 633491
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 462.3301, l2 = 1.2346
+INFO:root:Epoch     1 [136.5 s]
+ validation= 0.2524,0.1372 [185.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 309.9506, l2 = 1.8203
+INFO:root:Epoch     2 [103.8 s]
+ validation= 0.2641,0.1510 [116.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 275.3921, l2 = 2.2602
+INFO:root:Epoch     3 [81.9 s]
+ validation= 0.2852,0.1629 [124.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 254.2794, l2 = 2.6300
+INFO:root:Epoch     4 [74.7 s]
+ validation= 0.3020,0.1735 [115.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 236.8652, l2 = 2.9568
+INFO:root:Epoch     5 [88.2 s]
+ validation= 0.3149,0.1827 [131.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 225.4209, l2 = 3.2506
+INFO:root:Epoch     6 [60.6 s]
+ validation= 0.3301,0.1922 [118.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 214.6881, l2 = 3.5316
+INFO:root:Epoch     7 [67.3 s]
+ validation= 0.3419,0.2001 [86.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 206.6053, l2 = 3.7908
+INFO:root:Epoch     8 [64.2 s]
+ validation= 0.3509,0.2056 [78.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 199.4459, l2 = 4.0341
+INFO:root:Epoch     9 [74.7 s]
+ validation= 0.3612,0.2116 [81.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 192.3517, l2 = 4.2789
+INFO:root:Epoch    10 [58.8 s]
+ validation= 0.3686,0.2166 [112.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 185.8185, l2 = 4.5210
+INFO:root:Epoch    11 [76.4 s]
+ validation= 0.3768,0.2227 [79.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 181.4530, l2 = 4.7502
+INFO:root:Epoch    12 [79.0 s]
+ validation= 0.3816,0.2261 [101.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 176.5823, l2 = 4.9639
+INFO:root:Epoch    13 [66.6 s]
+ validation= 0.3864,0.2288 [109.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 172.4988, l2 = 5.1721
+INFO:root:Epoch    14 [73.6 s]
+ validation= 0.3913,0.2315 [96.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 168.6320, l2 = 5.3744
+INFO:root:Epoch    15 [73.4 s]
+ validation= 0.3969,0.2349 [96.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 163.5421, l2 = 5.5833
+INFO:root:Epoch    16 [69.4 s]
+ validation= 0.4003,0.2377 [104.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 160.1317, l2 = 5.7781
+INFO:root:Epoch    17 [58.8 s]
+ validation= 0.4029,0.2391 [97.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 156.3220, l2 = 5.9734
+INFO:root:Epoch    18 [72.7 s]
+ validation= 0.4048,0.2401 [93.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 153.4939, l2 = 6.1626
+INFO:root:Epoch    19 [64.7 s]
+ validation= 0.4084,0.2439 [103.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 149.4276, l2 = 6.3510
+INFO:root:Epoch    20 [63.1 s]
+ validation= 0.4116,0.2458 [96.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 147.3465, l2 = 6.5405
+INFO:root:Epoch    21 [68.6 s]
+ validation= 0.4151,0.2474 [98.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 143.8747, l2 = 6.7380
+INFO:root:Epoch    22 [65.4 s]
+ validation= 0.4196,0.2489 [98.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 141.0450, l2 = 6.9261
+INFO:root:Epoch    23 [64.5 s]
+ validation= 0.4208,0.2501 [99.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 138.0171, l2 = 7.1167
+INFO:root:Epoch    24 [65.1 s]
+ validation= 0.4263,0.2520 [92.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 135.0972, l2 = 7.3028
+INFO:root:Epoch    25 [77.1 s]
+ validation= 0.4273,0.2525 [104.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 132.7441, l2 = 7.4850
+INFO:root:Epoch    26 [62.5 s]
+ validation= 0.4298,0.2541 [106.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 130.0294, l2 = 7.6649
+INFO:root:Epoch    27 [70.1 s]
+ validation= 0.4307,0.2552 [96.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 127.5507, l2 = 7.8443
+INFO:root:Epoch    28 [69.6 s]
+ validation= 0.4308,0.2547 [95.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 125.7555, l2 = 8.0250
+INFO:root:Epoch    29 [71.9 s]
+ validation= 0.4343,0.2569 [101.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 123.6228, l2 = 8.1993
+INFO:root:Epoch    30 [70.5 s]
+ validation= 0.4346,0.2572 [116.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 121.4825, l2 = 8.3764
+INFO:root:Epoch    31 [74.7 s]
+ validation= 0.4347,0.2573 [113.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 118.7902, l2 = 8.5536
+INFO:root:Epoch    32 [66.1 s]
+ validation= 0.4359,0.2590 [106.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 116.5175, l2 = 8.7299
+INFO:root:Epoch    33 [78.7 s]
+ validation= 0.4356,0.2587 [104.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 115.7594, l2 = 8.8934
+INFO:root:Epoch    34 [63.8 s]
+ validation= 0.4372,0.2592 [105.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 114.5457, l2 = 9.0573
+INFO:root:Epoch    35 [70.9 s]
+ validation= 0.4387,0.2602 [112.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 112.2711, l2 = 9.2168
+INFO:root:Epoch    36 [64.0 s]
+ validation= 0.4395,0.2605 [111.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 110.8511, l2 = 9.3776
+INFO:root:Epoch    37 [74.1 s]
+ validation= 0.4424,0.2611 [101.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 109.2975, l2 = 9.5378
+INFO:root:Epoch    38 [66.7 s]
+ validation= 0.4428,0.2620 [94.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 107.4362, l2 = 9.6970
+INFO:root:Epoch    39 [68.9 s]
+ validation= 0.4447,0.2625 [91.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 106.2363, l2 = 9.8519
+INFO:root:Epoch    40 [68.1 s]
+ validation= 0.4466,0.2625 [92.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 105.1292, l2 = 10.0070
+INFO:root:Epoch    41 [76.7 s]
+ validation= 0.4471,0.2637 [107.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 103.8824, l2 = 10.1538
+INFO:root:Epoch    42 [70.6 s]
+ validation= 0.4480,0.2638 [113.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 102.6102, l2 = 10.2981
+INFO:root:Epoch    43 [67.2 s]
+ validation= 0.4473,0.2634 [109.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 101.8988, l2 = 10.4409
+INFO:root:Epoch    44 [63.5 s]
+ validation= 0.4480,0.2647 [94.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 100.3348, l2 = 10.5862
+INFO:root:Epoch    45 [71.4 s]
+ validation= 0.4486,0.2658 [94.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 99.4111, l2 = 10.7183
+INFO:root:Epoch    46 [63.1 s]
+ validation= 0.4492,0.2653 [97.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 98.6852, l2 = 10.8480
+INFO:root:Epoch    47 [70.7 s]
+ validation= 0.4502,0.2659 [93.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 97.8465, l2 = 10.9805
+INFO:root:Epoch    48 [63.5 s]
+ validation= 0.4519,0.2670 [93.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 97.2483, l2 = 11.1000
+INFO:root:Epoch    49 [72.8 s]
+ validation= 0.4516,0.2667 [93.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 96.8620, l2 = 11.2213
+INFO:root:Epoch    50 [66.1 s]
+ validation= 0.4509,0.2669 [91.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 95.6978, l2 = 11.3344
+INFO:root:Epoch    51 [69.2 s]
+ validation= 0.4493,0.2664 [91.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 94.9260, l2 = 11.4549
+INFO:root:Epoch    52 [64.5 s]
+ validation= 0.4499,0.2657 [90.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 94.0377, l2 = 11.5689
+INFO:root:Epoch    53 [65.2 s]
+ validation= 0.4504,0.2661 [88.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 93.1927, l2 = 11.6838
+INFO:root:Epoch    54 [63.5 s]
+ validation= 0.4517,0.2667 [87.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 92.5268, l2 = 11.7922
+INFO:root:Epoch    55 [61.6 s]
+ validation= 0.4527,0.2677 [86.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 90.9750, l2 = 11.9038
+INFO:root:Epoch    56 [65.0 s]
+ validation= 0.4548,0.2669 [88.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 91.2613, l2 = 12.0113
+INFO:root:Epoch    57 [62.2 s]
+ validation= 0.4567,0.2670 [82.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 90.2498, l2 = 12.1182
+INFO:root:Epoch    58 [65.4 s]
+ validation= 0.4568,0.2664 [89.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 90.1180, l2 = 12.2213
+INFO:root:Epoch    59 [60.5 s]
+ validation= 0.4565,0.2665 [92.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 90.0281, l2 = 12.3225
+INFO:root:Epoch    60 [64.6 s]
+ validation= 0.4562,0.2665 [89.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 89.0788, l2 = 12.4212
+INFO:root:Epoch    61 [64.9 s]
+ validation= 0.4562,0.2676 [89.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 88.8700, l2 = 12.5164
+INFO:root:Epoch    62 [71.1 s]
+ validation= 0.4546,0.2666 [83.7 s] ndcg@10,f1@10
+INFO:root:Early stop at 62 based on validation result.
+INFO:root:Best Iter (validation) =    58	 valid= 0.4568,0.2664 [10576.6 s] ndcg@10,f1@10
+INFO:root:Load model from ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:Load model from ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_occupation loss = 0.6964
+INFO:root:Epoch     1 [0.4 s]
+INFO:root:u_occupation disc test = 0.5003,0.4727,0.3476,0.4727 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_occupation loss = 0.6949
+INFO:root:
+
+INFO:root:u_occupation loss = 0.5724
+INFO:root:Epoch   126 [0.3 s]
+INFO:root:u_occupation disc test = 0.5328,0.5364,0.5324,0.5364 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_occupation loss = 0.4835
+INFO:root:Epoch   251 [0.3 s]
+INFO:root:u_occupation disc test = 0.5267,0.5281,0.5267,0.5281 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_occupation loss = 0.4539
+INFO:root:Epoch   376 [0.3 s]
+INFO:root:u_occupation disc test = 0.5374,0.5389,0.5374,0.5389 auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation best auc: 0.5513
+INFO:root:And the corresponding u_occupation best disc test= 0.5513,0.5530,0.5513,0.5530 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_occupation discriminator model from ../model/BiasedMF_FOCF_ValUnf_ml1M_u_occupation_neg_samplev=1000/u_occupation_eval_disc.pt
+INFO:root:Test After Training = 0.4624,0.2700 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.008845003759896164

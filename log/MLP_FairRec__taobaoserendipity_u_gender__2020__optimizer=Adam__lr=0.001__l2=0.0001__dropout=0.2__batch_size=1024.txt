@@ -1,0 +1,567 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'MLP', 'fairness_framework': 'FairRec', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '4', 'verbose': 20, 'log_file': '../log/MLP_FairRec__taobaoserendipity_u_gender__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'taobaoserendipity', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_gender'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'num_layers': 3, 'model_path': '../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.05, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: MLP
+INFO:root:Fairness framework: FairRec
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 9132376
+INFO:root:load validation csv...
+INFO:root:size of validation: 1141547
+INFO:root:load test csv...
+INFO:root:size of test: 1141548
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 54166593
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 595.0621, l2 = 22.4708
+INFO:root:u_gender disc test= 0.5419,0.8440,0.5378,0.8440auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.5433,0.8443,0.5402,0.8443auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [2137.4 s]
+ validation= 0.5007,0.1050 [189.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 492.9421, l2 = 44.3464
+INFO:root:u_gender disc test= 0.6954,0.8767,0.7305,0.8767auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.7021,0.8778,0.7361,0.8778auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [2569.9 s]
+ validation= 0.5347,0.1137 [235.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 429.4256, l2 = 57.0507
+INFO:root:u_gender disc test= 0.7794,0.9056,0.8092,0.9056auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.7908,0.9086,0.8178,0.9086auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [2744.0 s]
+ validation= 0.5413,0.1153 [257.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 385.2280, l2 = 66.5461
+INFO:root:u_gender disc test= 0.8552,0.9357,0.8761,0.9357auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.8600,0.9379,0.8807,0.9379auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [2845.4 s]
+ validation= 0.5487,0.1170 [220.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 352.4700, l2 = 72.8234
+INFO:root:u_gender disc test= 0.8984,0.9564,0.9171,0.9564auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9029,0.9580,0.9204,0.9580auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [2837.6 s]
+ validation= 0.5647,0.1229 [217.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 328.6993, l2 = 76.6415
+INFO:root:u_gender disc test= 0.9233,0.9671,0.9381,0.9671auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9235,0.9671,0.9381,0.9671auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [2867.9 s]
+ validation= 0.5762,0.1268 [219.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 310.0405, l2 = 78.7263
+INFO:root:u_gender disc test= 0.9333,0.9715,0.9466,0.9715auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9362,0.9727,0.9490,0.9727auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [2828.2 s]
+ validation= 0.5818,0.1286 [217.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 296.4470, l2 = 79.5531
+INFO:root:u_gender disc test= 0.9400,0.9744,0.9521,0.9744auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9436,0.9758,0.9549,0.9758auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [2798.7 s]
+ validation= 0.5851,0.1299 [228.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 286.7213, l2 = 79.7556
+INFO:root:u_gender disc test= 0.9459,0.9767,0.9567,0.9767auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9488,0.9778,0.9587,0.9778auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [2766.9 s]
+ validation= 0.5838,0.1303 [223.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 279.4813, l2 = 79.7313
+INFO:root:u_gender disc test= 0.9505,0.9784,0.9600,0.9784auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9547,0.9798,0.9627,0.9798auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [2394.9 s]
+ validation= 0.5909,0.1320 [198.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 273.8085, l2 = 79.6997
+INFO:root:u_gender disc test= 0.9546,0.9802,0.9634,0.9802auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9583,0.9814,0.9657,0.9814auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [2286.8 s]
+ validation= 0.5876,0.1310 [165.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 268.6126, l2 = 79.5933
+INFO:root:u_gender disc test= 0.9566,0.9812,0.9653,0.9812auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9610,0.9824,0.9676,0.9824auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [2288.5 s]
+ validation= 0.5935,0.1327 [175.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 264.3936, l2 = 79.5076
+INFO:root:u_gender disc test= 0.9584,0.9819,0.9665,0.9819auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9635,0.9834,0.9695,0.9834auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [1945.9 s]
+ validation= 0.5988,0.1344 [178.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 260.7473, l2 = 79.3995
+INFO:root:u_gender disc test= 0.9601,0.9826,0.9678,0.9826auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9656,0.9842,0.9710,0.9842auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [1351.3 s]
+ validation= 0.6029,0.1359 [162.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 257.0395, l2 = 79.2463
+INFO:root:u_gender disc test= 0.9598,0.9827,0.9679,0.9827auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9661,0.9842,0.9711,0.9842auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [1214.9 s]
+ validation= 0.6034,0.1360 [160.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 254.4091, l2 = 79.1258
+INFO:root:u_gender disc test= 0.9611,0.9828,0.9683,0.9828auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9685,0.9851,0.9728,0.9851auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [1116.8 s]
+ validation= 0.5982,0.1350 [172.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 251.3657, l2 = 78.9493
+INFO:root:u_gender disc test= 0.9629,0.9837,0.9699,0.9837auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9702,0.9860,0.9743,0.9860auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [1090.8 s]
+ validation= 0.6034,0.1369 [162.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 249.4008, l2 = 78.8396
+INFO:root:u_gender disc test= 0.9637,0.9840,0.9706,0.9840auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9716,0.9866,0.9755,0.9866auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [1331.0 s]
+ validation= 0.6033,0.1358 [175.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 246.9161, l2 = 78.6894
+INFO:root:u_gender disc test= 0.9658,0.9847,0.9719,0.9847auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9719,0.9868,0.9758,0.9868auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [1334.9 s]
+ validation= 0.6091,0.1384 [169.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 244.8077, l2 = 78.5561
+INFO:root:u_gender disc test= 0.9651,0.9846,0.9716,0.9846auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9727,0.9873,0.9767,0.9873auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [1306.7 s]
+ validation= 0.6106,0.1379 [175.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 242.8478, l2 = 78.5189
+INFO:root:u_gender disc test= 0.9660,0.9846,0.9717,0.9846auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9733,0.9874,0.9769,0.9874auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [1173.5 s]
+ validation= 0.6054,0.1373 [175.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 241.1025, l2 = 78.4991
+INFO:root:u_gender disc test= 0.9655,0.9844,0.9712,0.9844auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9732,0.9873,0.9767,0.9873auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    22 [1362.8 s]
+ validation= 0.6070,0.1379 [169.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 239.6660, l2 = 78.5206
+INFO:root:u_gender disc test= 0.9657,0.9846,0.9717,0.9846auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9731,0.9873,0.9767,0.9873auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    23 [1477.1 s]
+ validation= 0.6132,0.1399 [164.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 237.8983, l2 = 78.5246
+INFO:root:u_gender disc test= 0.9655,0.9848,0.9720,0.9848auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9740,0.9878,0.9777,0.9878auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    24 [1483.8 s]
+ validation= 0.6173,0.1417 [183.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 236.3400, l2 = 78.4505
+INFO:root:u_gender disc test= 0.9667,0.9853,0.9729,0.9853auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9753,0.9882,0.9784,0.9882auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    25 [2432.8 s]
+ validation= 0.6189,0.1418 [213.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 235.2054, l2 = 78.4268
+INFO:root:u_gender disc test= 0.9677,0.9857,0.9737,0.9857auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9759,0.9884,0.9789,0.9884auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    26 [2979.2 s]
+ validation= 0.6199,0.1422 [220.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 234.0843, l2 = 78.3249
+INFO:root:u_gender disc test= 0.9685,0.9857,0.9738,0.9857auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9764,0.9884,0.9788,0.9884auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    27 [2953.0 s]
+ validation= 0.6179,0.1414 [265.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 232.9009, l2 = 78.2165
+INFO:root:u_gender disc test= 0.9692,0.9859,0.9741,0.9859auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9763,0.9886,0.9792,0.9886auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    28 [2848.5 s]
+ validation= 0.6188,0.1425 [203.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 231.7434, l2 = 78.0949
+INFO:root:u_gender disc test= 0.9695,0.9860,0.9744,0.9860auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9763,0.9887,0.9793,0.9887auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    29 [2613.9 s]
+ validation= 0.6236,0.1442 [234.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 230.5567, l2 = 78.0110
+INFO:root:u_gender disc test= 0.9706,0.9863,0.9749,0.9863auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9768,0.9889,0.9797,0.9889auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    30 [2555.5 s]
+ validation= 0.6188,0.1431 [226.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 229.4606, l2 = 77.8795
+INFO:root:u_gender disc test= 0.9717,0.9867,0.9757,0.9867auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9779,0.9893,0.9805,0.9893auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    31 [2356.0 s]
+ validation= 0.6209,0.1431 [178.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 228.5816, l2 = 77.6874
+INFO:root:u_gender disc test= 0.9713,0.9868,0.9758,0.9868auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9784,0.9896,0.9810,0.9896auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    32 [2445.7 s]
+ validation= 0.6159,0.1420 [178.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 228.1950, l2 = 77.5810
+INFO:root:u_gender disc test= 0.9701,0.9863,0.9749,0.9863auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9787,0.9898,0.9814,0.9898auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    33 [2432.3 s]
+ validation= 0.6177,0.1433 [170.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 227.2552, l2 = 77.4583
+INFO:root:u_gender disc test= 0.9712,0.9867,0.9757,0.9867auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9784,0.9896,0.9810,0.9896auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    34 [2418.3 s]
+ validation= 0.6172,0.1430 [186.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 226.1011, l2 = 77.3092
+INFO:root:u_gender disc test= 0.9721,0.9872,0.9765,0.9872auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9804,0.9905,0.9826,0.9905auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    35 [2423.8 s]
+ validation= 0.6187,0.1435 [193.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 225.5000, l2 = 77.1942
+INFO:root:u_gender disc test= 0.9722,0.9872,0.9765,0.9872auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9820,0.9910,0.9837,0.9910auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    36 [2393.8 s]
+ validation= 0.6206,0.1439 [188.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 225.0423, l2 = 77.1395
+INFO:root:u_gender disc test= 0.9717,0.9869,0.9759,0.9869auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9817,0.9908,0.9832,0.9908auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    37 [2424.1 s]
+ validation= 0.6213,0.1440 [182.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 224.3163, l2 = 77.0824
+INFO:root:u_gender disc test= 0.9720,0.9870,0.9762,0.9870auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9807,0.9906,0.9828,0.9906auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    38 [2441.0 s]
+ validation= 0.6236,0.1449 [176.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 223.6862, l2 = 77.0862
+INFO:root:u_gender disc test= 0.9726,0.9874,0.9769,0.9874auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9816,0.9909,0.9834,0.9909auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    39 [2382.7 s]
+ validation= 0.6252,0.1451 [181.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 222.8125, l2 = 77.0524
+INFO:root:u_gender disc test= 0.9729,0.9875,0.9771,0.9875auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9814,0.9908,0.9832,0.9908auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    40 [2180.0 s]
+ validation= 0.6205,0.1446 [190.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 222.3759, l2 = 76.9936
+INFO:root:u_gender disc test= 0.9734,0.9877,0.9775,0.9877auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9818,0.9909,0.9834,0.9909auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    41 [2118.5 s]
+ validation= 0.6252,0.1460 [183.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 222.0876, l2 = 76.9633
+INFO:root:u_gender disc test= 0.9738,0.9879,0.9779,0.9879auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9815,0.9908,0.9832,0.9908auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    42 [1928.9 s]
+ validation= 0.6274,0.1455 [174.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 221.6510, l2 = 76.9401
+INFO:root:u_gender disc test= 0.9743,0.9881,0.9781,0.9881auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9812,0.9907,0.9830,0.9907auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    43 [2002.2 s]
+ validation= 0.6261,0.1458 [173.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 221.0080, l2 = 76.9062
+INFO:root:u_gender disc test= 0.9749,0.9882,0.9785,0.9882auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9812,0.9906,0.9829,0.9906auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    44 [1863.5 s]
+ validation= 0.6224,0.1448 [195.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 220.7100, l2 = 76.8783
+INFO:root:u_gender disc test= 0.9748,0.9883,0.9786,0.9883auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9804,0.9903,0.9823,0.9903auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    45 [1630.4 s]
+ validation= 0.6260,0.1461 [191.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 220.1626, l2 = 76.8343
+INFO:root:u_gender disc test= 0.9754,0.9886,0.9792,0.9886auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9809,0.9906,0.9828,0.9906auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    46 [1944.0 s]
+ validation= 0.6231,0.1451 [172.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 219.5953, l2 = 76.7291
+INFO:root:u_gender disc test= 0.9749,0.9885,0.9789,0.9885auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9811,0.9906,0.9829,0.9906auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    47 [1721.5 s]
+ validation= 0.6236,0.1455 [181.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 219.4922, l2 = 76.6537
+INFO:root:u_gender disc test= 0.9751,0.9886,0.9791,0.9886auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9818,0.9908,0.9833,0.9908auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    48 [1786.1 s]
+ validation= 0.6245,0.1462 [179.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 218.9205, l2 = 76.5820
+INFO:root:u_gender disc test= 0.9746,0.9883,0.9786,0.9883auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9821,0.9910,0.9836,0.9910auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    49 [1606.1 s]
+ validation= 0.6277,0.1467 [184.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 218.6605, l2 = 76.5483
+INFO:root:u_gender disc test= 0.9749,0.9884,0.9787,0.9884auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9830,0.9914,0.9843,0.9914auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    50 [1657.0 s]
+ validation= 0.6302,0.1477 [164.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 218.0954, l2 = 76.4957
+INFO:root:u_gender disc test= 0.9751,0.9886,0.9792,0.9886auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9829,0.9913,0.9842,0.9913auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    51 [2905.2 s]
+ validation= 0.6279,0.1467 [244.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 217.5555, l2 = 76.4046
+INFO:root:u_gender disc test= 0.9762,0.9889,0.9797,0.9889auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9828,0.9914,0.9843,0.9914auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    52 [3230.8 s]
+ validation= 0.6292,0.1473 [231.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 217.5587, l2 = 76.3605
+INFO:root:u_gender disc test= 0.9756,0.9887,0.9794,0.9887auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9835,0.9916,0.9848,0.9916auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    53 [3025.9 s]
+ validation= 0.6264,0.1469 [236.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 217.0221, l2 = 76.2868
+INFO:root:u_gender disc test= 0.9756,0.9888,0.9796,0.9888auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9835,0.9916,0.9847,0.9916auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    54 [2965.8 s]
+ validation= 0.6307,0.1476 [227.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 216.6870, l2 = 76.2779
+INFO:root:u_gender disc test= 0.9766,0.9892,0.9802,0.9892auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9842,0.9920,0.9853,0.9920auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    55 [2988.6 s]
+ validation= 0.6248,0.1460 [214.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 216.8463, l2 = 76.2932
+INFO:root:u_gender disc test= 0.9778,0.9896,0.9809,0.9896auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9843,0.9920,0.9854,0.9920auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    56 [3019.5 s]
+ validation= 0.6242,0.1457 [217.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 216.0589, l2 = 76.2151
+INFO:root:u_gender disc test= 0.9761,0.9888,0.9796,0.9888auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9844,0.9918,0.9852,0.9918auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    57 [2969.0 s]
+ validation= 0.6288,0.1467 [247.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 215.7016, l2 = 76.1538
+INFO:root:u_gender disc test= 0.9756,0.9887,0.9793,0.9887auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9839,0.9917,0.9849,0.9917auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    58 [2851.1 s]
+ validation= 0.6289,0.1467 [218.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 215.7146, l2 = 76.0947
+INFO:root:u_gender disc test= 0.9763,0.9890,0.9798,0.9890auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9842,0.9919,0.9853,0.9919auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    59 [2468.1 s]
+ validation= 0.6288,0.1468 [210.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 215.1821, l2 = 76.0344
+INFO:root:u_gender disc test= 0.9763,0.9891,0.9800,0.9891auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9841,0.9919,0.9853,0.9919auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    60 [2247.9 s]
+ validation= 0.6283,0.1465 [193.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 214.9270, l2 = 75.9892
+INFO:root:u_gender disc test= 0.9771,0.9894,0.9805,0.9894auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9839,0.9918,0.9850,0.9918auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    61 [2196.9 s]
+ validation= 0.6260,0.1458 [200.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 214.6728, l2 = 75.8841
+INFO:root:u_gender disc test= 0.9763,0.9890,0.9798,0.9890auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9839,0.9920,0.9854,0.9920auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    62 [2104.1 s]
+ validation= 0.6260,0.1455 [207.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 214.5444, l2 = 75.8553
+INFO:root:u_gender disc test= 0.9764,0.9890,0.9799,0.9890auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9845,0.9921,0.9856,0.9921auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    63 [1375.6 s]
+ validation= 0.6302,0.1474 [163.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 214.4607, l2 = 75.8352
+INFO:root:u_gender disc test= 0.9764,0.9892,0.9802,0.9892auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9840,0.9919,0.9853,0.9919auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    64 [2036.6 s]
+ validation= 0.6263,0.1463 [177.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.8628, l2 = 75.7466
+INFO:root:u_gender disc test= 0.9771,0.9895,0.9808,0.9895auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9842,0.9920,0.9854,0.9920auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    65 [2074.7 s]
+ validation= 0.6289,0.1470 [189.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.7278, l2 = 75.6666
+INFO:root:u_gender disc test= 0.9773,0.9896,0.9810,0.9896auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9841,0.9920,0.9854,0.9920auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    66 [898.4 s]
+ validation= 0.6285,0.1469 [160.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.8665, l2 = 75.6639
+INFO:root:u_gender disc test= 0.9779,0.9898,0.9813,0.9898auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9844,0.9921,0.9856,0.9921auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    67 [859.4 s]
+ validation= 0.6268,0.1458 [156.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.3968, l2 = 75.6139
+INFO:root:u_gender disc test= 0.9774,0.9897,0.9811,0.9897auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9837,0.9919,0.9852,0.9919auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    68 [1240.0 s]
+ validation= 0.6268,0.1459 [155.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.4016, l2 = 75.5564
+INFO:root:u_gender disc test= 0.9779,0.9898,0.9813,0.9898auc, acc, f1_macro, f1_micro
+INFO:root:u_gender pred test= 0.9827,0.9916,0.9846,0.9916auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    69 [1605.4 s]
+ validation= 0.6243,0.1459 [226.8 s] ndcg@10,f1@10
+INFO:root:Early stop at 69 based on validation result.
+INFO:root:Best Iter (validation) =    54	 valid= 0.6307,0.1476 [162660.8 s] ndcg@10,f1@10
+INFO:root:disc test: u_gender=0.9756auc, pred test: u_gender=0.9835auc
+INFO:root:Load model from ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load u_gender discriminator model from ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/u_gender_disc.pt
+INFO:root:Load u_gender discriminator model from ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/u_gender_disc.pt
+INFO:root:Load model from ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/MLP_FairRec_taobaoserendipity_u_gender_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_gender loss = 0.7038
+INFO:root:Epoch     1 [2.9 s]
+INFO:root:u_gender disc test = 0.5013,0.3247,0.2470,0.3247 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_gender loss = 0.6871
+INFO:root:
+
+INFO:root:u_gender loss = 0.1470
+INFO:root:Epoch   126 [2.0 s]
+INFO:root:u_gender disc test = 0.5423,0.5712,0.4411,0.5712 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_gender loss = 0.1331
+INFO:root:Epoch   251 [2.2 s]
+INFO:root:u_gender disc test = 0.5473,0.5514,0.4444,0.5514 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_gender loss = 0.1295
+INFO:root:Epoch   376 [1.7 s]
+INFO:root:u_gender disc test = 0.5577,0.5286,0.4386,0.5286 auc, acc, f1_macro, f1_micro
+INFO:root:u_gender best auc: 0.5838
+INFO:root:And the corresponding u_gender best disc test= 0.5838,0.5444,0.3849,0.5444 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_gender discriminator model from ../model/MLP_FairRec_taobaoserendipity_u_gender_neg_sample=1000/u_gender_eval_disc.pt
+INFO:root:Test After Training = 0.6349,0.1489 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.16783787000731565

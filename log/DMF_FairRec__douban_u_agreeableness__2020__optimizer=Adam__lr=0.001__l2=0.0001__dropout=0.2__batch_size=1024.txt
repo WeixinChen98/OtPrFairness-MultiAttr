@@ -1,0 +1,424 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'DMF', 'fairness_framework': 'FairRec', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '3', 'verbose': 20, 'log_file': '../log/DMF_FairRec__douban_u_agreeableness__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'douban', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_agreeableness'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'num_layers': 3, 'model_path': '../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: DMF
+INFO:root:Fairness framework: FairRec
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 19451
+INFO:root:load validation csv...
+INFO:root:size of validation: 2431
+INFO:root:load test csv...
+INFO:root:size of test: 2432
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 320896
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 556.0975, l2 = 0.0924
+INFO:root:u_agreeableness disc test= 0.5000,0.5091,0.3374,0.5091auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5009,0.5000,0.4982,0.5000auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [3.0 s]
+ validation= 0.1520,0.0759 [22.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 308.8861, l2 = 0.0928
+INFO:root:u_agreeableness disc test= 0.5011,0.5102,0.3425,0.5102auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5018,0.5107,0.3489,0.5107auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [2.5 s]
+ validation= 0.1542,0.0798 [50.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 295.2457, l2 = 0.0931
+INFO:root:u_agreeableness disc test= 0.5141,0.5184,0.4876,0.5184auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5155,0.5179,0.5083,0.5179auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [1.6 s]
+ validation= 0.1638,0.0819 [37.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 283.7130, l2 = 0.0932
+INFO:root:u_agreeableness disc test= 0.5184,0.5204,0.5137,0.5204auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5235,0.5274,0.5027,0.5274auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [3.1 s]
+ validation= 0.1846,0.0899 [49.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 275.9958, l2 = 0.0933
+INFO:root:u_agreeableness disc test= 0.5236,0.5261,0.5156,0.5261auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5261,0.5279,0.5225,0.5279auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [3.9 s]
+ validation= 0.1809,0.0874 [43.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 276.4604, l2 = 0.0935
+INFO:root:u_agreeableness disc test= 0.5190,0.5223,0.5039,0.5223auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5309,0.5321,0.5295,0.5321auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [3.4 s]
+ validation= 0.1908,0.0947 [42.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 267.8473, l2 = 0.0936
+INFO:root:u_agreeableness disc test= 0.5246,0.5271,0.5171,0.5271auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5285,0.5297,0.5270,0.5297auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [2.8 s]
+ validation= 0.1807,0.0901 [55.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 269.1374, l2 = 0.0937
+INFO:root:u_agreeableness disc test= 0.5232,0.5250,0.5191,0.5250auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5315,0.5318,0.5315,0.5318auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [2.0 s]
+ validation= 0.1913,0.0969 [53.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 266.1724, l2 = 0.0939
+INFO:root:u_agreeableness disc test= 0.5220,0.5233,0.5202,0.5233auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5297,0.5291,0.5289,0.5291auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [1.0 s]
+ validation= 0.1914,0.0965 [49.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 257.5652, l2 = 0.0940
+INFO:root:u_agreeableness disc test= 0.5254,0.5264,0.5243,0.5264auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5276,0.5280,0.5275,0.5280auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [4.1 s]
+ validation= 0.2055,0.1027 [43.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 255.5408, l2 = 0.0941
+INFO:root:u_agreeableness disc test= 0.5253,0.5265,0.5237,0.5265auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5299,0.5298,0.5298,0.5298auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [2.6 s]
+ validation= 0.2103,0.1048 [44.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 261.9500, l2 = 0.0942
+INFO:root:u_agreeableness disc test= 0.5253,0.5259,0.5250,0.5259auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5366,0.5363,0.5362,0.5363auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [0.8 s]
+ validation= 0.2088,0.1028 [56.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 254.7946, l2 = 0.0944
+INFO:root:u_agreeableness disc test= 0.5258,0.5273,0.5235,0.5273auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5367,0.5368,0.5367,0.5368auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [2.0 s]
+ validation= 0.2020,0.1001 [57.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 255.3951, l2 = 0.0945
+INFO:root:u_agreeableness disc test= 0.5248,0.5256,0.5242,0.5256auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5344,0.5342,0.5342,0.5342auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [2.6 s]
+ validation= 0.2115,0.1099 [51.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 250.9089, l2 = 0.0946
+INFO:root:u_agreeableness disc test= 0.5287,0.5309,0.5232,0.5309auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5353,0.5363,0.5345,0.5363auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [3.8 s]
+ validation= 0.2170,0.1054 [50.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 254.2516, l2 = 0.0948
+INFO:root:u_agreeableness disc test= 0.5286,0.5301,0.5259,0.5301auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5306,0.5308,0.5306,0.5308auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [3.1 s]
+ validation= 0.2188,0.1048 [49.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 252.7821, l2 = 0.0949
+INFO:root:u_agreeableness disc test= 0.5291,0.5307,0.5262,0.5307auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5356,0.5356,0.5356,0.5356auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [1.8 s]
+ validation= 0.2179,0.1092 [45.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 248.9730, l2 = 0.0950
+INFO:root:u_agreeableness disc test= 0.5269,0.5294,0.5191,0.5294auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5354,0.5362,0.5349,0.5362auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [2.9 s]
+ validation= 0.2231,0.1093 [57.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 247.3235, l2 = 0.0951
+INFO:root:u_agreeableness disc test= 0.5250,0.5276,0.5166,0.5276auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5334,0.5344,0.5325,0.5344auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [2.2 s]
+ validation= 0.2270,0.1105 [47.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 245.0637, l2 = 0.0953
+INFO:root:u_agreeableness disc test= 0.5255,0.5277,0.5194,0.5277auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5346,0.5347,0.5346,0.5347auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [4.1 s]
+ validation= 0.2338,0.1108 [51.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 248.9288, l2 = 0.0954
+INFO:root:u_agreeableness disc test= 0.5207,0.5247,0.4979,0.5247auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5328,0.5342,0.5309,0.5342auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [1.8 s]
+ validation= 0.2293,0.1131 [56.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 247.0953, l2 = 0.0956
+INFO:root:u_agreeableness disc test= 0.5220,0.5249,0.5112,0.5249auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5377,0.5387,0.5365,0.5387auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    22 [4.1 s]
+ validation= 0.2174,0.1100 [53.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 245.9924, l2 = 0.0958
+INFO:root:u_agreeableness disc test= 0.5242,0.5275,0.5090,0.5275auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5317,0.5353,0.5142,0.5353auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    23 [1.9 s]
+ validation= 0.2380,0.1170 [37.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 249.0712, l2 = 0.0959
+INFO:root:u_agreeableness disc test= 0.5226,0.5247,0.5174,0.5247auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5358,0.5375,0.5329,0.5375auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    24 [2.1 s]
+ validation= 0.2266,0.1121 [51.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 240.5075, l2 = 0.0961
+INFO:root:u_agreeableness disc test= 0.5149,0.5193,0.4874,0.5193auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5346,0.5365,0.5304,0.5365auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    25 [1.6 s]
+ validation= 0.2282,0.1125 [52.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 241.5716, l2 = 0.0962
+INFO:root:u_agreeableness disc test= 0.5148,0.5197,0.4796,0.5197auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5365,0.5381,0.5336,0.5381auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    26 [2.6 s]
+ validation= 0.2358,0.1124 [46.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 238.4734, l2 = 0.0964
+INFO:root:u_agreeableness disc test= 0.5222,0.5258,0.5047,0.5258auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5280,0.5301,0.5229,0.5301auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    27 [1.4 s]
+ validation= 0.2194,0.1098 [49.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 236.0105, l2 = 0.0965
+INFO:root:u_agreeableness disc test= 0.5195,0.5232,0.5015,0.5232auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5313,0.5341,0.5216,0.5341auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    28 [1.3 s]
+ validation= 0.2328,0.1130 [48.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 237.8910, l2 = 0.0967
+INFO:root:u_agreeableness disc test= 0.5159,0.5206,0.4837,0.5206auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5334,0.5363,0.5233,0.5363auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    29 [2.1 s]
+ validation= 0.2343,0.1139 [50.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 235.8013, l2 = 0.0968
+INFO:root:u_agreeableness disc test= 0.5167,0.5213,0.4866,0.5213auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5247,0.5289,0.5004,0.5289auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    30 [2.5 s]
+ validation= 0.2452,0.1155 [48.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 239.3984, l2 = 0.0970
+INFO:root:u_agreeableness disc test= 0.5181,0.5238,0.4691,0.5238auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5252,0.5280,0.5145,0.5280auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    31 [2.4 s]
+ validation= 0.2362,0.1140 [50.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 230.5738, l2 = 0.0972
+INFO:root:u_agreeableness disc test= 0.5236,0.5293,0.4761,0.5293auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5226,0.5266,0.5008,0.5266auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    32 [1.5 s]
+ validation= 0.2308,0.1136 [47.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 236.1644, l2 = 0.0974
+INFO:root:u_agreeableness disc test= 0.5170,0.5221,0.4779,0.5221auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5254,0.5294,0.5033,0.5294auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    33 [2.4 s]
+ validation= 0.2343,0.1123 [41.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 237.5512, l2 = 0.0976
+INFO:root:u_agreeableness disc test= 0.5149,0.5212,0.4536,0.5212auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5221,0.5266,0.4940,0.5266auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    34 [2.9 s]
+ validation= 0.2365,0.1132 [47.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 230.2999, l2 = 0.0978
+INFO:root:u_agreeableness disc test= 0.5188,0.5244,0.4725,0.5244auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5257,0.5302,0.4973,0.5302auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    35 [1.4 s]
+ validation= 0.2273,0.1119 [49.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 232.9750, l2 = 0.0981
+INFO:root:u_agreeableness disc test= 0.5191,0.5227,0.5013,0.5227auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5268,0.5312,0.5007,0.5312auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    36 [2.7 s]
+ validation= 0.2341,0.1128 [49.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 227.2189, l2 = 0.0983
+INFO:root:u_agreeableness disc test= 0.5230,0.5262,0.5097,0.5262auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5310,0.5340,0.5191,0.5340auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    37 [1.8 s]
+ validation= 0.2286,0.1089 [41.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 227.8355, l2 = 0.0985
+INFO:root:u_agreeableness disc test= 0.5203,0.5242,0.4995,0.5242auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5307,0.5345,0.5112,0.5345auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    38 [1.0 s]
+ validation= 0.2234,0.1106 [44.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 219.6664, l2 = 0.0988
+INFO:root:u_agreeableness disc test= 0.5178,0.5204,0.5085,0.5204auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5293,0.5335,0.5050,0.5335auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    39 [1.8 s]
+ validation= 0.2322,0.1142 [50.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 228.1371, l2 = 0.0990
+INFO:root:u_agreeableness disc test= 0.5274,0.5303,0.5174,0.5303auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5334,0.5361,0.5243,0.5361auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    40 [1.7 s]
+ validation= 0.2292,0.1142 [38.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 222.0577, l2 = 0.0992
+INFO:root:u_agreeableness disc test= 0.5270,0.5298,0.5168,0.5298auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5321,0.5366,0.5046,0.5366auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    41 [1.2 s]
+ validation= 0.2289,0.1089 [35.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 225.5869, l2 = 0.0995
+INFO:root:u_agreeableness disc test= 0.5293,0.5326,0.5149,0.5326auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5352,0.5389,0.5173,0.5389auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    42 [1.7 s]
+ validation= 0.2314,0.1130 [37.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 218.8946, l2 = 0.0997
+INFO:root:u_agreeableness disc test= 0.5350,0.5382,0.5220,0.5382auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5350,0.5381,0.5227,0.5381auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    43 [2.9 s]
+ validation= 0.2268,0.1121 [46.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 218.7359, l2 = 0.1000
+INFO:root:u_agreeableness disc test= 0.5316,0.5350,0.5171,0.5350auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5372,0.5395,0.5310,0.5395auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    44 [1.3 s]
+ validation= 0.2248,0.1148 [41.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 213.8753, l2 = 0.1003
+INFO:root:u_agreeableness disc test= 0.5271,0.5289,0.5235,0.5289auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5339,0.5368,0.5233,0.5368auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    45 [1.6 s]
+ validation= 0.2139,0.1086 [38.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 212.8822, l2 = 0.1005
+INFO:root:u_agreeableness disc test= 0.5317,0.5343,0.5229,0.5343auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5299,0.5329,0.5179,0.5329auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    46 [1.3 s]
+ validation= 0.2169,0.1061 [33.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 217.3155, l2 = 0.1008
+INFO:root:u_agreeableness disc test= 0.5359,0.5385,0.5277,0.5385auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5296,0.5331,0.5138,0.5331auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    47 [0.9 s]
+ validation= 0.2237,0.1090 [35.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.5188, l2 = 0.1010
+INFO:root:u_agreeableness disc test= 0.5349,0.5371,0.5290,0.5371auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5302,0.5329,0.5214,0.5329auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    48 [1.4 s]
+ validation= 0.2118,0.1042 [31.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 209.7595, l2 = 0.1013
+INFO:root:u_agreeableness disc test= 0.5339,0.5370,0.5210,0.5370auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5405,0.5425,0.5358,0.5425auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    49 [1.1 s]
+ validation= 0.2206,0.1108 [32.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 206.2358, l2 = 0.1016
+INFO:root:u_agreeableness disc test= 0.5351,0.5377,0.5270,0.5377auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness pred test= 0.5380,0.5393,0.5363,0.5393auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    50 [1.6 s]
+ validation= 0.2248,0.1108 [34.9 s] ndcg@10,f1@10
+INFO:root:Early stop at 50 based on validation result.
+INFO:root:Best Iter (validation) =    30	 valid= 0.2452,0.1155 [2397.6 s] ndcg@10,f1@10
+INFO:root:disc test: u_agreeableness=0.5167auc, pred test: u_agreeableness=0.5247auc
+INFO:root:Load model from ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load u_agreeableness discriminator model from ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/u_agreeableness_disc.pt
+INFO:root:Load u_agreeableness discriminator model from ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/u_agreeableness_disc.pt
+INFO:root:Load model from ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/DMF_FairRec_douban_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.6949
+INFO:root:Epoch     1 [0.2 s]
+INFO:root:u_agreeableness disc test = 0.5000,0.5132,0.3391,0.5132 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.6939
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.4297
+INFO:root:Epoch   126 [0.3 s]
+INFO:root:u_agreeableness disc test = 0.5000,0.5132,0.3391,0.5132 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.3146
+INFO:root:Epoch   251 [0.3 s]
+INFO:root:u_agreeableness disc test = 0.5000,0.5132,0.3391,0.5132 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.2494
+INFO:root:Epoch   376 [0.4 s]
+INFO:root:u_agreeableness disc test = 0.5000,0.5132,0.3391,0.5132 auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness best auc: 0.5000
+INFO:root:And the corresponding u_agreeableness best disc test= 0.5000,0.5132,0.3391,0.5132 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_agreeableness discriminator model from ../model/DMF_FairRec_douban_u_agreeableness_neg_sample=1000/u_agreeableness_eval_disc.pt
+INFO:root:Test After Training = 0.2371,0.1169 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.008466017349148591

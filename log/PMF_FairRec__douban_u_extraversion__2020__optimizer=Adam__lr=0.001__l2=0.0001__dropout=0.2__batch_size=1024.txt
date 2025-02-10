@@ -1,0 +1,221 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'PMF', 'fairness_framework': 'FairRec', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '3', 'verbose': 20, 'log_file': '../log/PMF_FairRec__douban_u_extraversion__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'douban', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_extraversion'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/PMF_FairRec_douban_u_extraversion_neg_sample=1000/PMF_FairRec_douban_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: PMF
+INFO:root:Fairness framework: FairRec
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 19451
+INFO:root:load validation csv...
+INFO:root:size of validation: 2431
+INFO:root:load test csv...
+INFO:root:size of test: 2432
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 295936
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 706.3289, l2 = 0.0160
+INFO:root:u_extraversion disc test= 0.5012,0.5302,0.4209,0.5302auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.5042,0.5105,0.4846,0.5105auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [13.1 s]
+ validation= 0.3130,0.1288 [67.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_douban_u_extraversion_neg_sample=1000/PMF_FairRec_douban_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 662.6951, l2 = 0.0183
+INFO:root:u_extraversion disc test= 0.5095,0.5447,0.4065,0.5447auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.5102,0.5456,0.4054,0.5456auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [3.0 s]
+ validation= 0.3137,0.1251 [59.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_douban_u_extraversion_neg_sample=1000/PMF_FairRec_douban_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 563.8587, l2 = 0.0218
+INFO:root:u_extraversion disc test= 0.5142,0.5476,0.4260,0.5476auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.5128,0.5464,0.4226,0.5464auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [2.6 s]
+ validation= 0.3226,0.1292 [48.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FairRec_douban_u_extraversion_neg_sample=1000/PMF_FairRec_douban_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 462.1493, l2 = 0.0258
+INFO:root:u_extraversion disc test= 0.5067,0.5413,0.4077,0.5413auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.5048,0.5409,0.3922,0.5409auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [4.4 s]
+ validation= 0.2895,0.1222 [47.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 366.1212, l2 = 0.0300
+INFO:root:u_extraversion disc test= 0.5084,0.5423,0.4149,0.5423auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.5115,0.5440,0.4286,0.5440auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [2.1 s]
+ validation= 0.2486,0.1065 [59.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 295.5305, l2 = 0.0340
+INFO:root:u_extraversion disc test= 0.5157,0.5433,0.4624,0.5433auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.5246,0.5492,0.4858,0.5492auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [1.7 s]
+ validation= 0.2377,0.1070 [60.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 240.6478, l2 = 0.0377
+INFO:root:u_extraversion disc test= 0.5209,0.5533,0.4405,0.5533auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.5408,0.5645,0.5071,0.5645auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [1.9 s]
+ validation= 0.2443,0.1086 [60.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 203.7712, l2 = 0.0411
+INFO:root:u_extraversion disc test= 0.5433,0.5629,0.5232,0.5629auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.5545,0.5670,0.5488,0.5670auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [4.4 s]
+ validation= 0.2378,0.1032 [53.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 174.9837, l2 = 0.0442
+INFO:root:u_extraversion disc test= 0.5540,0.5731,0.5356,0.5731auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.5535,0.5723,0.5359,0.5723auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [2.3 s]
+ validation= 0.2441,0.1041 [53.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 150.1299, l2 = 0.0471
+INFO:root:u_extraversion disc test= 0.5579,0.5751,0.5443,0.5751auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.5518,0.5731,0.5272,0.5731auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [1.7 s]
+ validation= 0.2042,0.0893 [52.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 135.1952, l2 = 0.0498
+INFO:root:u_extraversion disc test= 0.5590,0.5752,0.5471,0.5752auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.5591,0.5766,0.5448,0.5766auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [4.5 s]
+ validation= 0.2500,0.1072 [79.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 123.4167, l2 = 0.0522
+INFO:root:u_extraversion disc test= 0.5870,0.6037,0.5757,0.6037auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.5782,0.5942,0.5678,0.5942auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [1.1 s]
+ validation= 0.2704,0.1170 [51.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 113.1703, l2 = 0.0546
+INFO:root:u_extraversion disc test= 0.5921,0.6056,0.5862,0.6056auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.6008,0.6145,0.5949,0.6145auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [3.3 s]
+ validation= 0.2543,0.1123 [55.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 103.0676, l2 = 0.0567
+INFO:root:u_extraversion disc test= 0.5975,0.6116,0.5910,0.6116auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.6003,0.6133,0.5953,0.6133auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [3.2 s]
+ validation= 0.2365,0.1048 [88.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 95.9959, l2 = 0.0587
+INFO:root:u_extraversion disc test= 0.6094,0.6205,0.6066,0.6205auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.6067,0.6192,0.6025,0.6192auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [4.0 s]
+ validation= 0.2457,0.1087 [73.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 90.6897, l2 = 0.0606
+INFO:root:u_extraversion disc test= 0.6149,0.6265,0.6118,0.6265auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.6193,0.6313,0.6160,0.6313auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [1.4 s]
+ validation= 0.2629,0.1160 [55.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 85.9045, l2 = 0.0624
+INFO:root:u_extraversion disc test= 0.6301,0.6407,0.6281,0.6407auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.6242,0.6367,0.6205,0.6367auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [1.0 s]
+ validation= 0.2594,0.1108 [61.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.1548, l2 = 0.0641
+INFO:root:u_extraversion disc test= 0.6292,0.6398,0.6273,0.6398auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.6283,0.6406,0.6248,0.6406auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [3.8 s]
+ validation= 0.2728,0.1179 [62.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 77.3973, l2 = 0.0658
+INFO:root:u_extraversion disc test= 0.6454,0.6535,0.6452,0.6535auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.6399,0.6517,0.6373,0.6517auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [4.0 s]
+ validation= 0.2703,0.1181 [54.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 74.9978, l2 = 0.0674
+INFO:root:u_extraversion disc test= 0.6455,0.6553,0.6444,0.6553auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.6399,0.6527,0.6365,0.6527auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [3.8 s]
+ validation= 0.2854,0.1209 [49.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 69.5686, l2 = 0.0689
+INFO:root:u_extraversion disc test= 0.6589,0.6663,0.6590,0.6663auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.6495,0.6605,0.6477,0.6605auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [1.7 s]
+ validation= 0.2949,0.1244 [45.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 71.9436, l2 = 0.0704
+INFO:root:u_extraversion disc test= 0.6609,0.6715,0.6597,0.6715auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.6434,0.6565,0.6397,0.6565auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    22 [1.0 s]
+ validation= 0.2464,0.1107 [40.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 66.3282, l2 = 0.0718
+INFO:root:u_extraversion disc test= 0.6691,0.6786,0.6687,0.6786auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion pred test= 0.6578,0.6698,0.6555,0.6698auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    23 [1.5 s]
+ validation= 0.2458,0.1053 [38.2 s] ndcg@10,f1@10
+INFO:root:Early stop at 23 based on validation result.
+INFO:root:Best Iter (validation) =     3	 valid= 0.3226,0.1292 [1390.0 s] ndcg@10,f1@10
+INFO:root:disc test: u_extraversion=0.5142auc, pred test: u_extraversion=0.5128auc
+INFO:root:Load model from ../model/PMF_FairRec_douban_u_extraversion_neg_sample=1000/PMF_FairRec_douban_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load u_extraversion discriminator model from ../model/PMF_FairRec_douban_u_extraversion_neg_sample=1000/u_extraversion_disc.pt
+INFO:root:Load u_extraversion discriminator model from ../model/PMF_FairRec_douban_u_extraversion_neg_sample=1000/u_extraversion_disc.pt
+INFO:root:Load model from ../model/PMF_FairRec_douban_u_extraversion_neg_sample=1000/PMF_FairRec_douban_u_extraversion_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_extraversion loss = 0.6921
+INFO:root:Epoch     1 [1.1 s]
+INFO:root:u_extraversion disc test = 0.5000,0.5044,0.3353,0.5044 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_extraversion loss = 0.6926
+INFO:root:
+
+INFO:root:u_extraversion loss = 0.6912
+INFO:root:Epoch   126 [0.3 s]
+INFO:root:u_extraversion disc test = 0.5000,0.5044,0.3353,0.5044 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_extraversion loss = 0.6898
+INFO:root:Epoch   251 [0.1 s]
+INFO:root:u_extraversion disc test = 0.5367,0.5367,0.5367,0.5367 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_extraversion loss = 0.6876
+INFO:root:Epoch   376 [0.1 s]
+INFO:root:u_extraversion disc test = 0.5085,0.5044,0.3689,0.5044 auc, acc, f1_macro, f1_micro
+INFO:root:u_extraversion best auc: 0.5508
+INFO:root:And the corresponding u_extraversion best disc test= 0.5508,0.5513,0.5498,0.5513 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_extraversion discriminator model from ../model/PMF_FairRec_douban_u_extraversion_neg_sample=1000/u_extraversion_eval_disc.pt
+INFO:root:Test After Training = 0.3276,0.1339 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.0031023129622268497

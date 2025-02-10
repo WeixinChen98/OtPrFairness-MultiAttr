@@ -1,0 +1,158 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'MLP', 'fairness_framework': 'FOCF_AbsUnf', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '4', 'verbose': 20, 'log_file': '../log/MLP_FOCF_AbsUnf__insurance_u_occupation__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'insurance', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_occupation'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'num_layers': 3, 'model_path': '../model/MLP_FOCF_AbsUnf_insurance_u_occupation_neg_sample=10/MLP_FOCF_AbsUnf_insurance_u_occupation_l2=1e-4_dim=64_neg_sample=10.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@3,f1@3', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 10, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: MLP
+INFO:root:Fairness framework: FOCF_AbsUnf
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 53071
+INFO:root:load validation csv...
+INFO:root:size of validation: 6634
+INFO:root:load test csv...
+INFO:root:size of test: 6634
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 1876609
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 488.6553, l2 = 0.0235
+INFO:root:Epoch     1 [21.2 s]
+ validation= 0.8324,0.4616 [9.4 s] ndcg@3,f1@3
+INFO:root:Save model to ../model/MLP_FOCF_AbsUnf_insurance_u_occupation_neg_sample=10/MLP_FOCF_AbsUnf_insurance_u_occupation_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:
+
+INFO:root:loss = 183.0019, l2 = 0.0356
+INFO:root:Epoch     2 [18.6 s]
+ validation= 0.7023,0.4620 [8.4 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 167.2787, l2 = 0.0517
+INFO:root:Epoch     3 [19.7 s]
+ validation= 0.7021,0.4619 [15.0 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 162.3006, l2 = 0.0699
+INFO:root:Epoch     4 [14.0 s]
+ validation= 0.7005,0.4611 [12.7 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 151.8064, l2 = 0.0863
+INFO:root:Epoch     5 [26.8 s]
+ validation= 0.6996,0.4607 [11.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 144.1989, l2 = 0.0988
+INFO:root:Epoch     6 [18.9 s]
+ validation= 0.6979,0.4604 [16.8 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 139.6018, l2 = 0.1147
+INFO:root:Epoch     7 [38.1 s]
+ validation= 0.7008,0.4626 [25.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 129.6951, l2 = 0.1261
+INFO:root:Epoch     8 [21.3 s]
+ validation= 0.7009,0.4631 [14.6 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 122.3122, l2 = 0.1380
+INFO:root:Epoch     9 [29.9 s]
+ validation= 0.7019,0.4630 [16.8 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 115.6532, l2 = 0.1490
+INFO:root:Epoch    10 [25.2 s]
+ validation= 0.7052,0.4648 [10.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 110.5558, l2 = 0.1614
+INFO:root:Epoch    11 [31.4 s]
+ validation= 0.7060,0.4654 [7.3 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 103.8225, l2 = 0.1718
+INFO:root:Epoch    12 [22.9 s]
+ validation= 0.7066,0.4650 [14.8 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 100.5447, l2 = 0.1850
+INFO:root:Epoch    13 [24.9 s]
+ validation= 0.7088,0.4667 [17.1 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 96.4056, l2 = 0.1952
+INFO:root:Epoch    14 [19.1 s]
+ validation= 0.7119,0.4683 [11.4 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 92.6162, l2 = 0.2051
+INFO:root:Epoch    15 [12.4 s]
+ validation= 0.7089,0.4670 [22.9 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 85.8971, l2 = 0.2128
+INFO:root:Epoch    16 [11.7 s]
+ validation= 0.7096,0.4669 [10.8 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 82.3480, l2 = 0.2231
+INFO:root:Epoch    17 [27.0 s]
+ validation= 0.7080,0.4658 [16.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 79.3278, l2 = 0.2307
+INFO:root:Epoch    18 [23.3 s]
+ validation= 0.7112,0.4672 [18.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 72.1353, l2 = 0.2417
+INFO:root:Epoch    19 [27.7 s]
+ validation= 0.7111,0.4681 [9.9 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 72.2795, l2 = 0.2508
+INFO:root:Epoch    20 [17.3 s]
+ validation= 0.7140,0.4691 [11.6 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 68.2320, l2 = 0.2602
+INFO:root:Epoch    21 [15.5 s]
+ validation= 0.7143,0.4690 [11.1 s] ndcg@3,f1@3
+INFO:root:Early stop at 21 based on validation result.
+INFO:root:Best Iter (validation) =     1	 valid= 0.8324,0.4616 [760.4 s] ndcg@3,f1@3
+INFO:root:Load model from ../model/MLP_FOCF_AbsUnf_insurance_u_occupation_neg_sample=10/MLP_FOCF_AbsUnf_insurance_u_occupation_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:Load model from ../model/MLP_FOCF_AbsUnf_insurance_u_occupation_neg_sample=10/MLP_FOCF_AbsUnf_insurance_u_occupation_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_occupation loss = 0.7045
+INFO:root:Epoch     1 [0.4 s]
+INFO:root:u_occupation disc test = 0.5000,0.3541,0.2615,0.3541 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_occupation loss = 0.6953
+INFO:root:
+
+INFO:root:u_occupation loss = 0.6143
+INFO:root:Epoch   126 [0.7 s]
+INFO:root:u_occupation disc test = 0.5842,0.6718,0.5784,0.6718 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_occupation loss = 0.6120
+INFO:root:Epoch   251 [0.4 s]
+INFO:root:u_occupation disc test = 0.5813,0.6752,0.5718,0.6752 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_occupation loss = 0.6118
+INFO:root:Epoch   376 [1.6 s]
+INFO:root:u_occupation disc test = 0.5873,0.6783,0.5803,0.6783 auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation best auc: 0.5969
+INFO:root:And the corresponding u_occupation best disc test= 0.5969,0.6804,0.5945,0.6804 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_occupation discriminator model from ../model/MLP_FOCF_AbsUnf_insurance_u_occupation_neg_sample=10/u_occupation_eval_disc.pt
+INFO:root:Test After Training = 0.8422,0.4644 ndcg@3,f1@3
+INFO:root:User-oriented unfairness: 0.06607877515350191

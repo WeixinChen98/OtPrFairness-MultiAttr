@@ -1,0 +1,1253 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'BiasedMF', 'fairness_framework': 'PCFR', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '5', 'verbose': 20, 'log_file': '../log/BiasedMF_PCFR__ml1M_u_gender__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'ml1M', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_gender'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: BiasedMF
+INFO:root:Fairness framework: PCFR
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 800169
+INFO:root:load validation csv...
+INFO:root:size of validation: 100020
+INFO:root:load test csv...
+INFO:root:size of test: 100020
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 650195
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 372.8766, l2 = 0.2399
+INFO:root:u_gender disc test= 0.5182,0.7551,0.4753,0.7551auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [250.4 s]
+ validation= 0.2756,0.1540 [146.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 257.5186, l2 = 0.3217
+INFO:root:u_gender disc test= 0.6182,0.7843,0.6338,0.7843auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [136.1 s]
+ validation= 0.2948,0.1696 [108.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 242.4368, l2 = 0.3855
+INFO:root:u_gender disc test= 0.6379,0.7939,0.6575,0.7939auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [122.1 s]
+ validation= 0.3080,0.1781 [105.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 234.0405, l2 = 0.4452
+INFO:root:u_gender disc test= 0.6547,0.8005,0.6763,0.8005auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [137.3 s]
+ validation= 0.3135,0.1827 [106.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 225.9316, l2 = 0.5080
+INFO:root:u_gender disc test= 0.6934,0.8185,0.7174,0.8185auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [59.6 s]
+ validation= 0.3231,0.1890 [92.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 219.1561, l2 = 0.5696
+INFO:root:u_gender disc test= 0.7094,0.8279,0.7344,0.8279auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [101.5 s]
+ validation= 0.3301,0.1940 [75.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 212.2712, l2 = 0.6342
+INFO:root:u_gender disc test= 0.7149,0.8296,0.7393,0.8296auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [41.0 s]
+ validation= 0.3419,0.2013 [87.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 204.1605, l2 = 0.6974
+INFO:root:u_gender disc test= 0.7289,0.8374,0.7535,0.8374auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [23.0 s]
+ validation= 0.3492,0.2065 [69.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 199.1869, l2 = 0.7599
+INFO:root:u_gender disc test= 0.7396,0.8447,0.7651,0.8447auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [75.1 s]
+ validation= 0.3553,0.2119 [73.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 195.4961, l2 = 0.8236
+INFO:root:u_gender disc test= 0.7530,0.8523,0.7785,0.8523auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [14.4 s]
+ validation= 0.3561,0.2101 [93.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 189.9298, l2 = 0.8871
+INFO:root:u_gender disc test= 0.7613,0.8579,0.7873,0.8579auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [123.1 s]
+ validation= 0.3614,0.2145 [70.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 186.7514, l2 = 0.9508
+INFO:root:u_gender disc test= 0.7728,0.8639,0.7980,0.8639auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [76.6 s]
+ validation= 0.3677,0.2185 [95.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 183.0956, l2 = 1.0141
+INFO:root:u_gender disc test= 0.7832,0.8706,0.8086,0.8706auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [50.4 s]
+ validation= 0.3709,0.2202 [91.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 180.8557, l2 = 1.0776
+INFO:root:u_gender disc test= 0.7943,0.8768,0.8190,0.8768auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [97.7 s]
+ validation= 0.3763,0.2244 [74.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 177.1931, l2 = 1.1403
+INFO:root:u_gender disc test= 0.8081,0.8856,0.8327,0.8856auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [72.5 s]
+ validation= 0.3787,0.2259 [95.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 174.3120, l2 = 1.2018
+INFO:root:u_gender disc test= 0.8155,0.8906,0.8403,0.8906auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [55.8 s]
+ validation= 0.3805,0.2279 [84.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 171.3885, l2 = 1.2634
+INFO:root:u_gender disc test= 0.8214,0.8943,0.8461,0.8943auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [88.2 s]
+ validation= 0.3864,0.2311 [74.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 169.6756, l2 = 1.3244
+INFO:root:u_gender disc test= 0.8268,0.8985,0.8520,0.8985auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [58.8 s]
+ validation= 0.3848,0.2306 [90.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 167.7782, l2 = 1.3854
+INFO:root:u_gender disc test= 0.8363,0.9043,0.8612,0.9043auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [54.2 s]
+ validation= 0.3881,0.2333 [81.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 165.6416, l2 = 1.4482
+INFO:root:u_gender disc test= 0.8447,0.9086,0.8681,0.9086auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [77.7 s]
+ validation= 0.3904,0.2349 [84.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 163.8485, l2 = 1.5098
+INFO:root:u_gender disc test= 0.8490,0.9112,0.8722,0.9112auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [37.8 s]
+ validation= 0.3891,0.2332 [92.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 163.2206, l2 = 1.5700
+INFO:root:u_gender disc test= 0.8554,0.9156,0.8786,0.9156auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    22 [72.4 s]
+ validation= 0.3916,0.2346 [88.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 160.4863, l2 = 1.6306
+INFO:root:u_gender disc test= 0.8612,0.9195,0.8843,0.9195auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    23 [79.0 s]
+ validation= 0.3949,0.2367 [92.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 158.8526, l2 = 1.6906
+INFO:root:u_gender disc test= 0.8677,0.9235,0.8904,0.9235auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    24 [43.3 s]
+ validation= 0.3946,0.2367 [85.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 156.1289, l2 = 1.7502
+INFO:root:u_gender disc test= 0.8725,0.9263,0.8947,0.9263auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    25 [84.0 s]
+ validation= 0.3951,0.2373 [81.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 154.9370, l2 = 1.8093
+INFO:root:u_gender disc test= 0.8768,0.9286,0.8982,0.9286auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    26 [86.3 s]
+ validation= 0.3972,0.2379 [85.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 151.9742, l2 = 1.8680
+INFO:root:u_gender disc test= 0.8819,0.9312,0.9023,0.9312auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    27 [63.4 s]
+ validation= 0.3992,0.2405 [85.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 151.7251, l2 = 1.9257
+INFO:root:u_gender disc test= 0.8837,0.9326,0.9043,0.9326auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    28 [85.1 s]
+ validation= 0.3992,0.2398 [79.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 150.3436, l2 = 1.9839
+INFO:root:u_gender disc test= 0.8915,0.9373,0.9112,0.9373auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    29 [67.6 s]
+ validation= 0.3995,0.2394 [84.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 148.6217, l2 = 2.0417
+INFO:root:u_gender disc test= 0.8930,0.9388,0.9133,0.9388auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    30 [40.6 s]
+ validation= 0.4003,0.2391 [88.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 146.6075, l2 = 2.0999
+INFO:root:u_gender disc test= 0.8958,0.9405,0.9157,0.9405auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    31 [73.0 s]
+ validation= 0.4032,0.2413 [79.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 146.3862, l2 = 2.1575
+INFO:root:u_gender disc test= 0.8971,0.9409,0.9165,0.9409auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    32 [79.8 s]
+ validation= 0.4038,0.2420 [86.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 144.3655, l2 = 2.2143
+INFO:root:u_gender disc test= 0.9028,0.9444,0.9217,0.9444auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    33 [58.1 s]
+ validation= 0.4052,0.2433 [87.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 143.6542, l2 = 2.2700
+INFO:root:u_gender disc test= 0.9075,0.9471,0.9256,0.9471auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    34 [75.0 s]
+ validation= 0.4071,0.2442 [80.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 142.1732, l2 = 2.3277
+INFO:root:u_gender disc test= 0.9091,0.9483,0.9273,0.9483auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    35 [86.8 s]
+ validation= 0.4073,0.2440 [80.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 141.2908, l2 = 2.3852
+INFO:root:u_gender disc test= 0.9120,0.9502,0.9300,0.9502auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    36 [64.9 s]
+ validation= 0.4081,0.2444 [85.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 139.4991, l2 = 2.4434
+INFO:root:u_gender disc test= 0.9118,0.9502,0.9300,0.9502auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    37 [80.1 s]
+ validation= 0.4085,0.2442 [82.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 139.2478, l2 = 2.5001
+INFO:root:u_gender disc test= 0.9143,0.9512,0.9315,0.9512auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    38 [71.4 s]
+ validation= 0.4081,0.2443 [84.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 138.2571, l2 = 2.5585
+INFO:root:u_gender disc test= 0.9184,0.9531,0.9344,0.9531auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    39 [65.6 s]
+ validation= 0.4079,0.2445 [86.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 137.4113, l2 = 2.6171
+INFO:root:u_gender disc test= 0.9188,0.9538,0.9353,0.9538auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    40 [57.2 s]
+ validation= 0.4092,0.2452 [86.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 136.1965, l2 = 2.6738
+INFO:root:u_gender disc test= 0.9213,0.9555,0.9377,0.9555auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    41 [68.7 s]
+ validation= 0.4091,0.2442 [87.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 134.8949, l2 = 2.7337
+INFO:root:u_gender disc test= 0.9254,0.9577,0.9410,0.9577auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    42 [61.6 s]
+ validation= 0.4104,0.2458 [86.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 133.2912, l2 = 2.7915
+INFO:root:u_gender disc test= 0.9272,0.9588,0.9425,0.9588auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    43 [73.1 s]
+ validation= 0.4118,0.2470 [86.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 132.6400, l2 = 2.8488
+INFO:root:u_gender disc test= 0.9286,0.9594,0.9435,0.9594auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    44 [84.1 s]
+ validation= 0.4113,0.2458 [95.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 131.9270, l2 = 2.9061
+INFO:root:u_gender disc test= 0.9302,0.9605,0.9450,0.9605auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    45 [60.7 s]
+ validation= 0.4130,0.2463 [91.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 130.5963, l2 = 2.9631
+INFO:root:u_gender disc test= 0.9318,0.9615,0.9464,0.9615auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    46 [72.4 s]
+ validation= 0.4125,0.2464 [76.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 129.9922, l2 = 3.0196
+INFO:root:u_gender disc test= 0.9340,0.9629,0.9484,0.9629auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    47 [79.0 s]
+ validation= 0.4134,0.2471 [85.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 128.3725, l2 = 3.0771
+INFO:root:u_gender disc test= 0.9350,0.9633,0.9491,0.9633auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    48 [69.1 s]
+ validation= 0.4149,0.2476 [88.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 127.2663, l2 = 3.1331
+INFO:root:u_gender disc test= 0.9386,0.9652,0.9518,0.9652auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    49 [69.2 s]
+ validation= 0.4167,0.2482 [83.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 126.8440, l2 = 3.1898
+INFO:root:u_gender disc test= 0.9402,0.9661,0.9531,0.9661auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    50 [75.8 s]
+ validation= 0.4146,0.2467 [82.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 125.8019, l2 = 3.2466
+INFO:root:u_gender disc test= 0.9402,0.9663,0.9533,0.9663auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    51 [81.3 s]
+ validation= 0.4139,0.2453 [81.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 125.6628, l2 = 3.3014
+INFO:root:u_gender disc test= 0.9411,0.9669,0.9541,0.9669auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    52 [64.5 s]
+ validation= 0.4186,0.2492 [84.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 124.4062, l2 = 3.3579
+INFO:root:u_gender disc test= 0.9421,0.9676,0.9551,0.9676auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    53 [68.1 s]
+ validation= 0.4177,0.2491 [87.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 123.8518, l2 = 3.4135
+INFO:root:u_gender disc test= 0.9444,0.9689,0.9570,0.9689auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    54 [70.0 s]
+ validation= 0.4189,0.2493 [83.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 122.3252, l2 = 3.4676
+INFO:root:u_gender disc test= 0.9440,0.9688,0.9568,0.9688auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    55 [67.0 s]
+ validation= 0.4177,0.2491 [86.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 121.3110, l2 = 3.5232
+INFO:root:u_gender disc test= 0.9438,0.9688,0.9568,0.9688auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    56 [48.3 s]
+ validation= 0.4172,0.2490 [83.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 121.6017, l2 = 3.5764
+INFO:root:u_gender disc test= 0.9444,0.9691,0.9572,0.9691auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    57 [59.6 s]
+ validation= 0.4190,0.2506 [81.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 120.0057, l2 = 3.6306
+INFO:root:u_gender disc test= 0.9455,0.9695,0.9578,0.9695auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    58 [59.1 s]
+ validation= 0.4197,0.2508 [85.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 120.2450, l2 = 3.6849
+INFO:root:u_gender disc test= 0.9458,0.9696,0.9580,0.9696auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    59 [40.5 s]
+ validation= 0.4212,0.2513 [80.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 118.1401, l2 = 3.7383
+INFO:root:u_gender disc test= 0.9471,0.9704,0.9591,0.9704auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    60 [56.1 s]
+ validation= 0.4199,0.2503 [80.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 118.6030, l2 = 3.7916
+INFO:root:u_gender disc test= 0.9470,0.9703,0.9590,0.9703auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    61 [48.5 s]
+ validation= 0.4211,0.2505 [81.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 117.6708, l2 = 3.8463
+INFO:root:u_gender disc test= 0.9472,0.9704,0.9591,0.9704auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    62 [58.4 s]
+ validation= 0.4184,0.2488 [76.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 116.4509, l2 = 3.8991
+INFO:root:u_gender disc test= 0.9474,0.9707,0.9595,0.9707auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    63 [68.3 s]
+ validation= 0.4232,0.2520 [77.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 116.3999, l2 = 3.9508
+INFO:root:u_gender disc test= 0.9473,0.9707,0.9594,0.9707auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    64 [60.9 s]
+ validation= 0.4215,0.2512 [78.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 115.1734, l2 = 4.0029
+INFO:root:u_gender disc test= 0.9481,0.9709,0.9598,0.9709auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    65 [22.3 s]
+ validation= 0.4187,0.2490 [85.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 114.9049, l2 = 4.0542
+INFO:root:u_gender disc test= 0.9488,0.9712,0.9602,0.9712auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    66 [69.7 s]
+ validation= 0.4223,0.2508 [80.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 114.1305, l2 = 4.1069
+INFO:root:u_gender disc test= 0.9489,0.9714,0.9605,0.9714auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    67 [72.6 s]
+ validation= 0.4233,0.2516 [75.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 113.5278, l2 = 4.1585
+INFO:root:u_gender disc test= 0.9501,0.9720,0.9614,0.9720auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    68 [42.2 s]
+ validation= 0.4226,0.2515 [84.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 112.5319, l2 = 4.2080
+INFO:root:u_gender disc test= 0.9520,0.9733,0.9632,0.9733auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    69 [60.5 s]
+ validation= 0.4237,0.2522 [81.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 112.0636, l2 = 4.2585
+INFO:root:u_gender disc test= 0.9525,0.9735,0.9635,0.9735auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    70 [59.2 s]
+ validation= 0.4218,0.2502 [79.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 111.5829, l2 = 4.3090
+INFO:root:u_gender disc test= 0.9534,0.9739,0.9640,0.9739auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    71 [61.0 s]
+ validation= 0.4240,0.2508 [88.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 110.9576, l2 = 4.3595
+INFO:root:u_gender disc test= 0.9554,0.9748,0.9653,0.9748auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    72 [39.9 s]
+ validation= 0.4303,0.2553 [87.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 110.6097, l2 = 4.4089
+INFO:root:u_gender disc test= 0.9558,0.9751,0.9658,0.9751auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    73 [49.6 s]
+ validation= 0.4289,0.2546 [84.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 109.8853, l2 = 4.4580
+INFO:root:u_gender disc test= 0.9552,0.9749,0.9654,0.9749auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    74 [68.8 s]
+ validation= 0.4282,0.2534 [72.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 110.0859, l2 = 4.5087
+INFO:root:u_gender disc test= 0.9557,0.9751,0.9657,0.9751auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    75 [55.5 s]
+ validation= 0.4284,0.2534 [86.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 108.9865, l2 = 4.5563
+INFO:root:u_gender disc test= 0.9569,0.9758,0.9667,0.9758auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    76 [39.5 s]
+ validation= 0.4289,0.2546 [85.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 108.9631, l2 = 4.6045
+INFO:root:u_gender disc test= 0.9576,0.9762,0.9673,0.9762auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    77 [36.5 s]
+ validation= 0.4297,0.2543 [72.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 108.4805, l2 = 4.6537
+INFO:root:u_gender disc test= 0.9578,0.9763,0.9675,0.9763auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    78 [64.1 s]
+ validation= 0.4337,0.2572 [75.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 107.8278, l2 = 4.7038
+INFO:root:u_gender disc test= 0.9583,0.9766,0.9678,0.9766auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    79 [40.2 s]
+ validation= 0.4290,0.2546 [78.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 106.2513, l2 = 4.7509
+INFO:root:u_gender disc test= 0.9576,0.9762,0.9673,0.9762auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    80 [19.8 s]
+ validation= 0.4313,0.2560 [75.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 106.2995, l2 = 4.7978
+INFO:root:u_gender disc test= 0.9589,0.9768,0.9682,0.9768auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    81 [58.2 s]
+ validation= 0.4312,0.2555 [76.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 105.6930, l2 = 4.8439
+INFO:root:u_gender disc test= 0.9592,0.9769,0.9683,0.9769auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    82 [56.7 s]
+ validation= 0.4325,0.2556 [70.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 105.1344, l2 = 4.8910
+INFO:root:u_gender disc test= 0.9595,0.9772,0.9687,0.9772auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    83 [19.2 s]
+ validation= 0.4297,0.2543 [77.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 104.8761, l2 = 4.9387
+INFO:root:u_gender disc test= 0.9602,0.9777,0.9695,0.9777auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    84 [23.1 s]
+ validation= 0.4302,0.2553 [68.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 104.6084, l2 = 4.9850
+INFO:root:u_gender disc test= 0.9598,0.9776,0.9693,0.9776auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    85 [58.7 s]
+ validation= 0.4285,0.2544 [67.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 103.7952, l2 = 5.0309
+INFO:root:u_gender disc test= 0.9598,0.9776,0.9693,0.9776auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    86 [51.6 s]
+ validation= 0.4303,0.2556 [71.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 103.4619, l2 = 5.0766
+INFO:root:u_gender disc test= 0.9604,0.9780,0.9698,0.9780auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    87 [29.4 s]
+ validation= 0.4321,0.2559 [75.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 102.8598, l2 = 5.1230
+INFO:root:u_gender disc test= 0.9601,0.9778,0.9695,0.9778auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    88 [19.7 s]
+ validation= 0.4337,0.2571 [71.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 102.5905, l2 = 5.1709
+INFO:root:u_gender disc test= 0.9609,0.9782,0.9701,0.9782auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    89 [38.2 s]
+ validation= 0.4303,0.2552 [72.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 102.1408, l2 = 5.2161
+INFO:root:u_gender disc test= 0.9608,0.9782,0.9700,0.9782auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    90 [37.8 s]
+ validation= 0.4315,0.2560 [70.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 101.8189, l2 = 5.2616
+INFO:root:u_gender disc test= 0.9615,0.9785,0.9705,0.9785auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    91 [30.7 s]
+ validation= 0.4320,0.2563 [69.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 101.2963, l2 = 5.3064
+INFO:root:u_gender disc test= 0.9622,0.9790,0.9712,0.9790auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    92 [30.8 s]
+ validation= 0.4334,0.2565 [70.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 101.2301, l2 = 5.3513
+INFO:root:u_gender disc test= 0.9626,0.9791,0.9714,0.9791auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    93 [33.7 s]
+ validation= 0.4346,0.2569 [70.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 100.1894, l2 = 5.3964
+INFO:root:u_gender disc test= 0.9621,0.9788,0.9710,0.9788auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    94 [35.3 s]
+ validation= 0.4325,0.2567 [71.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 100.4282, l2 = 5.4415
+INFO:root:u_gender disc test= 0.9609,0.9783,0.9702,0.9783auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    95 [28.6 s]
+ validation= 0.4313,0.2562 [70.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 100.2205, l2 = 5.4851
+INFO:root:u_gender disc test= 0.9608,0.9781,0.9700,0.9781auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    96 [36.2 s]
+ validation= 0.4311,0.2562 [68.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 100.1919, l2 = 5.5298
+INFO:root:u_gender disc test= 0.9623,0.9788,0.9710,0.9788auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    97 [31.7 s]
+ validation= 0.4326,0.2565 [66.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 98.9013, l2 = 5.5730
+INFO:root:u_gender disc test= 0.9624,0.9790,0.9712,0.9790auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    98 [34.8 s]
+ validation= 0.4314,0.2551 [68.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 98.7556, l2 = 5.6173
+INFO:root:u_gender disc test= 0.9624,0.9790,0.9712,0.9790auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    99 [39.2 s]
+ validation= 0.4339,0.2567 [68.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 98.8096, l2 = 5.6622
+INFO:root:u_gender disc test= 0.9622,0.9790,0.9712,0.9790auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   100 [22.2 s]
+ validation= 0.4339,0.2572 [72.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 98.6512, l2 = 5.7066
+INFO:root:u_gender disc test= 0.9627,0.9792,0.9715,0.9792auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   101 [28.5 s]
+ validation= 0.4337,0.2567 [77.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 97.7557, l2 = 5.7495
+INFO:root:u_gender disc test= 0.9640,0.9800,0.9727,0.9800auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   102 [40.5 s]
+ validation= 0.4350,0.2566 [67.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 98.1543, l2 = 5.7926
+INFO:root:u_gender disc test= 0.9640,0.9800,0.9726,0.9800auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   103 [30.0 s]
+ validation= 0.4362,0.2573 [64.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 97.0070, l2 = 5.8354
+INFO:root:u_gender disc test= 0.9635,0.9797,0.9722,0.9797auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   104 [38.4 s]
+ validation= 0.4353,0.2576 [65.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 96.2652, l2 = 5.8785
+INFO:root:u_gender disc test= 0.9634,0.9796,0.9720,0.9796auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   105 [31.6 s]
+ validation= 0.4337,0.2553 [65.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 97.3455, l2 = 5.9221
+INFO:root:u_gender disc test= 0.9634,0.9794,0.9718,0.9794auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   106 [27.0 s]
+ validation= 0.4341,0.2559 [65.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 96.8155, l2 = 5.9647
+INFO:root:u_gender disc test= 0.9638,0.9798,0.9723,0.9798auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   107 [35.5 s]
+ validation= 0.4366,0.2569 [64.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 96.2334, l2 = 6.0075
+INFO:root:u_gender disc test= 0.9643,0.9799,0.9725,0.9799auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   108 [18.7 s]
+ validation= 0.4343,0.2560 [66.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 95.8518, l2 = 6.0501
+INFO:root:u_gender disc test= 0.9639,0.9797,0.9723,0.9797auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   109 [19.1 s]
+ validation= 0.4341,0.2560 [72.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 95.0884, l2 = 6.0919
+INFO:root:u_gender disc test= 0.9633,0.9794,0.9717,0.9794auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   110 [21.5 s]
+ validation= 0.4360,0.2576 [69.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 94.7999, l2 = 6.1335
+INFO:root:u_gender disc test= 0.9628,0.9793,0.9716,0.9793auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   111 [21.2 s]
+ validation= 0.4369,0.2574 [69.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 94.9409, l2 = 6.1744
+INFO:root:u_gender disc test= 0.9635,0.9797,0.9722,0.9797auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   112 [29.2 s]
+ validation= 0.4365,0.2590 [68.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 94.8350, l2 = 6.2153
+INFO:root:u_gender disc test= 0.9642,0.9800,0.9726,0.9800auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   113 [26.1 s]
+ validation= 0.4351,0.2580 [67.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 94.0552, l2 = 6.2576
+INFO:root:u_gender disc test= 0.9654,0.9807,0.9735,0.9807auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   114 [25.2 s]
+ validation= 0.4361,0.2581 [67.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 93.7866, l2 = 6.2980
+INFO:root:u_gender disc test= 0.9654,0.9807,0.9736,0.9807auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   115 [26.5 s]
+ validation= 0.4381,0.2581 [69.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 94.6277, l2 = 6.3397
+INFO:root:u_gender disc test= 0.9657,0.9810,0.9739,0.9810auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   116 [20.0 s]
+ validation= 0.4345,0.2565 [69.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 93.1097, l2 = 6.3801
+INFO:root:u_gender disc test= 0.9654,0.9806,0.9735,0.9806auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   117 [18.3 s]
+ validation= 0.4358,0.2585 [66.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 92.8869, l2 = 6.4186
+INFO:root:u_gender disc test= 0.9652,0.9804,0.9732,0.9804auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   118 [24.7 s]
+ validation= 0.4371,0.2582 [67.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 92.9100, l2 = 6.4592
+INFO:root:u_gender disc test= 0.9650,0.9804,0.9731,0.9804auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   119 [20.1 s]
+ validation= 0.4362,0.2589 [62.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 92.8347, l2 = 6.4985
+INFO:root:u_gender disc test= 0.9653,0.9806,0.9734,0.9806auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   120 [27.5 s]
+ validation= 0.4378,0.2589 [60.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 92.2816, l2 = 6.5387
+INFO:root:u_gender disc test= 0.9646,0.9802,0.9729,0.9802auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   121 [19.7 s]
+ validation= 0.4384,0.2595 [60.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 91.7900, l2 = 6.5785
+INFO:root:u_gender disc test= 0.9654,0.9806,0.9734,0.9806auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   122 [27.2 s]
+ validation= 0.4384,0.2590 [61.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 92.2654, l2 = 6.6176
+INFO:root:u_gender disc test= 0.9651,0.9805,0.9733,0.9805auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   123 [33.8 s]
+ validation= 0.4400,0.2590 [62.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 91.9273, l2 = 6.6571
+INFO:root:u_gender disc test= 0.9649,0.9806,0.9734,0.9806auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   124 [21.5 s]
+ validation= 0.4407,0.2600 [62.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 92.1139, l2 = 6.6952
+INFO:root:u_gender disc test= 0.9648,0.9805,0.9732,0.9805auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   125 [25.2 s]
+ validation= 0.4387,0.2582 [63.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 92.0552, l2 = 6.7355
+INFO:root:u_gender disc test= 0.9651,0.9807,0.9736,0.9807auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   126 [33.5 s]
+ validation= 0.4389,0.2583 [61.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 90.8692, l2 = 6.7753
+INFO:root:u_gender disc test= 0.9646,0.9802,0.9729,0.9802auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   127 [20.0 s]
+ validation= 0.4390,0.2588 [63.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 91.0829, l2 = 6.8140
+INFO:root:u_gender disc test= 0.9646,0.9803,0.9730,0.9803auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   128 [23.9 s]
+ validation= 0.4407,0.2598 [64.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 91.1942, l2 = 6.8514
+INFO:root:u_gender disc test= 0.9645,0.9802,0.9729,0.9802auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   129 [27.5 s]
+ validation= 0.4422,0.2601 [64.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 90.8615, l2 = 6.8913
+INFO:root:u_gender disc test= 0.9640,0.9800,0.9725,0.9800auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   130 [17.9 s]
+ validation= 0.4389,0.2591 [63.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 89.8843, l2 = 6.9300
+INFO:root:u_gender disc test= 0.9646,0.9803,0.9730,0.9803auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   131 [23.0 s]
+ validation= 0.4428,0.2613 [63.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 90.7507, l2 = 6.9692
+INFO:root:u_gender disc test= 0.9646,0.9803,0.9730,0.9803auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   132 [18.7 s]
+ validation= 0.4405,0.2593 [62.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 90.1265, l2 = 7.0067
+INFO:root:u_gender disc test= 0.9656,0.9807,0.9736,0.9807auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   133 [18.2 s]
+ validation= 0.4399,0.2592 [66.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 90.0296, l2 = 7.0435
+INFO:root:u_gender disc test= 0.9656,0.9807,0.9736,0.9807auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   134 [15.6 s]
+ validation= 0.4377,0.2579 [66.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 89.7583, l2 = 7.0832
+INFO:root:u_gender disc test= 0.9658,0.9808,0.9737,0.9808auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   135 [9.5 s]
+ validation= 0.4392,0.2589 [69.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 90.5350, l2 = 7.1213
+INFO:root:u_gender disc test= 0.9655,0.9808,0.9737,0.9808auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   136 [9.4 s]
+ validation= 0.4407,0.2606 [62.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 89.3101, l2 = 7.1589
+INFO:root:u_gender disc test= 0.9657,0.9808,0.9738,0.9808auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   137 [15.1 s]
+ validation= 0.4390,0.2587 [60.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 89.0542, l2 = 7.1952
+INFO:root:u_gender disc test= 0.9650,0.9804,0.9732,0.9804auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   138 [9.0 s]
+ validation= 0.4415,0.2602 [61.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 90.1588, l2 = 7.2339
+INFO:root:u_gender disc test= 0.9651,0.9805,0.9733,0.9805auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   139 [9.5 s]
+ validation= 0.4399,0.2586 [60.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 89.6070, l2 = 7.2726
+INFO:root:u_gender disc test= 0.9649,0.9803,0.9731,0.9803auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   140 [10.0 s]
+ validation= 0.4415,0.2596 [58.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 88.3720, l2 = 7.3085
+INFO:root:u_gender disc test= 0.9652,0.9805,0.9733,0.9805auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   141 [8.4 s]
+ validation= 0.4398,0.2596 [55.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 88.9761, l2 = 7.3472
+INFO:root:u_gender disc test= 0.9651,0.9803,0.9731,0.9803auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   142 [8.5 s]
+ validation= 0.4390,0.2587 [62.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 87.9865, l2 = 7.3849
+INFO:root:u_gender disc test= 0.9651,0.9803,0.9730,0.9803auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   143 [10.6 s]
+ validation= 0.4400,0.2589 [64.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 87.9268, l2 = 7.4211
+INFO:root:u_gender disc test= 0.9655,0.9805,0.9734,0.9805auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   144 [9.4 s]
+ validation= 0.4414,0.2612 [62.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 87.8279, l2 = 7.4569
+INFO:root:u_gender disc test= 0.9653,0.9806,0.9734,0.9806auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   145 [12.9 s]
+ validation= 0.4397,0.2600 [58.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 87.8420, l2 = 7.4950
+INFO:root:u_gender disc test= 0.9654,0.9806,0.9734,0.9806auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   146 [9.9 s]
+ validation= 0.4418,0.2607 [56.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 88.4847, l2 = 7.5313
+INFO:root:u_gender disc test= 0.9655,0.9807,0.9736,0.9807auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   147 [9.7 s]
+ validation= 0.4421,0.2601 [56.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 87.9015, l2 = 7.5678
+INFO:root:u_gender disc test= 0.9651,0.9805,0.9733,0.9805auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   148 [10.5 s]
+ validation= 0.4440,0.2617 [56.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 88.1451, l2 = 7.6018
+INFO:root:u_gender disc test= 0.9655,0.9807,0.9736,0.9807auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   149 [9.2 s]
+ validation= 0.4421,0.2602 [55.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 87.9818, l2 = 7.6378
+INFO:root:u_gender disc test= 0.9655,0.9806,0.9735,0.9806auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   150 [9.4 s]
+ validation= 0.4399,0.2582 [55.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 87.2098, l2 = 7.6734
+INFO:root:u_gender disc test= 0.9655,0.9805,0.9734,0.9805auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   151 [9.6 s]
+ validation= 0.4418,0.2604 [56.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 87.1050, l2 = 7.7091
+INFO:root:u_gender disc test= 0.9663,0.9808,0.9738,0.9808auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   152 [14.2 s]
+ validation= 0.4397,0.2593 [56.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 87.1167, l2 = 7.7463
+INFO:root:u_gender disc test= 0.9662,0.9809,0.9739,0.9809auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   153 [10.1 s]
+ validation= 0.4426,0.2603 [55.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 87.3644, l2 = 7.7808
+INFO:root:u_gender disc test= 0.9667,0.9811,0.9741,0.9811auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   154 [10.0 s]
+ validation= 0.4413,0.2605 [55.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 86.6417, l2 = 7.8155
+INFO:root:u_gender disc test= 0.9666,0.9811,0.9741,0.9811auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   155 [15.6 s]
+ validation= 0.4417,0.2609 [56.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 86.7476, l2 = 7.8514
+INFO:root:u_gender disc test= 0.9665,0.9810,0.9741,0.9810auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   156 [9.0 s]
+ validation= 0.4441,0.2624 [55.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 85.6316, l2 = 7.8874
+INFO:root:u_gender disc test= 0.9664,0.9810,0.9740,0.9810auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   157 [8.7 s]
+ validation= 0.4437,0.2616 [55.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 86.4692, l2 = 7.9225
+INFO:root:u_gender disc test= 0.9662,0.9808,0.9737,0.9808auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   158 [14.2 s]
+ validation= 0.4443,0.2614 [55.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 86.1987, l2 = 7.9567
+INFO:root:u_gender disc test= 0.9666,0.9810,0.9741,0.9810auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   159 [8.8 s]
+ validation= 0.4439,0.2610 [55.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 86.7379, l2 = 7.9929
+INFO:root:u_gender disc test= 0.9668,0.9812,0.9743,0.9812auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   160 [9.0 s]
+ validation= 0.4432,0.2603 [55.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 85.7122, l2 = 8.0273
+INFO:root:u_gender disc test= 0.9673,0.9816,0.9748,0.9816auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   161 [15.7 s]
+ validation= 0.4433,0.2608 [56.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 85.5805, l2 = 8.0607
+INFO:root:u_gender disc test= 0.9675,0.9816,0.9749,0.9816auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   162 [9.5 s]
+ validation= 0.4440,0.2616 [57.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 86.1877, l2 = 8.0974
+INFO:root:u_gender disc test= 0.9675,0.9816,0.9749,0.9816auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   163 [8.6 s]
+ validation= 0.4449,0.2616 [55.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 86.1615, l2 = 8.1326
+INFO:root:u_gender disc test= 0.9675,0.9817,0.9750,0.9817auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   164 [13.6 s]
+ validation= 0.4444,0.2616 [55.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 86.1139, l2 = 8.1662
+INFO:root:u_gender disc test= 0.9674,0.9816,0.9749,0.9816auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   165 [9.4 s]
+ validation= 0.4468,0.2623 [55.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 85.0015, l2 = 8.1996
+INFO:root:u_gender disc test= 0.9674,0.9817,0.9749,0.9817auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   166 [8.9 s]
+ validation= 0.4478,0.2632 [55.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.9688, l2 = 8.2327
+INFO:root:u_gender disc test= 0.9676,0.9819,0.9752,0.9819auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   167 [14.8 s]
+ validation= 0.4480,0.2635 [56.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 85.5875, l2 = 8.2658
+INFO:root:u_gender disc test= 0.9674,0.9818,0.9751,0.9818auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   168 [8.5 s]
+ validation= 0.4499,0.2649 [54.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.9147, l2 = 8.2993
+INFO:root:u_gender disc test= 0.9674,0.9818,0.9751,0.9818auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   169 [8.6 s]
+ validation= 0.4483,0.2634 [53.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 84.9772, l2 = 8.3331
+INFO:root:u_gender disc test= 0.9671,0.9815,0.9747,0.9815auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   170 [9.8 s]
+ validation= 0.4473,0.2619 [56.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 85.0838, l2 = 8.3658
+INFO:root:u_gender disc test= 0.9669,0.9814,0.9746,0.9814auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   171 [9.5 s]
+ validation= 0.4487,0.2621 [56.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 84.5432, l2 = 8.3982
+INFO:root:u_gender disc test= 0.9673,0.9817,0.9750,0.9817auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   172 [9.4 s]
+ validation= 0.4463,0.2612 [56.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 84.3283, l2 = 8.4308
+INFO:root:u_gender disc test= 0.9672,0.9816,0.9748,0.9816auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   173 [9.5 s]
+ validation= 0.4481,0.2628 [56.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 84.1255, l2 = 8.4645
+INFO:root:u_gender disc test= 0.9674,0.9819,0.9752,0.9819auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   174 [8.6 s]
+ validation= 0.4477,0.2626 [55.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 84.7020, l2 = 8.4977
+INFO:root:u_gender disc test= 0.9679,0.9821,0.9756,0.9821auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   175 [8.6 s]
+ validation= 0.4464,0.2619 [53.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 84.0941, l2 = 8.5295
+INFO:root:u_gender disc test= 0.9677,0.9821,0.9755,0.9821auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   176 [8.7 s]
+ validation= 0.4481,0.2639 [55.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 84.3746, l2 = 8.5626
+INFO:root:u_gender disc test= 0.9674,0.9818,0.9751,0.9818auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   177 [8.4 s]
+ validation= 0.4461,0.2625 [53.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 84.0215, l2 = 8.5954
+INFO:root:u_gender disc test= 0.9676,0.9819,0.9752,0.9819auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   178 [8.7 s]
+ validation= 0.4473,0.2635 [54.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 83.7934, l2 = 8.6276
+INFO:root:u_gender disc test= 0.9667,0.9814,0.9746,0.9814auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   179 [8.4 s]
+ validation= 0.4483,0.2633 [53.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 84.1805, l2 = 8.6606
+INFO:root:u_gender disc test= 0.9667,0.9814,0.9746,0.9814auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   180 [8.3 s]
+ validation= 0.4480,0.2639 [55.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 83.6406, l2 = 8.6922
+INFO:root:u_gender disc test= 0.9664,0.9813,0.9744,0.9813auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   181 [8.3 s]
+ validation= 0.4472,0.2636 [53.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 84.0696, l2 = 8.7252
+INFO:root:u_gender disc test= 0.9669,0.9815,0.9747,0.9815auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   182 [8.3 s]
+ validation= 0.4480,0.2635 [54.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 83.2246, l2 = 8.7556
+INFO:root:u_gender disc test= 0.9671,0.9815,0.9747,0.9815auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   183 [8.5 s]
+ validation= 0.4488,0.2639 [51.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 83.2153, l2 = 8.7873
+INFO:root:u_gender disc test= 0.9669,0.9814,0.9746,0.9814auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   184 [8.1 s]
+ validation= 0.4492,0.2643 [53.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 83.4803, l2 = 8.8193
+INFO:root:u_gender disc test= 0.9668,0.9814,0.9746,0.9814auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   185 [8.5 s]
+ validation= 0.4473,0.2635 [52.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 83.3090, l2 = 8.8503
+INFO:root:u_gender disc test= 0.9666,0.9812,0.9743,0.9812auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   186 [8.2 s]
+ validation= 0.4493,0.2655 [54.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 83.3602, l2 = 8.8816
+INFO:root:u_gender disc test= 0.9667,0.9813,0.9744,0.9813auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   187 [8.5 s]
+ validation= 0.4480,0.2643 [53.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 82.4322, l2 = 8.9124
+INFO:root:u_gender disc test= 0.9667,0.9814,0.9745,0.9814auc, acc, f1_macro, f1_micro
+INFO:root:Epoch   188 [8.2 s]
+ validation= 0.4458,0.2625 [52.8 s] ndcg@10,f1@10
+INFO:root:Early stop at 188 based on validation result.
+INFO:root:Best Iter (validation) =   168	 valid= 0.4499,0.2649 [21072.8 s] ndcg@10,f1@10 u_gender=0.9674auc
+INFO:root:Load model from ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:Load u_gender discriminator model from ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/u_gender_disc.pt
+INFO:root:Load model from ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/BiasedMF_PCFR_ml1M_u_gender_l2=1e-4_dim=64_neg_samplev=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_gender loss = 0.7141
+INFO:root:Epoch     1 [0.2 s]
+INFO:root:u_gender disc test = 0.5010,0.2682,0.2122,0.2682 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_gender loss = 0.6960
+INFO:root:
+
+INFO:root:u_gender loss = 0.4428
+INFO:root:Epoch   126 [0.2 s]
+INFO:root:u_gender disc test = 0.5527,0.5215,0.4468,0.5215 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_gender loss = 0.3536
+INFO:root:Epoch   251 [0.2 s]
+INFO:root:u_gender disc test = 0.5664,0.3742,0.3708,0.3742 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_gender loss = 0.3116
+INFO:root:Epoch   376 [0.2 s]
+INFO:root:u_gender disc test = 0.5483,0.3063,0.2987,0.3063 auc, acc, f1_macro, f1_micro
+INFO:root:u_gender best auc: 0.5933
+INFO:root:And the corresponding u_gender best disc test= 0.5933,0.3162,0.3162,0.3162 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_gender discriminator model from ../model/BiasedMF_PCFR_ml1M_u_gender_neg_samplev=1000/u_gender_eval_disc.pt
+INFO:root:Test After Training = 0.4528,0.2672 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.06497842451307462

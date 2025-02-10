@@ -1,0 +1,1049 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'PMF', 'fairness_framework': 'FOCF_AbsUnf', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '4', 'verbose': 20, 'log_file': '../log/PMF_FOCF_AbsUnf__taobaoserendipity_u_agreeableness__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'taobaoserendipity', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_agreeableness'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: PMF
+INFO:root:Fairness framework: FOCF_AbsUnf
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 9132376
+INFO:root:load validation csv...
+INFO:root:size of validation: 1141547
+INFO:root:load test csv...
+INFO:root:size of test: 1141548
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 54122304
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 546.9467, l2 = 50.0236
+INFO:root:Epoch     1 [804.7 s]
+ validation= 0.6617,0.1552 [188.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 309.2399, l2 = 88.9568
+INFO:root:Epoch     2 [804.5 s]
+ validation= 0.7068,0.1725 [174.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 211.6119, l2 = 112.8168
+INFO:root:Epoch     3 [808.9 s]
+ validation= 0.7307,0.1814 [179.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 162.1979, l2 = 127.6936
+INFO:root:Epoch     4 [819.6 s]
+ validation= 0.7436,0.1863 [175.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 135.6756, l2 = 137.5766
+INFO:root:Epoch     5 [791.5 s]
+ validation= 0.7506,0.1896 [179.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 120.1230, l2 = 144.5056
+INFO:root:Epoch     6 [795.7 s]
+ validation= 0.7553,0.1919 [174.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 110.5798, l2 = 149.8042
+INFO:root:Epoch     7 [789.4 s]
+ validation= 0.7608,0.1948 [179.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 104.5540, l2 = 153.9357
+INFO:root:Epoch     8 [793.8 s]
+ validation= 0.7645,0.1968 [171.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 100.5481, l2 = 157.1351
+INFO:root:Epoch     9 [785.9 s]
+ validation= 0.7675,0.1984 [181.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 97.5302, l2 = 159.8852
+INFO:root:Epoch    10 [771.7 s]
+ validation= 0.7713,0.2000 [166.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 95.2769, l2 = 162.1468
+INFO:root:Epoch    11 [778.4 s]
+ validation= 0.7730,0.2009 [180.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 93.6877, l2 = 164.0182
+INFO:root:Epoch    12 [776.4 s]
+ validation= 0.7752,0.2020 [168.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 92.0809, l2 = 165.5390
+INFO:root:Epoch    13 [770.0 s]
+ validation= 0.7763,0.2029 [172.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 91.2410, l2 = 166.9489
+INFO:root:Epoch    14 [758.8 s]
+ validation= 0.7777,0.2040 [178.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 90.3546, l2 = 167.9777
+INFO:root:Epoch    15 [750.8 s]
+ validation= 0.7795,0.2048 [170.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 89.7187, l2 = 168.8644
+INFO:root:Epoch    16 [755.4 s]
+ validation= 0.7804,0.2052 [174.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 88.8852, l2 = 169.5881
+INFO:root:Epoch    17 [758.3 s]
+ validation= 0.7819,0.2060 [171.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 88.5037, l2 = 170.4197
+INFO:root:Epoch    18 [748.0 s]
+ validation= 0.7831,0.2066 [175.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 88.0946, l2 = 170.8695
+INFO:root:Epoch    19 [740.4 s]
+ validation= 0.7850,0.2079 [163.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 87.5208, l2 = 171.3155
+INFO:root:Epoch    20 [762.4 s]
+ validation= 0.7849,0.2076 [173.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 87.0854, l2 = 171.8318
+INFO:root:Epoch    21 [744.5 s]
+ validation= 0.7875,0.2088 [179.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 86.7148, l2 = 172.0581
+INFO:root:Epoch    22 [746.1 s]
+ validation= 0.7876,0.2090 [169.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 86.2552, l2 = 172.3090
+INFO:root:Epoch    23 [759.9 s]
+ validation= 0.7882,0.2095 [167.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 86.2270, l2 = 172.5499
+INFO:root:Epoch    24 [737.7 s]
+ validation= 0.7894,0.2098 [169.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 85.6652, l2 = 172.6820
+INFO:root:Epoch    25 [751.7 s]
+ validation= 0.7894,0.2103 [165.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 85.5007, l2 = 172.8047
+INFO:root:Epoch    26 [753.4 s]
+ validation= 0.7909,0.2106 [166.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 85.2733, l2 = 172.9921
+INFO:root:Epoch    27 [735.8 s]
+ validation= 0.7922,0.2115 [170.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 85.0530, l2 = 173.1962
+INFO:root:Epoch    28 [748.2 s]
+ validation= 0.7923,0.2117 [165.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 85.1432, l2 = 173.3107
+INFO:root:Epoch    29 [742.7 s]
+ validation= 0.7930,0.2118 [172.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.7179, l2 = 173.4349
+INFO:root:Epoch    30 [745.0 s]
+ validation= 0.7939,0.2123 [164.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.5154, l2 = 173.4559
+INFO:root:Epoch    31 [756.8 s]
+ validation= 0.7945,0.2129 [175.7 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.4025, l2 = 173.6503
+INFO:root:Epoch    32 [737.6 s]
+ validation= 0.7945,0.2123 [166.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.3075, l2 = 173.7022
+INFO:root:Epoch    33 [745.0 s]
+ validation= 0.7951,0.2128 [170.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.1861, l2 = 173.6419
+INFO:root:Epoch    34 [741.3 s]
+ validation= 0.7950,0.2131 [170.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 83.8839, l2 = 173.7196
+INFO:root:Epoch    35 [744.4 s]
+ validation= 0.7967,0.2141 [163.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 84.1006, l2 = 173.8935
+INFO:root:Epoch    36 [736.7 s]
+ validation= 0.7974,0.2141 [171.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 83.7938, l2 = 173.9485
+INFO:root:Epoch    37 [748.7 s]
+ validation= 0.7975,0.2141 [163.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 83.6224, l2 = 174.0203
+INFO:root:Epoch    38 [741.7 s]
+ validation= 0.7969,0.2140 [169.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 83.5217, l2 = 174.0840
+INFO:root:Epoch    39 [734.3 s]
+ validation= 0.7971,0.2142 [165.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 83.4930, l2 = 174.0608
+INFO:root:Epoch    40 [736.9 s]
+ validation= 0.7973,0.2141 [165.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 83.0663, l2 = 174.2206
+INFO:root:Epoch    41 [739.6 s]
+ validation= 0.7988,0.2150 [166.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 83.0888, l2 = 174.2573
+INFO:root:Epoch    42 [737.9 s]
+ validation= 0.7990,0.2147 [170.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 83.1833, l2 = 174.1861
+INFO:root:Epoch    43 [757.6 s]
+ validation= 0.7991,0.2148 [159.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 82.8643, l2 = 174.1365
+INFO:root:Epoch    44 [751.3 s]
+ validation= 0.7996,0.2152 [163.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 82.9186, l2 = 174.1536
+INFO:root:Epoch    45 [735.5 s]
+ validation= 0.7991,0.2148 [170.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 82.7667, l2 = 174.0571
+INFO:root:Epoch    46 [752.3 s]
+ validation= 0.7998,0.2151 [164.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 82.6029, l2 = 174.0602
+INFO:root:Epoch    47 [741.3 s]
+ validation= 0.8010,0.2162 [167.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 82.4915, l2 = 174.0577
+INFO:root:Epoch    48 [745.2 s]
+ validation= 0.8003,0.2158 [166.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 82.4656, l2 = 174.1778
+INFO:root:Epoch    49 [755.3 s]
+ validation= 0.8011,0.2161 [165.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 82.3231, l2 = 174.1686
+INFO:root:Epoch    50 [736.1 s]
+ validation= 0.8003,0.2155 [168.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 82.3947, l2 = 174.3277
+INFO:root:Epoch    51 [742.2 s]
+ validation= 0.8018,0.2165 [160.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 82.4924, l2 = 174.4307
+INFO:root:Epoch    52 [755.5 s]
+ validation= 0.8007,0.2157 [171.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 82.2883, l2 = 174.3598
+INFO:root:Epoch    53 [738.3 s]
+ validation= 0.8013,0.2159 [158.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 82.0574, l2 = 174.2781
+INFO:root:Epoch    54 [749.2 s]
+ validation= 0.8028,0.2168 [164.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 82.0610, l2 = 174.2070
+INFO:root:Epoch    55 [761.5 s]
+ validation= 0.8027,0.2168 [163.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.8713, l2 = 174.1823
+INFO:root:Epoch    56 [749.1 s]
+ validation= 0.8048,0.2174 [167.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 81.8229, l2 = 174.2465
+INFO:root:Epoch    57 [764.6 s]
+ validation= 0.8033,0.2164 [163.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.9667, l2 = 174.2932
+INFO:root:Epoch    58 [750.6 s]
+ validation= 0.8038,0.2175 [174.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.7334, l2 = 174.3656
+INFO:root:Epoch    59 [752.4 s]
+ validation= 0.8036,0.2169 [164.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.6737, l2 = 174.3137
+INFO:root:Epoch    60 [747.9 s]
+ validation= 0.8033,0.2167 [161.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.6545, l2 = 174.3781
+INFO:root:Epoch    61 [743.4 s]
+ validation= 0.8041,0.2172 [161.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.6660, l2 = 174.3641
+INFO:root:Epoch    62 [745.4 s]
+ validation= 0.8034,0.2168 [164.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.4300, l2 = 174.3386
+INFO:root:Epoch    63 [747.8 s]
+ validation= 0.8030,0.2167 [160.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.6514, l2 = 174.2444
+INFO:root:Epoch    64 [753.2 s]
+ validation= 0.8042,0.2175 [159.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.5905, l2 = 174.3720
+INFO:root:Epoch    65 [745.3 s]
+ validation= 0.8042,0.2171 [161.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.3203, l2 = 174.3416
+INFO:root:Epoch    66 [762.0 s]
+ validation= 0.8051,0.2181 [164.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 81.4950, l2 = 174.5493
+INFO:root:Epoch    67 [724.1 s]
+ validation= 0.8052,0.2180 [163.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 81.4441, l2 = 174.6319
+INFO:root:Epoch    68 [721.6 s]
+ validation= 0.8048,0.2177 [161.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.2967, l2 = 174.4544
+INFO:root:Epoch    69 [711.5 s]
+ validation= 0.8046,0.2172 [162.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.2549, l2 = 174.4336
+INFO:root:Epoch    70 [707.5 s]
+ validation= 0.8037,0.2174 [165.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.2518, l2 = 174.2744
+INFO:root:Epoch    71 [707.0 s]
+ validation= 0.8056,0.2182 [161.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 81.0744, l2 = 174.2344
+INFO:root:Epoch    72 [707.4 s]
+ validation= 0.8059,0.2182 [161.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.9854, l2 = 174.4541
+INFO:root:Epoch    73 [702.6 s]
+ validation= 0.8045,0.2176 [158.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.1540, l2 = 174.4739
+INFO:root:Epoch    74 [702.5 s]
+ validation= 0.8052,0.2178 [162.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.9592, l2 = 174.6195
+INFO:root:Epoch    75 [707.6 s]
+ validation= 0.8061,0.2184 [165.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 81.1313, l2 = 174.5707
+INFO:root:Epoch    76 [706.7 s]
+ validation= 0.8058,0.2181 [161.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 81.0430, l2 = 174.5777
+INFO:root:Epoch    77 [700.5 s]
+ validation= 0.8069,0.2183 [159.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 81.1337, l2 = 174.5850
+INFO:root:Epoch    78 [698.5 s]
+ validation= 0.8068,0.2185 [158.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.9941, l2 = 174.5646
+INFO:root:Epoch    79 [705.9 s]
+ validation= 0.8072,0.2186 [164.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.8905, l2 = 174.4335
+INFO:root:Epoch    80 [696.6 s]
+ validation= 0.8066,0.2183 [166.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.7886, l2 = 174.4053
+INFO:root:Epoch    81 [697.4 s]
+ validation= 0.8067,0.2183 [163.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.8474, l2 = 174.5546
+INFO:root:Epoch    82 [703.7 s]
+ validation= 0.8070,0.2187 [168.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.7600, l2 = 174.5111
+INFO:root:Epoch    83 [696.9 s]
+ validation= 0.8083,0.2192 [161.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.8660, l2 = 174.4725
+INFO:root:Epoch    84 [689.3 s]
+ validation= 0.8079,0.2186 [160.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.7482, l2 = 174.5234
+INFO:root:Epoch    85 [688.8 s]
+ validation= 0.8071,0.2189 [161.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.6995, l2 = 174.4111
+INFO:root:Epoch    86 [686.7 s]
+ validation= 0.8088,0.2196 [156.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.5724, l2 = 174.4102
+INFO:root:Epoch    87 [686.7 s]
+ validation= 0.8080,0.2193 [162.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.8289, l2 = 174.3405
+INFO:root:Epoch    88 [682.7 s]
+ validation= 0.8081,0.2194 [158.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.4470, l2 = 174.4147
+INFO:root:Epoch    89 [695.6 s]
+ validation= 0.8067,0.2184 [156.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.5265, l2 = 174.4318
+INFO:root:Epoch    90 [689.4 s]
+ validation= 0.8074,0.2191 [162.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.4794, l2 = 174.3887
+INFO:root:Epoch    91 [694.0 s]
+ validation= 0.8075,0.2188 [161.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.4587, l2 = 174.4822
+INFO:root:Epoch    92 [690.0 s]
+ validation= 0.8084,0.2192 [160.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.5618, l2 = 174.5187
+INFO:root:Epoch    93 [694.4 s]
+ validation= 0.8081,0.2190 [155.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.5921, l2 = 174.4662
+INFO:root:Epoch    94 [695.8 s]
+ validation= 0.8090,0.2193 [160.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.4657, l2 = 174.4182
+INFO:root:Epoch    95 [701.7 s]
+ validation= 0.8078,0.2186 [156.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.3679, l2 = 174.4945
+INFO:root:Epoch    96 [696.8 s]
+ validation= 0.8087,0.2194 [155.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.4236, l2 = 174.4344
+INFO:root:Epoch    97 [691.3 s]
+ validation= 0.8081,0.2189 [161.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.2819, l2 = 174.3368
+INFO:root:Epoch    98 [694.3 s]
+ validation= 0.8091,0.2193 [155.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.1726, l2 = 174.2907
+INFO:root:Epoch    99 [689.8 s]
+ validation= 0.8094,0.2194 [155.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.2044, l2 = 174.4218
+INFO:root:Epoch   100 [691.9 s]
+ validation= 0.8093,0.2193 [158.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.3509, l2 = 174.5137
+INFO:root:Epoch   101 [697.6 s]
+ validation= 0.8086,0.2195 [164.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.3630, l2 = 174.3863
+INFO:root:Epoch   102 [693.6 s]
+ validation= 0.8095,0.2198 [158.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.0830, l2 = 174.3544
+INFO:root:Epoch   103 [696.4 s]
+ validation= 0.8100,0.2200 [157.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.1476, l2 = 174.5216
+INFO:root:Epoch   104 [685.0 s]
+ validation= 0.8086,0.2193 [158.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.2289, l2 = 174.5264
+INFO:root:Epoch   105 [689.3 s]
+ validation= 0.8093,0.2196 [160.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.1107, l2 = 174.6191
+INFO:root:Epoch   106 [692.6 s]
+ validation= 0.8095,0.2200 [158.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.2074, l2 = 174.4835
+INFO:root:Epoch   107 [693.5 s]
+ validation= 0.8084,0.2197 [162.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.0636, l2 = 174.5488
+INFO:root:Epoch   108 [693.3 s]
+ validation= 0.8092,0.2198 [156.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.1337, l2 = 174.6439
+INFO:root:Epoch   109 [687.5 s]
+ validation= 0.8101,0.2205 [155.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.0463, l2 = 174.6389
+INFO:root:Epoch   110 [692.0 s]
+ validation= 0.8111,0.2205 [156.1 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 80.2452, l2 = 174.7127
+INFO:root:Epoch   111 [682.5 s]
+ validation= 0.8104,0.2201 [163.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.1475, l2 = 174.6219
+INFO:root:Epoch   112 [692.6 s]
+ validation= 0.8096,0.2197 [159.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.0979, l2 = 174.4296
+INFO:root:Epoch   113 [686.2 s]
+ validation= 0.8109,0.2205 [165.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.8834, l2 = 174.4251
+INFO:root:Epoch   114 [683.3 s]
+ validation= 0.8113,0.2204 [162.9 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.8999, l2 = 174.4757
+INFO:root:Epoch   115 [686.1 s]
+ validation= 0.8111,0.2202 [160.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.9409, l2 = 174.5503
+INFO:root:Epoch   116 [683.7 s]
+ validation= 0.8102,0.2199 [155.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 80.0182, l2 = 174.6046
+INFO:root:Epoch   117 [685.7 s]
+ validation= 0.8110,0.2204 [158.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.9078, l2 = 174.3716
+INFO:root:Epoch   118 [678.4 s]
+ validation= 0.8106,0.2203 [156.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.7612, l2 = 174.3369
+INFO:root:Epoch   119 [683.2 s]
+ validation= 0.8103,0.2197 [160.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.9491, l2 = 174.4894
+INFO:root:Epoch   120 [677.5 s]
+ validation= 0.8108,0.2200 [154.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.8640, l2 = 174.5146
+INFO:root:Epoch   121 [683.7 s]
+ validation= 0.8104,0.2199 [153.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.7106, l2 = 174.5127
+INFO:root:Epoch   122 [687.6 s]
+ validation= 0.8116,0.2205 [156.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.8566, l2 = 174.4504
+INFO:root:Epoch   123 [689.7 s]
+ validation= 0.8112,0.2201 [167.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.8145, l2 = 174.5351
+INFO:root:Epoch   124 [689.9 s]
+ validation= 0.8107,0.2202 [155.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.7769, l2 = 174.5529
+INFO:root:Epoch   125 [687.0 s]
+ validation= 0.8095,0.2197 [163.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.7924, l2 = 174.5800
+INFO:root:Epoch   126 [687.5 s]
+ validation= 0.8106,0.2205 [156.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.6793, l2 = 174.4518
+INFO:root:Epoch   127 [688.4 s]
+ validation= 0.8110,0.2204 [161.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.6812, l2 = 174.4758
+INFO:root:Epoch   128 [691.3 s]
+ validation= 0.8110,0.2202 [163.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.5973, l2 = 174.5121
+INFO:root:Epoch   129 [685.3 s]
+ validation= 0.8106,0.2200 [159.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.5625, l2 = 174.4729
+INFO:root:Epoch   130 [691.5 s]
+ validation= 0.8115,0.2204 [156.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.7086, l2 = 174.5376
+INFO:root:Epoch   131 [682.6 s]
+ validation= 0.8116,0.2205 [166.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.6399, l2 = 174.6492
+INFO:root:Epoch   132 [687.5 s]
+ validation= 0.8125,0.2204 [157.8 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.6061, l2 = 174.6077
+INFO:root:Epoch   133 [691.0 s]
+ validation= 0.8119,0.2208 [168.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.4737, l2 = 174.6024
+INFO:root:Epoch   134 [686.3 s]
+ validation= 0.8111,0.2205 [164.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.5570, l2 = 174.5028
+INFO:root:Epoch   135 [687.6 s]
+ validation= 0.8119,0.2212 [159.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.5448, l2 = 174.5035
+INFO:root:Epoch   136 [688.2 s]
+ validation= 0.8114,0.2203 [158.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.5421, l2 = 174.4543
+INFO:root:Epoch   137 [684.6 s]
+ validation= 0.8109,0.2199 [160.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.4533, l2 = 174.6136
+INFO:root:Epoch   138 [684.6 s]
+ validation= 0.8128,0.2205 [162.3 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.4202, l2 = 174.5789
+INFO:root:Epoch   139 [687.1 s]
+ validation= 0.8121,0.2202 [155.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.6786, l2 = 174.5536
+INFO:root:Epoch   140 [690.9 s]
+ validation= 0.8116,0.2202 [165.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.4907, l2 = 174.5973
+INFO:root:Epoch   141 [689.7 s]
+ validation= 0.8124,0.2209 [164.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.6703, l2 = 174.7306
+INFO:root:Epoch   142 [691.5 s]
+ validation= 0.8120,0.2206 [154.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.4618, l2 = 174.5916
+INFO:root:Epoch   143 [693.5 s]
+ validation= 0.8119,0.2208 [157.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.4224, l2 = 174.4715
+INFO:root:Epoch   144 [692.3 s]
+ validation= 0.8127,0.2213 [156.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.3804, l2 = 174.4677
+INFO:root:Epoch   145 [690.2 s]
+ validation= 0.8114,0.2207 [164.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.5509, l2 = 174.5498
+INFO:root:Epoch   146 [689.9 s]
+ validation= 0.8130,0.2212 [161.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.4299, l2 = 174.4208
+INFO:root:Epoch   147 [693.5 s]
+ validation= 0.8116,0.2202 [161.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.2060, l2 = 174.4303
+INFO:root:Epoch   148 [690.2 s]
+ validation= 0.8113,0.2203 [154.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.3761, l2 = 174.5898
+INFO:root:Epoch   149 [682.5 s]
+ validation= 0.8116,0.2203 [155.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.4414, l2 = 174.5930
+INFO:root:Epoch   150 [687.6 s]
+ validation= 0.8117,0.2208 [162.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.3166, l2 = 174.4797
+INFO:root:Epoch   151 [690.0 s]
+ validation= 0.8121,0.2206 [160.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.4616, l2 = 174.5491
+INFO:root:Epoch   152 [689.9 s]
+ validation= 0.8118,0.2204 [158.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.3870, l2 = 174.6435
+INFO:root:Epoch   153 [690.2 s]
+ validation= 0.8128,0.2208 [158.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.3431, l2 = 174.6414
+INFO:root:Epoch   154 [669.8 s]
+ validation= 0.8124,0.2206 [156.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.3873, l2 = 174.6045
+INFO:root:Epoch   155 [663.1 s]
+ validation= 0.8130,0.2212 [154.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.3425, l2 = 174.5321
+INFO:root:Epoch   156 [659.0 s]
+ validation= 0.8119,0.2204 [159.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.1167, l2 = 174.5714
+INFO:root:Epoch   157 [667.8 s]
+ validation= 0.8137,0.2215 [168.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.3558, l2 = 174.3887
+INFO:root:Epoch   158 [665.5 s]
+ validation= 0.8137,0.2216 [159.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.0759, l2 = 174.4543
+INFO:root:Epoch   159 [673.9 s]
+ validation= 0.8126,0.2206 [162.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.2610, l2 = 174.4566
+INFO:root:Epoch   160 [663.8 s]
+ validation= 0.8128,0.2208 [160.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.1570, l2 = 174.3198
+INFO:root:Epoch   161 [662.4 s]
+ validation= 0.8129,0.2207 [160.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.1868, l2 = 174.4403
+INFO:root:Epoch   162 [660.2 s]
+ validation= 0.8134,0.2209 [155.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.2330, l2 = 174.3674
+INFO:root:Epoch   163 [662.9 s]
+ validation= 0.8136,0.2210 [162.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.2746, l2 = 174.4961
+INFO:root:Epoch   164 [666.9 s]
+ validation= 0.8139,0.2216 [166.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.2521, l2 = 174.4424
+INFO:root:Epoch   165 [667.5 s]
+ validation= 0.8143,0.2215 [164.2 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 79.1155, l2 = 174.3646
+INFO:root:Epoch   166 [665.8 s]
+ validation= 0.8129,0.2212 [170.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.0220, l2 = 174.4092
+INFO:root:Epoch   167 [663.6 s]
+ validation= 0.8125,0.2203 [161.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.0521, l2 = 174.2881
+INFO:root:Epoch   168 [659.9 s]
+ validation= 0.8129,0.2211 [165.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.1290, l2 = 174.2479
+INFO:root:Epoch   169 [660.9 s]
+ validation= 0.8136,0.2215 [162.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.0168, l2 = 174.4590
+INFO:root:Epoch   170 [664.9 s]
+ validation= 0.8139,0.2211 [159.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 78.9936, l2 = 174.5676
+INFO:root:Epoch   171 [665.3 s]
+ validation= 0.8123,0.2207 [160.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.1628, l2 = 174.4941
+INFO:root:Epoch   172 [663.0 s]
+ validation= 0.8136,0.2211 [161.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.1722, l2 = 174.4614
+INFO:root:Epoch   173 [676.7 s]
+ validation= 0.8133,0.2216 [160.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.1689, l2 = 174.5185
+INFO:root:Epoch   174 [659.6 s]
+ validation= 0.8137,0.2217 [162.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.1101, l2 = 174.5059
+INFO:root:Epoch   175 [667.0 s]
+ validation= 0.8126,0.2207 [162.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.0883, l2 = 174.5486
+INFO:root:Epoch   176 [674.4 s]
+ validation= 0.8138,0.2216 [157.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.1487, l2 = 174.5827
+INFO:root:Epoch   177 [656.8 s]
+ validation= 0.8129,0.2211 [140.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.1403, l2 = 174.5724
+INFO:root:Epoch   178 [662.0 s]
+ validation= 0.8120,0.2210 [167.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.1342, l2 = 174.5904
+INFO:root:Epoch   179 [661.3 s]
+ validation= 0.8124,0.2206 [164.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 79.0177, l2 = 174.6687
+INFO:root:Epoch   180 [658.9 s]
+ validation= 0.8125,0.2209 [164.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 78.9406, l2 = 174.4650
+INFO:root:Epoch   181 [657.4 s]
+ validation= 0.8128,0.2211 [150.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 78.9247, l2 = 174.5589
+INFO:root:Epoch   182 [643.3 s]
+ validation= 0.8130,0.2210 [152.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 78.9850, l2 = 174.4854
+INFO:root:Epoch   183 [646.6 s]
+ validation= 0.8135,0.2211 [156.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 78.8842, l2 = 174.5373
+INFO:root:Epoch   184 [654.0 s]
+ validation= 0.8140,0.2213 [166.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 78.9603, l2 = 174.4687
+INFO:root:Epoch   185 [650.2 s]
+ validation= 0.8129,0.2205 [167.3 s] ndcg@10,f1@10
+INFO:root:Early stop at 185 based on validation result.
+INFO:root:Best Iter (validation) =   165	 valid= 0.8143,0.2215 [161640.8 s] ndcg@10,f1@10
+INFO:root:Load model from ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load model from ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.6984
+INFO:root:Epoch     1 [2.1 s]
+INFO:root:u_agreeableness disc test = 0.5010,0.4943,0.4942,0.4943 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.6921
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.5901
+INFO:root:Epoch   126 [1.6 s]
+INFO:root:u_agreeableness disc test = 0.5261,0.5356,0.5241,0.5356 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.5460
+INFO:root:Epoch   251 [1.5 s]
+INFO:root:u_agreeableness disc test = 0.5291,0.5356,0.5287,0.5356 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_agreeableness loss = 0.5246
+INFO:root:Epoch   376 [1.7 s]
+INFO:root:u_agreeableness disc test = 0.5280,0.5338,0.5278,0.5338 auc, acc, f1_macro, f1_micro
+INFO:root:u_agreeableness best auc: 0.5335
+INFO:root:And the corresponding u_agreeableness best disc test= 0.5335,0.5404,0.5329,0.5404 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_agreeableness discriminator model from ../model/PMF_FOCF_AbsUnf_taobaoserendipity_u_agreeableness_neg_sample=1000/u_agreeableness_eval_disc.pt
+INFO:root:Test After Training = 0.8136,0.2204 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.010601823569582947

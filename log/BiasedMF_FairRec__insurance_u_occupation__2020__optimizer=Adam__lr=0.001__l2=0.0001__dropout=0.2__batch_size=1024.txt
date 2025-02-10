@@ -1,0 +1,205 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'BiasedMF', 'fairness_framework': 'FairRec', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '7', 'verbose': 20, 'log_file': '../log/BiasedMF_FairRec__insurance_u_occupation__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'insurance', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_occupation'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/BiasedMF_FairRec_insurance_u_occupation_neg_sample=10/BiasedMF_FairRec_insurance_u_occupation_l2=1e-4_dim=64_neg_sample=10.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@3,f1@3', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 10, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: BiasedMF
+INFO:root:Fairness framework: FairRec
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 53071
+INFO:root:load validation csv...
+INFO:root:size of validation: 6634
+INFO:root:load test csv...
+INFO:root:size of test: 6634
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 1928289
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 587.6341, l2 = 0.0245
+INFO:root:u_occupation disc test= 0.5004,0.6410,0.3916,0.6410auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5003,0.6412,0.3914,0.6412auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [12.6 s]
+ validation= 0.8304,0.4607 [6.7 s] ndcg@3,f1@3
+INFO:root:Save model to ../model/BiasedMF_FairRec_insurance_u_occupation_neg_sample=10/BiasedMF_FairRec_insurance_u_occupation_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:
+
+INFO:root:loss = 231.6509, l2 = 0.0357
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [13.4 s]
+ validation= 0.7936,0.4612 [4.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 116.9210, l2 = 0.0424
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [13.9 s]
+ validation= 0.7928,0.4558 [5.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 86.6127, l2 = 0.0476
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [12.0 s]
+ validation= 0.7729,0.4571 [2.9 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 66.3238, l2 = 0.0520
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [9.5 s]
+ validation= 0.7881,0.4614 [4.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 56.0270, l2 = 0.0560
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [9.1 s]
+ validation= 0.7840,0.4572 [3.8 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 42.7669, l2 = 0.0594
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [9.7 s]
+ validation= 0.7485,0.4507 [4.9 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 35.2741, l2 = 0.0626
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [10.7 s]
+ validation= 0.7804,0.4618 [7.1 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 30.2048, l2 = 0.0655
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [14.3 s]
+ validation= 0.7947,0.4676 [4.9 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 24.8611, l2 = 0.0679
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [12.9 s]
+ validation= 0.7577,0.4564 [5.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 21.2898, l2 = 0.0703
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [13.8 s]
+ validation= 0.7920,0.4653 [5.0 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 18.3256, l2 = 0.0725
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [20.3 s]
+ validation= 0.7514,0.4538 [7.0 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 15.3074, l2 = 0.0744
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [19.6 s]
+ validation= 0.7505,0.4450 [5.3 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 13.5698, l2 = 0.0759
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [19.3 s]
+ validation= 0.7838,0.4698 [7.0 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 12.4831, l2 = 0.0775
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [16.9 s]
+ validation= 0.7763,0.4599 [7.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 11.2188, l2 = 0.0789
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [16.3 s]
+ validation= 0.7891,0.4671 [7.1 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 10.4516, l2 = 0.0804
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [17.8 s]
+ validation= 0.7858,0.4707 [8.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 9.5083, l2 = 0.0820
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [17.4 s]
+ validation= 0.7810,0.4638 [5.9 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 8.3888, l2 = 0.0832
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [17.5 s]
+ validation= 0.7777,0.4657 [6.7 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 8.0834, l2 = 0.0842
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [16.8 s]
+ validation= 0.7802,0.4661 [6.0 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 6.2655, l2 = 0.0854
+INFO:root:u_occupation disc test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation pred test= 0.5000,0.6418,0.3909,0.6418auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [14.0 s]
+ validation= 0.7792,0.4607 [5.1 s] ndcg@3,f1@3
+INFO:root:Early stop at 21 based on validation result.
+INFO:root:Best Iter (validation) =     1	 valid= 0.8304,0.4607 [428.3 s] ndcg@3,f1@3
+INFO:root:disc test: u_occupation=0.5004auc, pred test: u_occupation=0.5003auc
+INFO:root:Load model from ../model/BiasedMF_FairRec_insurance_u_occupation_neg_sample=10/BiasedMF_FairRec_insurance_u_occupation_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:Load u_occupation discriminator model from ../model/BiasedMF_FairRec_insurance_u_occupation_neg_sample=10/u_occupation_disc.pt
+INFO:root:Load u_occupation discriminator model from ../model/BiasedMF_FairRec_insurance_u_occupation_neg_sample=10/u_occupation_disc.pt
+INFO:root:Load model from ../model/BiasedMF_FairRec_insurance_u_occupation_neg_sample=10/BiasedMF_FairRec_insurance_u_occupation_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_occupation loss = 0.7020
+INFO:root:Epoch     1 [0.5 s]
+INFO:root:u_occupation disc test = 0.5000,0.3541,0.2615,0.3541 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_occupation loss = 0.6903
+INFO:root:
+
+INFO:root:u_occupation loss = 0.6499
+INFO:root:Epoch   126 [0.5 s]
+INFO:root:u_occupation disc test = 0.5000,0.6459,0.3924,0.6459 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_occupation loss = 0.6489
+INFO:root:Epoch   251 [0.4 s]
+INFO:root:u_occupation disc test = 0.5000,0.6459,0.3924,0.6459 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_occupation loss = 0.6516
+INFO:root:Epoch   376 [0.3 s]
+INFO:root:u_occupation disc test = 0.5000,0.6459,0.3924,0.6459 auc, acc, f1_macro, f1_micro
+INFO:root:u_occupation best auc: 0.5000
+INFO:root:And the corresponding u_occupation best disc test= 0.5000,0.6459,0.3924,0.6459 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_occupation discriminator model from ../model/BiasedMF_FairRec_insurance_u_occupation_neg_sample=10/u_occupation_eval_disc.pt
+INFO:root:Test After Training = 0.8414,0.4644 ndcg@3,f1@3
+INFO:root:User-oriented unfairness: 0.0684962068471282

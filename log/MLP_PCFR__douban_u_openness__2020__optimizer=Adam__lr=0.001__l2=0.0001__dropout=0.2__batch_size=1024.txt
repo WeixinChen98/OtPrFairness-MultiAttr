@@ -1,0 +1,202 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'MLP', 'fairness_framework': 'PCFR', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '3', 'verbose': 20, 'log_file': '../log/MLP_PCFR__douban_u_openness__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'douban', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_openness'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'num_layers': 3, 'model_path': '../model/MLP_PCFR_douban_u_openness_neg_sample=1000/MLP_PCFR_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: MLP
+INFO:root:Fairness framework: PCFR
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 19451
+INFO:root:load validation csv...
+INFO:root:size of validation: 2431
+INFO:root:load test csv...
+INFO:root:size of test: 2432
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 290113
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 713.8197, l2 = 0.0396
+INFO:root:u_openness disc test= 0.5403,0.5424,0.5200,0.5424auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [4.8 s]
+ validation= 0.2368,0.0925 [60.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_PCFR_douban_u_openness_neg_sample=1000/MLP_PCFR_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 701.9321, l2 = 0.0409
+INFO:root:u_openness disc test= 0.5801,0.5810,0.5770,0.5810auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [3.5 s]
+ validation= 0.3285,0.1333 [91.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_PCFR_douban_u_openness_neg_sample=1000/MLP_PCFR_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 620.2521, l2 = 0.0448
+INFO:root:u_openness disc test= 0.6131,0.6128,0.6127,0.6128auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [1.3 s]
+ validation= 0.3311,0.1346 [75.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_PCFR_douban_u_openness_neg_sample=1000/MLP_PCFR_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 351.9413, l2 = 0.0516
+INFO:root:u_openness disc test= 0.6215,0.6213,0.6212,0.6213auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [1.4 s]
+ validation= 0.3321,0.1351 [66.6 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/MLP_PCFR_douban_u_openness_neg_sample=1000/MLP_PCFR_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 267.8336, l2 = 0.0544
+INFO:root:u_openness disc test= 0.6084,0.6082,0.6082,0.6082auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [2.0 s]
+ validation= 0.3253,0.1321 [78.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 257.2343, l2 = 0.0554
+INFO:root:u_openness disc test= 0.5924,0.5925,0.5924,0.5925auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [2.1 s]
+ validation= 0.3241,0.1311 [80.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 252.9289, l2 = 0.0567
+INFO:root:u_openness disc test= 0.5910,0.5913,0.5909,0.5913auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [2.4 s]
+ validation= 0.3264,0.1333 [99.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 249.6729, l2 = 0.0578
+INFO:root:u_openness disc test= 0.5985,0.5983,0.5983,0.5983auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [1.0 s]
+ validation= 0.3264,0.1336 [74.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 244.0669, l2 = 0.0590
+INFO:root:u_openness disc test= 0.6007,0.6008,0.6007,0.6008auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [3.1 s]
+ validation= 0.3268,0.1330 [70.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 240.8202, l2 = 0.0600
+INFO:root:u_openness disc test= 0.6081,0.6077,0.6072,0.6077auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [2.1 s]
+ validation= 0.3276,0.1343 [62.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 241.4847, l2 = 0.0609
+INFO:root:u_openness disc test= 0.6154,0.6150,0.6148,0.6150auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [2.2 s]
+ validation= 0.3280,0.1333 [75.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 242.0817, l2 = 0.0618
+INFO:root:u_openness disc test= 0.6225,0.6222,0.6220,0.6222auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [0.9 s]
+ validation= 0.3319,0.1348 [63.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 237.1913, l2 = 0.0628
+INFO:root:u_openness disc test= 0.6162,0.6160,0.6158,0.6160auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [2.2 s]
+ validation= 0.3318,0.1354 [73.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 231.9433, l2 = 0.0639
+INFO:root:u_openness disc test= 0.6306,0.6304,0.6304,0.6304auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [2.6 s]
+ validation= 0.3277,0.1322 [102.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 229.2172, l2 = 0.0648
+INFO:root:u_openness disc test= 0.6298,0.6297,0.6297,0.6297auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [1.3 s]
+ validation= 0.3291,0.1324 [67.2 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 234.6832, l2 = 0.0656
+INFO:root:u_openness disc test= 0.6214,0.6211,0.6210,0.6211auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [2.5 s]
+ validation= 0.3286,0.1316 [59.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 228.2491, l2 = 0.0668
+INFO:root:u_openness disc test= 0.6169,0.6167,0.6166,0.6167auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [2.9 s]
+ validation= 0.3287,0.1317 [56.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 226.9120, l2 = 0.0678
+INFO:root:u_openness disc test= 0.6222,0.6222,0.6222,0.6222auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [3.7 s]
+ validation= 0.3293,0.1317 [67.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 223.7515, l2 = 0.0687
+INFO:root:u_openness disc test= 0.6128,0.6129,0.6128,0.6129auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [1.1 s]
+ validation= 0.3289,0.1316 [56.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 221.4023, l2 = 0.0698
+INFO:root:u_openness disc test= 0.6218,0.6220,0.6216,0.6220auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [0.9 s]
+ validation= 0.3292,0.1336 [75.4 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 221.8983, l2 = 0.0707
+INFO:root:u_openness disc test= 0.6314,0.6317,0.6313,0.6317auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [0.9 s]
+ validation= 0.3318,0.1345 [86.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 221.0932, l2 = 0.0717
+INFO:root:u_openness disc test= 0.6325,0.6329,0.6323,0.6329auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    22 [1.8 s]
+ validation= 0.3319,0.1336 [52.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 219.2712, l2 = 0.0727
+INFO:root:u_openness disc test= 0.6327,0.6328,0.6327,0.6328auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    23 [1.1 s]
+ validation= 0.3306,0.1338 [33.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 219.6798, l2 = 0.0738
+INFO:root:u_openness disc test= 0.6291,0.6292,0.6291,0.6292auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    24 [1.4 s]
+ validation= 0.3257,0.1326 [34.5 s] ndcg@10,f1@10
+INFO:root:Early stop at 24 based on validation result.
+INFO:root:Best Iter (validation) =     4	 valid= 0.3321,0.1351 [1716.1 s] ndcg@10,f1@10 u_openness=0.6215auc
+INFO:root:Load model from ../model/MLP_PCFR_douban_u_openness_neg_sample=1000/MLP_PCFR_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load u_openness discriminator model from ../model/MLP_PCFR_douban_u_openness_neg_sample=1000/u_openness_disc.pt
+INFO:root:Load model from ../model/MLP_PCFR_douban_u_openness_neg_sample=1000/MLP_PCFR_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_openness loss = 0.6965
+INFO:root:Epoch     1 [0.2 s]
+INFO:root:u_openness disc test = 0.5000,0.5015,0.3340,0.5015 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_openness loss = 0.6953
+INFO:root:
+
+INFO:root:u_openness loss = 0.5833
+INFO:root:Epoch   126 [0.1 s]
+INFO:root:u_openness disc test = 0.5089,0.5103,0.3720,0.5103 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_openness loss = 0.5022
+INFO:root:Epoch   251 [0.1 s]
+INFO:root:u_openness disc test = 0.5088,0.5103,0.3582,0.5103 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_openness loss = 0.4582
+INFO:root:Epoch   376 [0.4 s]
+INFO:root:u_openness disc test = 0.5000,0.5015,0.3391,0.5015 auc, acc, f1_macro, f1_micro
+INFO:root:u_openness best auc: 0.5283
+INFO:root:And the corresponding u_openness best disc test= 0.5283,0.4721,0.4580,0.4721 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_openness discriminator model from ../model/MLP_PCFR_douban_u_openness_neg_sample=1000/u_openness_eval_disc.pt
+INFO:root:Test After Training = 0.3318,0.1384 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.006824429351209527

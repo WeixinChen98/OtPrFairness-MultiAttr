@@ -1,0 +1,221 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'BiasedMF', 'fairness_framework': 'FairRec', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '3', 'verbose': 20, 'log_file': '../log/BiasedMF_FairRec__douban_u_openness__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'douban', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_openness'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/BiasedMF_FairRec_douban_u_openness_neg_sample=1000/BiasedMF_FairRec_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@10,f1@10', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 1000, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: BiasedMF
+INFO:root:Fairness framework: FairRec
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 19451
+INFO:root:load validation csv...
+INFO:root:size of validation: 2431
+INFO:root:load test csv...
+INFO:root:size of test: 2432
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 300039
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 703.0969, l2 = 0.0160
+INFO:root:u_openness disc test= 0.5016,0.4970,0.4889,0.4970auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.5000,0.5050,0.3356,0.5050auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [2.1 s]
+ validation= 0.1567,0.0939 [22.5 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FairRec_douban_u_openness_neg_sample=1000/BiasedMF_FairRec_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 652.7946, l2 = 0.0183
+INFO:root:u_openness disc test= 0.5000,0.5050,0.3356,0.5050auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.5000,0.5050,0.3356,0.5050auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [1.2 s]
+ validation= 0.2975,0.1279 [25.0 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FairRec_douban_u_openness_neg_sample=1000/BiasedMF_FairRec_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 553.4057, l2 = 0.0221
+INFO:root:u_openness disc test= 0.5087,0.5130,0.4025,0.5130auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.5061,0.5100,0.4176,0.5100auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [0.8 s]
+ validation= 0.3118,0.1295 [27.4 s] ndcg@10,f1@10
+INFO:root:Save model to ../model/BiasedMF_FairRec_douban_u_openness_neg_sample=1000/BiasedMF_FairRec_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:
+
+INFO:root:loss = 443.4747, l2 = 0.0262
+INFO:root:u_openness disc test= 0.5331,0.5338,0.5315,0.5338auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.5372,0.5374,0.5371,0.5374auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [1.8 s]
+ validation= 0.2880,0.1221 [28.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 354.6261, l2 = 0.0302
+INFO:root:u_openness disc test= 0.5460,0.5459,0.5459,0.5459auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.5461,0.5461,0.5461,0.5461auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [1.3 s]
+ validation= 0.2237,0.0992 [24.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 287.5522, l2 = 0.0339
+INFO:root:u_openness disc test= 0.5577,0.5569,0.5548,0.5569auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.5546,0.5544,0.5544,0.5544auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [1.3 s]
+ validation= 0.1941,0.0883 [22.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 237.7341, l2 = 0.0375
+INFO:root:u_openness disc test= 0.5677,0.5672,0.5661,0.5672auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.5648,0.5644,0.5638,0.5644auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [1.0 s]
+ validation= 0.2253,0.1047 [21.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 204.6959, l2 = 0.0407
+INFO:root:u_openness disc test= 0.5653,0.5659,0.5643,0.5659auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.5799,0.5799,0.5799,0.5799auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [0.9 s]
+ validation= 0.2065,0.0956 [25.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 174.3404, l2 = 0.0438
+INFO:root:u_openness disc test= 0.5733,0.5735,0.5732,0.5735auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.5860,0.5856,0.5853,0.5856auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [1.5 s]
+ validation= 0.2445,0.1097 [27.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 155.1836, l2 = 0.0467
+INFO:root:u_openness disc test= 0.5917,0.5919,0.5915,0.5919auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.5957,0.5959,0.5957,0.5959auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [1.9 s]
+ validation= 0.1933,0.0885 [23.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 138.4462, l2 = 0.0494
+INFO:root:u_openness disc test= 0.6025,0.6027,0.6024,0.6027auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.6040,0.6041,0.6040,0.6041auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [1.2 s]
+ validation= 0.2382,0.1090 [21.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 125.9748, l2 = 0.0519
+INFO:root:u_openness disc test= 0.6095,0.6100,0.6087,0.6100auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.6112,0.6113,0.6112,0.6113auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [0.9 s]
+ validation= 0.2335,0.1070 [21.7 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 113.2828, l2 = 0.0543
+INFO:root:u_openness disc test= 0.6158,0.6163,0.6152,0.6163auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.6219,0.6221,0.6218,0.6221auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [1.5 s]
+ validation= 0.2576,0.1159 [25.9 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 102.0179, l2 = 0.0566
+INFO:root:u_openness disc test= 0.6286,0.6291,0.6278,0.6291auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.6177,0.6183,0.6165,0.6183auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [1.3 s]
+ validation= 0.2536,0.1146 [25.6 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 96.6659, l2 = 0.0587
+INFO:root:u_openness disc test= 0.6260,0.6268,0.6240,0.6268auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.6304,0.6310,0.6294,0.6310auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [1.2 s]
+ validation= 0.2572,0.1147 [24.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 90.2202, l2 = 0.0609
+INFO:root:u_openness disc test= 0.6379,0.6384,0.6371,0.6384auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.6345,0.6350,0.6338,0.6350auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [0.7 s]
+ validation= 0.2695,0.1165 [24.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 87.3246, l2 = 0.0628
+INFO:root:u_openness disc test= 0.6406,0.6411,0.6401,0.6411auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.6487,0.6490,0.6485,0.6490auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [0.7 s]
+ validation= 0.2660,0.1150 [20.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 82.2978, l2 = 0.0648
+INFO:root:u_openness disc test= 0.6597,0.6602,0.6592,0.6602auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.6658,0.6660,0.6657,0.6660auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [0.7 s]
+ validation= 0.2622,0.1142 [20.3 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 77.5655, l2 = 0.0666
+INFO:root:u_openness disc test= 0.6696,0.6700,0.6692,0.6700auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.6686,0.6689,0.6685,0.6689auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [0.7 s]
+ validation= 0.2744,0.1183 [21.8 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 75.0769, l2 = 0.0684
+INFO:root:u_openness disc test= 0.6732,0.6735,0.6730,0.6735auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.6709,0.6713,0.6706,0.6713auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [0.8 s]
+ validation= 0.2700,0.1153 [23.0 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 69.7662, l2 = 0.0701
+INFO:root:u_openness disc test= 0.6766,0.6768,0.6765,0.6768auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.6881,0.6883,0.6881,0.6883auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [0.9 s]
+ validation= 0.2789,0.1197 [23.1 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 69.9808, l2 = 0.0717
+INFO:root:u_openness disc test= 0.6886,0.6889,0.6886,0.6889auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.6992,0.6994,0.6992,0.6994auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    22 [0.7 s]
+ validation= 0.2622,0.1110 [21.5 s] ndcg@10,f1@10
+INFO:root:
+
+INFO:root:loss = 62.8647, l2 = 0.0734
+INFO:root:u_openness disc test= 0.6932,0.6935,0.6930,0.6935auc, acc, f1_macro, f1_micro
+INFO:root:u_openness pred test= 0.7018,0.7019,0.7018,0.7019auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    23 [0.7 s]
+ validation= 0.2993,0.1236 [20.1 s] ndcg@10,f1@10
+INFO:root:Early stop at 23 based on validation result.
+INFO:root:Best Iter (validation) =     3	 valid= 0.3118,0.1295 [566.9 s] ndcg@10,f1@10
+INFO:root:disc test: u_openness=0.5087auc, pred test: u_openness=0.5061auc
+INFO:root:Load model from ../model/BiasedMF_FairRec_douban_u_openness_neg_sample=1000/BiasedMF_FairRec_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Load u_openness discriminator model from ../model/BiasedMF_FairRec_douban_u_openness_neg_sample=1000/u_openness_disc.pt
+INFO:root:Load u_openness discriminator model from ../model/BiasedMF_FairRec_douban_u_openness_neg_sample=1000/u_openness_disc.pt
+INFO:root:Load model from ../model/BiasedMF_FairRec_douban_u_openness_neg_sample=1000/BiasedMF_FairRec_douban_u_openness_l2=1e-4_dim=64_neg_sample=1000.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_openness loss = 0.6967
+INFO:root:Epoch     1 [0.2 s]
+INFO:root:u_openness disc test = 0.5000,0.5015,0.3340,0.5015 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_openness loss = 0.6955
+INFO:root:
+
+INFO:root:u_openness loss = 0.6884
+INFO:root:Epoch   126 [0.1 s]
+INFO:root:u_openness disc test = 0.5000,0.5015,0.3340,0.5015 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_openness loss = 0.6844
+INFO:root:Epoch   251 [0.2 s]
+INFO:root:u_openness disc test = 0.5000,0.5015,0.3340,0.5015 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_openness loss = 0.6827
+INFO:root:Epoch   376 [0.1 s]
+INFO:root:u_openness disc test = 0.5000,0.5015,0.3340,0.5015 auc, acc, f1_macro, f1_micro
+INFO:root:u_openness best auc: 0.5407
+INFO:root:And the corresponding u_openness best disc test= 0.5407,0.5396,0.4668,0.5396 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_openness discriminator model from ../model/BiasedMF_FairRec_douban_u_openness_neg_sample=1000/u_openness_eval_disc.pt
+INFO:root:Test After Training = 0.3068,0.1320 ndcg@10,f1@10
+INFO:root:User-oriented unfairness: 0.015899115077417814

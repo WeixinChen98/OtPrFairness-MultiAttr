@@ -1,0 +1,205 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'PMF', 'fairness_framework': 'FairRec', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '4', 'verbose': 20, 'log_file': '../log/PMF_FairRec__insurance_u_marital_status__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'insurance', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_marital_status'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'model_path': '../model/PMF_FairRec_insurance_u_marital_status_neg_sample=10/PMF_FairRec_insurance_u_marital_status_l2=1e-4_dim=64_neg_sample=10.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@3,f1@3', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 10, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: PMF
+INFO:root:Fairness framework: FairRec
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 53071
+INFO:root:load validation csv...
+INFO:root:size of validation: 6634
+INFO:root:load test csv...
+INFO:root:size of test: 6634
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 1899136
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 606.6729, l2 = 0.0246
+INFO:root:u_marital_status disc test= 0.5011,0.7689,0.4582,0.7689auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.5032,0.7460,0.4818,0.7460auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     1 [34.0 s]
+ validation= 0.8397,0.4672 [12.6 s] ndcg@3,f1@3
+INFO:root:Save model to ../model/PMF_FairRec_insurance_u_marital_status_neg_sample=10/PMF_FairRec_insurance_u_marital_status_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:
+
+INFO:root:loss = 243.4183, l2 = 0.0360
+INFO:root:u_marital_status disc test= 0.5000,0.7820,0.4393,0.7820auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.5020,0.7765,0.4518,0.7765auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     2 [22.2 s]
+ validation= 0.8237,0.4662 [8.1 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 123.0729, l2 = 0.0421
+INFO:root:u_marital_status disc test= 0.5000,0.7823,0.4389,0.7823auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.5001,0.7824,0.4392,0.7824auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     3 [24.4 s]
+ validation= 0.8013,0.4659 [7.4 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 92.5181, l2 = 0.0464
+INFO:root:u_marital_status disc test= 0.5019,0.7828,0.4435,0.7828auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.5003,0.7824,0.4397,0.7824auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     4 [24.8 s]
+ validation= 0.8031,0.4661 [9.6 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 74.8283, l2 = 0.0507
+INFO:root:u_marital_status disc test= 0.5349,0.7903,0.5136,0.7903auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.5391,0.7928,0.5202,0.7928auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     5 [20.5 s]
+ validation= 0.8044,0.4692 [9.3 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 60.1759, l2 = 0.0545
+INFO:root:u_marital_status disc test= 0.5811,0.8022,0.5897,0.8022auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.5932,0.8067,0.6067,0.8067auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     6 [22.2 s]
+ validation= 0.7910,0.4572 [10.1 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 47.1390, l2 = 0.0580
+INFO:root:u_marital_status disc test= 0.6043,0.8090,0.6216,0.8090auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6086,0.8111,0.6273,0.8111auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     7 [19.8 s]
+ validation= 0.7709,0.4610 [13.1 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 39.4170, l2 = 0.0614
+INFO:root:u_marital_status disc test= 0.6086,0.8128,0.6276,0.8128auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6131,0.8138,0.6333,0.8138auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     8 [21.6 s]
+ validation= 0.7942,0.4604 [10.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 33.6487, l2 = 0.0643
+INFO:root:u_marital_status disc test= 0.6204,0.8163,0.6424,0.8163auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6227,0.8170,0.6454,0.8170auc, acc, f1_macro, f1_micro
+INFO:root:Epoch     9 [23.8 s]
+ validation= 0.8085,0.4734 [9.4 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 29.4235, l2 = 0.0667
+INFO:root:u_marital_status disc test= 0.6248,0.8198,0.6485,0.8198auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6281,0.8198,0.6522,0.8198auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    10 [19.5 s]
+ validation= 0.7930,0.4662 [14.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 25.9476, l2 = 0.0692
+INFO:root:u_marital_status disc test= 0.6259,0.8217,0.6503,0.8217auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6286,0.8215,0.6533,0.8215auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    11 [21.7 s]
+ validation= 0.8093,0.4722 [12.9 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 23.1392, l2 = 0.0717
+INFO:root:u_marital_status disc test= 0.6320,0.8243,0.6578,0.8243auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6327,0.8240,0.6585,0.8240auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    12 [24.3 s]
+ validation= 0.7973,0.4658 [11.1 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 18.0504, l2 = 0.0737
+INFO:root:u_marital_status disc test= 0.6287,0.8236,0.6539,0.8236auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6331,0.8253,0.6594,0.8253auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    13 [22.0 s]
+ validation= 0.7975,0.4667 [5.8 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 16.7457, l2 = 0.0758
+INFO:root:u_marital_status disc test= 0.6326,0.8258,0.6590,0.8258auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6363,0.8272,0.6636,0.8272auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    14 [22.3 s]
+ validation= 0.7930,0.4583 [7.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 13.8258, l2 = 0.0775
+INFO:root:u_marital_status disc test= 0.6353,0.8278,0.6626,0.8278auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6363,0.8284,0.6640,0.8284auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    15 [24.6 s]
+ validation= 0.7817,0.4621 [12.7 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 11.4675, l2 = 0.0790
+INFO:root:u_marital_status disc test= 0.6373,0.8292,0.6654,0.8292auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6401,0.8304,0.6689,0.8304auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    16 [23.5 s]
+ validation= 0.7871,0.4591 [9.3 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 9.8519, l2 = 0.0803
+INFO:root:u_marital_status disc test= 0.6406,0.8313,0.6697,0.8313auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6421,0.8324,0.6717,0.8324auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    17 [21.9 s]
+ validation= 0.7997,0.4660 [8.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 8.8504, l2 = 0.0817
+INFO:root:u_marital_status disc test= 0.6434,0.8328,0.6733,0.8328auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6459,0.8340,0.6764,0.8340auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    18 [19.2 s]
+ validation= 0.7882,0.4582 [9.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 7.6964, l2 = 0.0824
+INFO:root:u_marital_status disc test= 0.6449,0.8334,0.6751,0.8334auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6479,0.8347,0.6788,0.8347auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    19 [20.4 s]
+ validation= 0.7975,0.4644 [8.1 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 6.8526, l2 = 0.0834
+INFO:root:u_marital_status disc test= 0.6439,0.8335,0.6741,0.8335auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6459,0.8345,0.6766,0.8345auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    20 [21.9 s]
+ validation= 0.7914,0.4661 [7.8 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 6.8228, l2 = 0.0844
+INFO:root:u_marital_status disc test= 0.6481,0.8353,0.6793,0.8353auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status pred test= 0.6491,0.8355,0.6804,0.8355auc, acc, f1_macro, f1_micro
+INFO:root:Epoch    21 [23.4 s]
+ validation= 0.7883,0.4610 [10.8 s] ndcg@3,f1@3
+INFO:root:Early stop at 21 based on validation result.
+INFO:root:Best Iter (validation) =     1	 valid= 0.8397,0.4672 [687.0 s] ndcg@3,f1@3
+INFO:root:disc test: u_marital_status=0.5011auc, pred test: u_marital_status=0.5032auc
+INFO:root:Load model from ../model/PMF_FairRec_insurance_u_marital_status_neg_sample=10/PMF_FairRec_insurance_u_marital_status_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:Load u_marital_status discriminator model from ../model/PMF_FairRec_insurance_u_marital_status_neg_sample=10/u_marital_status_disc.pt
+INFO:root:Load u_marital_status discriminator model from ../model/PMF_FairRec_insurance_u_marital_status_neg_sample=10/u_marital_status_disc.pt
+INFO:root:Load model from ../model/PMF_FairRec_insurance_u_marital_status_neg_sample=10/PMF_FairRec_insurance_u_marital_status_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_marital_status loss = 0.7133
+INFO:root:Epoch     1 [0.7 s]
+INFO:root:u_marital_status disc test = 0.5000,0.2108,0.1741,0.2108 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_marital_status loss = 0.6907
+INFO:root:
+
+INFO:root:u_marital_status loss = 0.5071
+INFO:root:Epoch   126 [1.0 s]
+INFO:root:u_marital_status disc test = 0.5000,0.7892,0.4411,0.7892 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_marital_status loss = 0.5106
+INFO:root:Epoch   251 [1.2 s]
+INFO:root:u_marital_status disc test = 0.5000,0.7892,0.4411,0.7892 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_marital_status loss = 0.5057
+INFO:root:Epoch   376 [0.8 s]
+INFO:root:u_marital_status disc test = 0.5000,0.7892,0.4411,0.7892 auc, acc, f1_macro, f1_micro
+INFO:root:u_marital_status best auc: 0.5000
+INFO:root:And the corresponding u_marital_status best disc test= 0.5000,0.7892,0.4411,0.7892 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_marital_status discriminator model from ../model/PMF_FairRec_insurance_u_marital_status_neg_sample=10/u_marital_status_eval_disc.pt
+INFO:root:Test After Training = 0.8489,0.4693 ndcg@3,f1@3
+INFO:root:User-oriented unfairness: 0.11818880047710012

@@ -1,0 +1,158 @@
+INFO:root:{'data_reader': 'RecDataReader', 'data_processor': 'RecDataset', 'model_name': 'MLP', 'fairness_framework': 'FOCF_AbsUnf', 'runner': 'RecRunner'}
+INFO:root:{'gpu': '4', 'verbose': 20, 'log_file': '../log/MLP_FOCF_AbsUnf__insurance_u_gender__2020__optimizer=Adam__lr=0.001__l2=0.0001__dropout=0.2__batch_size=1024.txt', 'result_file': '../result/result.npy', 'random_seed': 2020, 'train': 1, 'path': '../dataset/', 'dataset': 'insurance', 'sep': '\t', 'label': 'label', 'feature_columns': ['u_gender'], 'neg_slope': 0.2, 'attacker_layers': 3, 'discriminator_layers': 3, 'predictor_layers': 3, 'num_layers': 3, 'model_path': '../model/MLP_FOCF_AbsUnf_insurance_u_gender_neg_sample=10/MLP_FOCF_AbsUnf_insurance_u_gender_l2=1e-4_dim=64_neg_sample=10.pt', 'u_vector_size': 64, 'i_vector_size': 64, 'load': 0, 'load_attack': False, 'epoch': 1000, 'disc_epoch': 500, 'check_epoch': 1, 'early_stop': 1, 'lr': 0.001, 'lr_attack': 0.001, 'batch_size': 1024, 'vt_batch_size': 1024, 'dropout': 0.2, 'l2': 0.0001, 'l2_attack': 0.0001, 'optimizer': 'Adam', 'metric': 'ndcg@3,f1@3', 'disc_metric': 'auc,acc,f1_macro,f1_micro', 'skip_eval': 0, 'num_worker': 0, 'eval_disc': True, 'fairrec_lambda': 0.5, 'train_num_neg': 1, 'vt_num_neg': 10, 'disc_batch_size': 7000}
+INFO:root:DataReader: RecDataReader
+INFO:root:Model: MLP
+INFO:root:Fairness framework: FOCF_AbsUnf
+INFO:root:Runner: RecRunner
+INFO:root:DataProcessor: RecDataset
+INFO:root:# cuda devices: 1
+INFO:root:load all csv...
+INFO:root:load train csv...
+INFO:root:size of train: 53071
+INFO:root:load validation csv...
+INFO:root:size of validation: 6634
+INFO:root:load test csv...
+INFO:root:size of test: 6634
+INFO:root:Load validation data from pickle file.
+INFO:root:Load test data from pickle file.
+INFO:root:# of params: 1876609
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:loss = 488.6667, l2 = 0.0236
+INFO:root:Epoch     1 [28.7 s]
+ validation= 0.8343,0.4634 [8.0 s] ndcg@3,f1@3
+INFO:root:Save model to ../model/MLP_FOCF_AbsUnf_insurance_u_gender_neg_sample=10/MLP_FOCF_AbsUnf_insurance_u_gender_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:
+
+INFO:root:loss = 182.9250, l2 = 0.0358
+INFO:root:Epoch     2 [11.3 s]
+ validation= 0.7021,0.4632 [10.7 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 165.7879, l2 = 0.0543
+INFO:root:Epoch     3 [8.6 s]
+ validation= 0.7016,0.4628 [8.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 160.6103, l2 = 0.0730
+INFO:root:Epoch     4 [21.0 s]
+ validation= 0.6997,0.4616 [10.9 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 150.5280, l2 = 0.0863
+INFO:root:Epoch     5 [8.9 s]
+ validation= 0.6989,0.4609 [11.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 142.4973, l2 = 0.1059
+INFO:root:Epoch     6 [9.6 s]
+ validation= 0.6987,0.4615 [10.9 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 137.9999, l2 = 0.1164
+INFO:root:Epoch     7 [14.8 s]
+ validation= 0.6997,0.4626 [7.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 129.6452, l2 = 0.1323
+INFO:root:Epoch     8 [20.2 s]
+ validation= 0.7026,0.4643 [12.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 122.8441, l2 = 0.1421
+INFO:root:Epoch     9 [7.3 s]
+ validation= 0.7005,0.4621 [9.6 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 116.2626, l2 = 0.1561
+INFO:root:Epoch    10 [8.0 s]
+ validation= 0.7048,0.4649 [6.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 110.6728, l2 = 0.1629
+INFO:root:Epoch    11 [9.0 s]
+ validation= 0.7064,0.4653 [14.6 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 103.3885, l2 = 0.1758
+INFO:root:Epoch    12 [8.9 s]
+ validation= 0.7060,0.4652 [9.3 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 102.3182, l2 = 0.1838
+INFO:root:Epoch    13 [11.0 s]
+ validation= 0.7087,0.4669 [12.7 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 95.6178, l2 = 0.1957
+INFO:root:Epoch    14 [15.5 s]
+ validation= 0.7062,0.4653 [7.9 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 93.4774, l2 = 0.2041
+INFO:root:Epoch    15 [11.7 s]
+ validation= 0.7081,0.4671 [12.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 86.5362, l2 = 0.2135
+INFO:root:Epoch    16 [11.2 s]
+ validation= 0.7073,0.4664 [7.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 83.9556, l2 = 0.2208
+INFO:root:Epoch    17 [9.4 s]
+ validation= 0.7109,0.4684 [7.5 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 81.0471, l2 = 0.2318
+INFO:root:Epoch    18 [6.7 s]
+ validation= 0.7107,0.4678 [7.2 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 76.4386, l2 = 0.2387
+INFO:root:Epoch    19 [11.7 s]
+ validation= 0.7121,0.4684 [10.7 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 76.5062, l2 = 0.2488
+INFO:root:Epoch    20 [11.1 s]
+ validation= 0.7098,0.4669 [8.3 s] ndcg@3,f1@3
+INFO:root:
+
+INFO:root:loss = 70.8904, l2 = 0.2567
+INFO:root:Epoch    21 [13.3 s]
+ validation= 0.7089,0.4669 [8.8 s] ndcg@3,f1@3
+INFO:root:Early stop at 21 based on validation result.
+INFO:root:Best Iter (validation) =     1	 valid= 0.8343,0.4634 [461.6 s] ndcg@3,f1@3
+INFO:root:Load model from ../model/MLP_FOCF_AbsUnf_insurance_u_gender_neg_sample=10/MLP_FOCF_AbsUnf_insurance_u_gender_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:Load model from ../model/MLP_FOCF_AbsUnf_insurance_u_gender_neg_sample=10/MLP_FOCF_AbsUnf_insurance_u_gender_l2=1e-4_dim=64_neg_sample=10.pt
+INFO:root:Optimizer: Adam
+INFO:root:
+
+INFO:root:u_gender loss = 0.6708
+INFO:root:Epoch     1 [2.1 s]
+INFO:root:u_gender disc test = 0.5000,0.6910,0.4086,0.6910 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_gender loss = 0.6601
+INFO:root:
+
+INFO:root:u_gender loss = 0.6103
+INFO:root:Epoch   126 [1.5 s]
+INFO:root:u_gender disc test = 0.5000,0.6910,0.4086,0.6910 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_gender loss = 0.6098
+INFO:root:Epoch   251 [0.5 s]
+INFO:root:u_gender disc test = 0.5000,0.6910,0.4086,0.6910 auc, acc, f1_macro, f1_micro
+INFO:root:
+
+INFO:root:u_gender loss = 0.6081
+INFO:root:Epoch   376 [1.0 s]
+INFO:root:u_gender disc test = 0.5000,0.6910,0.4086,0.6910 auc, acc, f1_macro, f1_micro
+INFO:root:u_gender best auc: 0.5000
+INFO:root:And the corresponding u_gender best disc test= 0.5000,0.6910,0.4086,0.6910 auc, acc, f1_macro, f1_micro
+INFO:root:Load u_gender discriminator model from ../model/MLP_FOCF_AbsUnf_insurance_u_gender_neg_sample=10/u_gender_eval_disc.pt
+INFO:root:Test After Training = 0.8438,0.4661 ndcg@3,f1@3
+INFO:root:User-oriented unfairness: 0.013195782752581597
