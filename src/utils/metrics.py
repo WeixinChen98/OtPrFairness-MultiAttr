@@ -8,6 +8,8 @@ Learning to Rank for Information Retrieval (Tie-Yan Liu)
 """
 import numpy as np
 from statistics import mean
+from utils.constants import *
+
 
 def mean_reciprocal_rank(rs):
     """Score is reciprocal of the rank of the first relevant item
@@ -263,7 +265,7 @@ def user_oriented_unfairness(df_group_0, df_group_1, metric):
 
 import numpy as np
 
-def calibrated_groupwise_utility(df_group_0, df_group_1, metric, c=0.1):
+def calibrated_groupwise_utility(df_group_0, df_group_1, metric, c=0.0):
     """
     Compute the social welfare function based on the weighted sum of log-transformed ndcg values.
 
@@ -271,7 +273,7 @@ def calibrated_groupwise_utility(df_group_0, df_group_1, metric, c=0.1):
         df_group_0 (DataFrame): DataFrame for group 0.
         df_group_1 (DataFrame): DataFrame for group 1.
         metric (str): The ranking metric (e.g., 'ndcg@10').
-        c (float): A small constant to adjust magnitude, default is 0.1.
+        c (float): A small constant to adjust magnitude, default is 0.0.
 
     Returns:
         float: The social welfare value.
