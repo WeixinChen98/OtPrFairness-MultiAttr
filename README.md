@@ -37,7 +37,9 @@ All running commands can be found in the [`./cmd`](./cmd/) folder. For example, 
 > python ./main.py --model_name PMF --fairness_framework PCFR --optimizer Adam --dataset insurance --feature_columns u_gender --data_processor RecDataset --metric ndcg@3,f1@3 --l2 1e-4 --lr 1e-3 --batch_size 1024 --model_path "../model/PMF_PCFR_insurance_u_gender_neg_sample=10/PMF_PCFR_insurance_u_gender_l2=1e-4_dim=64_neg_sample=10.pt" --runner RecRunner --vt_num_neg 10 --vt_batch_size 1024 --num_worker 0 --epoch 1000 --eval_disc 
 ```
 
-To enable **non-sampling evaluation**, set `--vt_num_neg -1` to use all non-interacted items as negative candidates.
+To enable **non-sampling evaluation**, set `--vt_num_neg -1` to use all non-interacted items as negative candidates. The **social welfare function** evaluation is now supported to assess the weighted sum of the log-transformed groupwise utility.
+
+
 
 ## Acknowledgement
 The code of this repository is implemented based on the source code framework at [PCFR](https://github.com/yunqi-li/Personalized-Counterfactual-Fairness-in-Recommendation).

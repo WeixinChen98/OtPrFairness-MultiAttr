@@ -237,3 +237,67 @@ def value_unfairness(df_group_0, df_group_1):
         group_1_iid_val = mean(list(group_1_iid_res['score'])) - mean(list(group_1_iid_res['label']))
         diff.append(abs(group_0_iid_val - group_1_iid_val))
     return mean(diff)
+
+def user_oriented_unfairness(df_group_0, df_group_1, metric):
+
+    k = int(metric.split('@')[-1])
+    df_group_0 = df_group_0.sort_values(by='score', ascending=False)
+    df_group_0 = df_group_0.groupby(USER)
+    if metric.startswith('ndcg@'):
+        ndcgs = []
+        for uid, group in df_group_0:
+            ndcgs.append(ndcg_at_k(group['label'].tolist(), k=k, method=1))
+        ndcg_group_0 = np.average(ndcgs)
+
+    df_group_1 = df_group_1.sort_values(by='score', ascending=False)
+    df_group_1 = df_group_1.groupby(USER)
+    if metric.startswith('ndcg@'):
+        ndcgs = []
+        for uid, group in df_group_1:
+            ndcgs.append(ndcg_at_k(group['label'].tolist(), k=k, method=1))
+        ndcg_group_1 = np.average(ndcgs)
+
+
+    return np.abs(ndcg_group_0 - ndcg_group_1)
+
+
+import numpy as np
+
+def calibrated_groupwise_utility(df_group_0, df_group_1, metric, c=0.1):
+    """
+    Compute the social welfare function based on the weighted sum of log-transformed ndcg values.
+
+    Args:
+        df_group_0 (DataFrame): DataFrame for group 0.
+        df_group_1 (DataFrame): DataFrame for group 1.
+        metric (str): The ranking metric (e.g., 'ndcg@10').
+        c (float): A small constant to adjust magnitude, default is 0.1.
+
+    Returns:
+        float: The social welfare value.
+    """
+    k = int(metric.split('@')[-1])
+
+    # Compute NDCG for group 0
+    df_group_0 = df_group_0.sort_values(by='score', ascending=False)
+    df_group_0 = df_group_0.groupby(USER)
+    if metric.startswith('ndcg@'):
+        ndcgs_0 = [ndcg_at_k(group['label'].tolist(), k=k, method=1) for uid, group in df_group_0]
+        ndcg_group_0 = np.average(ndcgs_0)
+    
+    # Compute NDCG for group 1
+    df_group_1 = df_group_1.sort_values(by='score', ascending=False)
+    df_group_1 = df_group_1.groupby(USER)
+    if metric.startswith('ndcg@'):
+        ndcgs_1 = [ndcg_at_k(group['label'].tolist(), k=k, method=1) for uid, group in df_group_1]
+        ndcg_group_1 = np.average(ndcgs_1)
+
+    # Compute the proportions of each group
+    total_users = len(df_group_0) + len(df_group_1)
+    proportion_0 = len(df_group_0) / total_users
+    proportion_1 = len(df_group_1) / total_users
+
+    # Apply the social welfare function
+    welfare = (proportion_0 * np.log(ndcg_group_0 - c)) + (proportion_1 * np.log(ndcg_group_1 - c))
+
+    return welfare

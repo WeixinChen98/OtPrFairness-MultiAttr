@@ -274,7 +274,9 @@ def main():
                         rank_dl.g2_df.copy(deep=True)]
     logging.info('Value unfairness: ' + str(value_unfairness(group_df_list[0], group_df_list[1])))
     logging.info('Absolute unfairness: ' + str(absolute_unfairness(group_df_list[0], group_df_list[1])))
-
+    logging.info('User-oriented unfairness: ' + str(user_oriented_unfairness(group_df_list[0], group_df_list[1], runner.metrics[0])))
+    logging.info('Calibrated group-wise utility: ' + str(calibrated_groupwise_utility(group_df_list[0], group_df_list[1], runner.metrics[0])))
+    
     return
 
 
