@@ -40,6 +40,20 @@ All running commands can be found in the [`./cmd`](./cmd/) folder. For example, 
 To enable **non-sampling evaluation**, set `--vt_num_neg -1` to use all non-interacted items as negative candidates. The **social welfare function** evaluation is now supported to assess the weighted sum of the log-transformed groupwise utility.
 
 
+## Citation
+
+If you find our work helpful, please consider citing our paper:
+
+@article{chen2025investigating,
+  title     = {Investigating User-side fairness in outcome and process for multi-type sensitive attributes in recommendations},
+  author    = {Chen, Weixin and Chen, Li and Zhao, Yuhan},
+  year      = 2025,
+  journal   = {ACM Transactions on Recommender Systems},
+  volume    = {4},
+  number    = {2},
+  articleno = {25},
+  numpages  = {29}
+}
 
 ## Acknowledgement
 The code of this repository is implemented based on the source code framework at [PCFR](https://github.com/yunqi-li/Personalized-Counterfactual-Fairness-in-Recommendation).
