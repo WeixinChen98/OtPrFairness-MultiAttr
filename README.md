@@ -42,7 +42,7 @@ To enable **non-sampling evaluation**, set `--vt_num_neg -1` to use all non-inte
 
 ## Citation
 
-If you find our work helpful, please consider citing our paper:
+If you find this work helpful, please consider citing our paper:
 
 ```bibtex
 @article{chen2025investigating,
